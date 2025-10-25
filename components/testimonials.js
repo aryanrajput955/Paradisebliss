@@ -93,7 +93,7 @@ export default function TestimonialSlider() {
     <div className="max-w-5xl mx-auto py-12 px-6 relative">
       {/* Heading */}
       <h2 style={{ fontFamily: "Higher jump", color: "var(--coral-pink)" }} className=" sm:text-2xl lg:text-3xl font-bold text-center mb-6">
-        My &nbsp; Paradise &nbsp;Story!
+       Customer Reviews & Testimonials
       </h2>
       <p className="text-center">
         Customer satisfaction is our major goal. See what our customers say about us.

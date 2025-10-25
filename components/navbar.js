@@ -104,7 +104,7 @@ export default function Navbar() {
             <div className="flex items-center gap-4 lg:gap-5 xl:gap-8 2xl:gap-10">
               <div className="logo">
                 <Link href="/">
-                  <Image width={100} height={100} src="/img/logo.png" alt="Paradise Bliss Logo" className="h-12" />
+                  <Image width={100} height={100} src="/img/logo.png" alt="Paradise Bliss" className="h-12" />
                 </Link>
               </div>
               <div className="contact">
@@ -218,7 +218,7 @@ export default function Navbar() {
           {/* Mobile Layout */}
           <div className="flex items-center justify-between w-full lg:hidden">
             <div className="logo">
-              <Image height={100} width={100} src="/img/logo.png" alt="Paradise Bliss Logo" className="h-12" />
+              <Image height={100} width={100} src="/img/logo.png" alt="Paradise Bliss" className="h-12" />
             </div>
             <div className="flex items-center gap-3">
               <a href="tel:+918449000181" className="text-black">

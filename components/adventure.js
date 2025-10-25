@@ -6,8 +6,8 @@ export default function AdventureTours() {
       
       {/* Left Section: Heading & Subtext */}
       <div className="lg:w-[40%] text-center lg:text-left mb-10 lg:mb-0">
-        <h1 style={{ fontFamily: 'salazur' }} className="text-6xl font-bold text-[#FF7F50]">
-          Adventure, Your Way
+        <h1 style={{ fontFamily: 'salazur' }} className="text-4xl md:text-6xl font-bold text-[#FF7F50]">
+          Customized Holiday Packages for Every Traveler
         </h1>
         <p style={{fontFamily:'jost'}} className="mt-4 text-[#00453a] text-xl">
           We have a wide range of tour options to meet all your<br/> travel needs, ensuring a memorable experience for everyone.

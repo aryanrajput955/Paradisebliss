@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Logo */}
           <Image
             src="https://raw.githubusercontent.com/aryanrajput955/icons_paradise/refs/heads/main/logo.png" // Replace with your logo path
-            alt="Paradise Bliss Logo"
+            alt="Paradise Bliss"
             width={200} // Adjust width as needed
             height={50} // Adjust height as needed
             className="object-contain mt-10 mb-6"

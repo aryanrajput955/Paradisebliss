@@ -11,11 +11,11 @@ const nextConfig = {
         ],
         unoptimized: true,
     },
-    // output: "export",
-    // trailingSlash: true,
-    // eslint: {
-    //     ignoreDuringBuilds: true,
-    // },
+    output: "export",
+    trailingSlash: true,
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
 };
 
 export default nextConfig;

@@ -29,7 +29,7 @@ export default function Quote() {
 
       {/* Content */}
       <h2 className="text-3xl font-bold text-[#F1FDF3] mb-4">
-        In doubt? Can't decide?
+       Book Your Next Dream Vacation with Paradise Bliss Tours
       </h2>
       <p className="text-[#F1FDF3] max-w-lg">
         Don't hesitate & hand over your queries to our travel experts and let them

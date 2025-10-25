@@ -14,8 +14,8 @@ const WhyChooseUs = () => {
 
       <div className="container mx-auto px-4 text-center relative z-10">
         {/* Header with Divine Glow */}
-        <h2 style={{fontFamily:'salazur',color:'var(--color-dark)'}} className="text-7xl font-extrabold text-yellow-300 mb-6  tracking-wide animate-pulse-slow">
-          Why Choose Us?
+        <h2 style={{fontFamily:'salazur',color:'var(--color-dark)'}} className=" text-4xl  sm:text-7xl font-extrabold text-yellow-300 mb-6  tracking-wide animate-pulse-slow">
+          Why Choose Paradise Bliss Tours Pvt. Ltd?
           <span className="block w-24 h-1 mx-auto mt-2 bg-gradient-to-r from-green-900 to-green-100 rounded-full animate-pulse-slow"></span>
         </h2>
         <p className="text-green-500 italic text-xl mb-16 font-light drop-shadow-md">
@@ -31,11 +31,11 @@ const WhyChooseUs = () => {
               <Image height={100} width={100} src="/img/best_price.png" alt="Coin icon" className="w-40 h-40" />
             </div>
             <h3 className="text-teal-800 text-3xl font-bold mb-4 drop-shadow-md">
-              Best Price Guaranteed
+              Tailor-Made Itineraries for Every Budget
             </h3>
-            <p className="text-black text-lg leading-relaxed drop-shadow-sm">
+            {/* <p className="text-black text-lg leading-relaxed drop-shadow-sm">
               Unmatched celestial prices for your divine getaway—maximize value, minimize cost!
-            </p>
+            </p> */}
             {/* Subtle glow effect around the card */}
             <div className="absolute inset-0 bg-yellow-500/5 blur-xl rounded-2xl opacity-0 animate-pulse-slow"></div>
           </div>
@@ -47,11 +47,12 @@ const WhyChooseUs = () => {
               <Image height={100} width={100} src="/img/support.png" alt="Coin icon" className="w-40 h-40" />
             </div>
             <h3 className="text-teal-800 text-3xl font-bold mb-4 drop-shadow-md">
-              Top Notch Support
+             24/7 Support & Hassle-Free Booking
+
             </h3>
-            <p className="text-black text-lg leading-relaxed drop-shadow-sm">
+            {/* <p className="text-black text-lg leading-relaxed drop-shadow-sm">
               24/7 divine assistance—before, during, and after your journey, we’re your guardians!
-            </p>
+            </p> */}
             <div className="absolute inset-0 bg-teal-500/5 blur-xl rounded-2xl opacity-0 animate-pulse-slow"></div>
           </div>
 
@@ -62,11 +63,11 @@ const WhyChooseUs = () => {
               <Image height={100} width={100} src="/img/expert_team.png" alt="Coin icon" className="w-40 h-40" />
             </div>
             <h3 className="text-teal-800 text-3xl font-bold mb-4 drop-shadow-md">
-              Expert Team
+              Trusted Travel Experts with 10+ Years of Experience
             </h3>
-            <p className="text-black text-lg leading-relaxed drop-shadow-sm">
+            {/* <p className="text-black text-lg leading-relaxed drop-shadow-sm">
               Our celestial artisans craft flawless, godly trips—every detail, perfectly orchestrated!
-            </p>
+            </p> */}
             <div className="absolute inset-0 bg-purple-500/5 blur-xl rounded-2xl opacity-0 animate-pulse-slow"></div>
           </div>
 
@@ -77,11 +78,11 @@ const WhyChooseUs = () => {
               <Image height={100} width={100} src="/img/Transparency.png" alt="transparency" className="w-40 h-40" />
             </div>
             <h3 className="text-teal-800 text-3xl font-bold mb-4 drop-shadow-md">
-              Transparency
+              100% Transparency,Honest pricing—no hidden fees
             </h3>
-            <p className="text-black text-lg leading-relaxed drop-shadow-sm">
+            {/* <p className="text-black text-lg leading-relaxed drop-shadow-sm">
               Crystal-clear divine pricing—no hidden fees, ever—trust us as you trust the heavens!
-            </p>
+            </p> */}
             <div className="absolute inset-0 bg-pink-500/5 blur-xl rounded-2xl opacity-0 animate-pulse-slow"></div>
           </div>
         </div>

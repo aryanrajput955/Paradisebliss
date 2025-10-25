@@ -13,7 +13,7 @@ const ImageGallery = () => {
       link: '/destinations/ladakh' // Correct link for Ladakh
     },
     {
-      name: 'Uttrakhand',
+      name: 'Uttarakhand',
       image: 'img/banner/Uttrakhand.png',
       description: 'The Land of Gods and Eternal Beauty',
       price: 'Starting ₹19,990* per person',
@@ -58,7 +58,7 @@ const ImageGallery = () => {
     <div className="">
       <div className="container mx-auto px-4 ">
         <h1 style={{ fontFamily: 'salazur' }} className="text-4xl md:text-7xl text-[#00453a] font-bold text-center my-10">
-          Top Trending Destinations
+          Top Domestic Tour Packages in India
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* Large Nature Image - Kashmir */}

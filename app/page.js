@@ -1,6 +1,7 @@
 import AdventureTours from "@/components/adventure";
 import Banner1 from "@/components/banner1";
 import Banner2 from "@/components/banner2";
+import HolidaySaleBanner from "@/components/christmas";
 import HeroSection from "@/components/herosection";
 import ImageGallery from "@/components/imageGalley";
 import Quote from "@/components/quote";
@@ -19,6 +20,7 @@ export default function Home() {
       <Banner1 />
       <VideoSlider />
       <Banner2 />
+      <HolidaySaleBanner />
       <AdventureTours/>
     <ToursSlider />
     <WhyChooseUs />
