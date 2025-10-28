@@ -70,7 +70,7 @@ const HolidaySaleBanner = () => {
         .animate-shimmer { animation: shimmer 3s ease-in-out infinite; }
         #destinations-scroll::-webkit-scrollbar { display: none; }
       `}</style>
-      <div className="relative bg-gradient-to-br from-red-600 via-red-500 to-red-700 overflow-hidden shadow-2xl">
+      <div className="relative bg-[#00453a] overflow-hidden shadow-2xl">
         <div className="absolute inset-0 opacity-40" style={{ backgroundImage: `url('/img/snowbg.png')`, backgroundSize: '200px 200px' }}></div>
         <div className="absolute inset-0 bg-black opacity-5"></div>
         <RotatingSnowflake delay="0s" position="top-3 left-8" size="w-6 h-6" imageUrl="/img/flake.png" />
