@@ -258,31 +258,6 @@ const SikkimTour = () => {
                 <li>We provide you 24*7 customer support.</li>
               </ul>
             </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">A Land Where Nature Meets Peace</h3>
-              <p className="leading-relaxed">
-                The mighty Kanchenjunga dominates the skyline. Gangtok blends tradition with modernity — offering scenic views, lively markets, and spiritual calm.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Must-Visit Destinations</h3>
-              <ul className="list-disc list-inside space-y-2">
-                <li><strong>Gangtok</strong>: Ropeway, MG Marg, Enchey Monastery</li>
-                <li><strong>Tsomgo Lake</strong>: Sacred glacial lake at 12,400 ft</li>
-                <li><strong>Nathula Pass</strong>: Indo-China border with breathtaking views</li>
-                <li><strong>Lachung & Yumthang</strong>: Valley of Flowers & hot springs</li>
-                <li><strong>Pelling</strong>: Panoramic Kanchenjunga sunrise views</li>
-                <li><strong>Ravangla</strong>: Giant Buddha Park & serene landscapes</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit Sikkim</h3>
-              <ul className="list-disc list-inside space-y-2">
-                <li><strong>Mar–May</strong>: Rhododendrons bloom, clear skies</li>
-                <li><strong>Oct–Dec</strong>: Best views of Kanchenjunga</li>
-                <li><strong>Jan–Feb</strong>: Snow-covered wonderland</li>
-              </ul>
-            </div>
           </div>
         </div>
 
