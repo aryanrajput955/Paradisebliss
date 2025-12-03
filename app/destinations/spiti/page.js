@@ -238,7 +238,7 @@ const SpitiValleyTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Spiti Valley – The Cold Desert of the Himalayas
+          Explore the Untouched Beauty of Spiti Valley with Paradise Bliss Tours Pvt. Ltd.
         </motion.h2>
         <motion.p
           className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
@@ -246,8 +246,20 @@ const SpitiValleyTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Tucked away high in the Himalayas, Spiti Valley is a land of rugged mountains, ancient monasteries, crystal-clear rivers, and boundless serenity. Often called “Little Tibet”, this cold desert region in Himachal Pradesh is a haven for those who seek peace, adventure, and spiritual connection.
+          Welcome to Spiti Valley – The land that lies between India and Tibet. Here you can feel that every mountain is telling you a story of adventure, Peace, and faith. Spiti is bounded by the Rocky Mountains, ancient monasteries, and the pristine sky. Spiti is one of the breathtaking destinations that offers the raw beauty of nature and a Soulful experience. 
+In Paradise Bliss Tours, we organize personalized packages for you, which include the Comfort and the Thrill. From the Crazy drive through the high-altitude hills to the cozy stays at the Himalayan villages. Our goal is to make your trip seamless and unforgettable.
+
         </motion.p>
+                <motion.p
+          className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Popularly known as the Middle Land, Spiti Valley is located in the Lahaul and Spiti district of Himachal Pradesh. It is one of the most delightful high-altitude cold deserts in the Himalayas. Surrounded by the snow-covered peaks and monasteries, and scenic villages. It is a perfect destination that offers a perfect blend of adventure, spirituality, and peace. Its raw beauty, crystal clear rivers, and the starlit nights make it the ideal destination for the Nature lover.
+
+        </motion.p>
+
 
         <div
           ref={contentRef}
@@ -266,21 +278,41 @@ const SpitiValleyTour = () => {
             <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">Must-Visit Places in Spiti</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li><strong>Kaza</strong>: Commercial & cultural hub of Spiti</li>
-                <li><strong>Key Monastery</strong>: 1000-year-old Tibetan Buddhist monastery</li>
-                <li><strong>Kibber, Komik & Langza</strong>: Highest villages in the world</li>
-                <li><strong>Chandrataal Lake</strong>: High-altitude turquoise gem</li>
-                <li><strong>Dhankar & Tabo</strong>: Ancient monasteries with rich history</li>
-                <li><strong>Pin Valley</strong>: Home to snow leopards & rare wildlife</li>
+                <li><strong>Kaza</strong>: The Heart of Spiti Valley, it is the most famous town in the Spiti Valley. It is the perfect hub that gives you the complete vibes of their local culture. It offers vibrant markets, cozy cafes, fascinating mountains, and warm-hearted people. It also provides the base to reach the nearby places like Hikkim, Key monastery, and Langza. </li>
+                <li><strong>Langza</strong>: Renowned as the Fossil Village, it is the most picture-perfect place of the Spiti. It is situated at 14,500 ft, and is famous for its ancient marine fossils that tell the story about that time when the land was immersed under the Tethys sea. This place is surrounded by lush greenery in summer and covered with snow in the winter, and it is also a great place for Stargazing.</li>
+                <li><strong>Key Monastery</strong>: This is the largest and most famous Monastery of the Spiti Valley, situated on the hilltop of the Spiti River. This monastery is a thousand years old and was built as a fortress. Monks live here a disciplined and calm life, giving the visitor a chance to experience their peaceful life. From the top, it gives a stunning view, especially at sunset and sunrise. </li>
+                <li><strong>Chicham Bridge</strong>: The highest bridge of Asia, which stands at a height of 14,569 ft., joining the Chicham and the Kibber village. This bridge offers a stunning view of the rugged valley, which makes it the favorite spot for travelers and photographers. It is the most glorious landmark of the Spiti Valley.</li>
+                <li><strong>Komic</strong>: It holds the title of World’s highest village with a connected motorable road, situated at an altitude of about 15,000 ft. The Komic monastery is known as the heart of this village, and is believed to be 500 years old. The monks practice deep meditations in a silent and charming environment.  </li>
               </ul>
             </div>
             <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li><strong>May–Oct</strong>: Roads open, ideal for biking & trekking</li>
-                <li><strong>Nov–Apr</strong>: Winter Spiti – snow-covered, magical, challenging</li>
+                <li><strong>May–Sep</strong>:  This time is good for sightseeing and the road trip, as all the roads remain open.</li>
+                <li><strong>oct-feb</strong>: During this time, the whole Spiti becomes a snow desert, and it also becomes a paradise for snow lovers. </li>
+                <li><strong>Note </strong>Avoid travel in the monsoon due to the high risk of landslides. </li>
               </ul>
             </div>
+             <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in Spiti </h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>1.	Visit the ancient monasteries like Key, Komic, Tabo, and Dhankar.</li>
+                <li>2.	Send a postcard from the world’s highest post office at Hikkim.</li>
+                <li>3.	Experience the best Stargazing with a clear sky in Langza and Komic.</li>
+                <li>4.	Explore the ancient marine fossils at Langza. </li>
+                <li>5.	Visit Asia’s highest bridge, Chicham Bridge. </li>
+              </ul>
+            </div>
+           <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Kerala Trip?</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>We have a tailored itinerary for all traveler as per their need and preferences.</li>
+                <li>We provide you with the best accommodation.</li>
+                <li>Private Cab and local Assistance, Enjoy Hassle-free transfer with professional drivers.</li>
+                <li>Enjoy local sightseeing for whatever package you choose.</li>
+                <li>We provide you 24*7 customer support.</li>
+              </ul>
+            </div>  
           </div>
         </div>
 

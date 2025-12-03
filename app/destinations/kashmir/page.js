@@ -244,7 +244,7 @@ const KashmirTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Kashmir – The Paradise on Earth
+          Explore Heaven on Earth – Kashmir Tour Packages by Paradise Bliss Tours Pvt. Ltd.
         </motion.h2>
         <motion.p
           className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
@@ -252,7 +252,18 @@ const KashmirTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Known as “Heaven on Earth,” Kashmir is a land where nature reveals its most breathtaking beauty. With snow-clad mountains, crystal-clear lakes, blooming gardens, and a rich cultural heritage, Kashmir is a dream destination that captivates every traveler’s heart.
+         Explore the land of mesmerizing lakes, panoramic views, and lush meadows. Where you will get the Warmest welcome and best Hospitality. Paradise Bliss Tours is providing you the best Kashmir Package that is the perfect mix of Comfort, Adventure, serenity, and a perfect Holiday. 
+Whether you are looking for a Family trip to Gulmarg and Pahalgam, an adventure-filled Sonmarg trip, or A romantic Gateway to Srinagar, we have all the customized packages as per your requirements and preferences. 
+
+        </motion.p>
+                <motion.p
+          className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+         Kashmir is located in the northern part of India, which offers mesmerizing Views of snow-capped mountains, greenery of lush meadows, and serene Lakes. This place is renowned as the “Paradise on Earth”. This place is also famous for its Culture and the handicrafts like Pashmina and the walnut wood crafts. 
+
         </motion.p>
 
         <div
@@ -275,11 +286,10 @@ const KashmirTour = () => {
             <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">Must-Visit Destinations in Kashmir</h3>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Srinagar:</strong> The summer capital with Dal Lake, Mughal Gardens, and vibrant markets.</li>
-                <li><strong>Gulmarg:</strong> Famous for skiing, Gondola rides, and stunning snow views.</li>
-                <li><strong>Pahalgam:</strong> Known as the “Valley of Shepherds” – ideal for nature walks and riverside picnics.</li>
-                <li><strong>Sonamarg:</strong> The “Meadow of Gold” with glaciers and trekking routes.</li>
-                <li><strong>Betaab & Aru Valley:</strong> Perfect for photography and peaceful retreats.</li>
+                <li><strong>Srinagar:</strong> It is the heart of Kashmir, which is Famous for the Dal Lake, which gives a scenic view, and offers houseboat and shikara rides, the impressive Mughal gardens like Shalimar and Nishat. This place offers a view of the Himalayas. It is also famous for its Kashmiri Handicrafts, dry fruits, shawls, and carpets.</li>
+                <li><strong>Gulmarg:</strong> It is renowned as the ski capital. Its alpine meadows transform according to different seasons. In winter, it offers a premium skiing destination, and during summer, it invites visitors for trekking through the meadows with the wildflowers. And the best thing about this place is the gondola ride, which is one of the highest cable cars that lifts you to panoramic views beyond the horizon of peaks. </li>
+                <li><strong>Pahalgam:</strong> This is a stunning hill station, which is located about 100 km above Srinagar. This place is popularly known as the “Land of the Shepherd”. It gives a scenic view of lush meadows and snowcapped peaks. Major places to visit here are: Betaab valley, Aru valley, Chandanwari (starting point of the Amarnath Yatra), and Mamleshwar Temple. </li>
+                <li><strong>Sonamarg:</strong> This place is known for its Raw beauty. It gives a view of golden meadows. It is a famous hill station in Kashmir located 80 km away from Srinagar. Sonmarg is covered with high snow-covered mountains the alpine forests, and beautiful meadows. The top attractions of this place are the Thajiwas glaciers, Baltal valley, Kargil war memorial, and Zoji La Pass.</li>
               </ul>
             </div>
             <div>
@@ -287,6 +297,16 @@ const KashmirTour = () => {
               <p className="text-gray-600 leading-relaxed">
                 From trekking and skiing to experiencing Kashmiri Wazwan cuisine, Pashmina shopping, and warm Kahwa hospitality — Kashmir offers a complete sensory journey.
               </p>
+            </div>
+             <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why choose Paradise Bliss Tours:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Experienced in Global and Personalized travel plans.</li>
+                <li>Tailored itinerary for all traveler as per their need and preferences.</li>
+                <li>Complete Tour services – Hotels, Visa, Flights, and sightseeing.</li>
+                <li>We provide you 24*7 customer support.</li>
+                <li>Affordable Luxury Tour packages without any hidden cost.</li>
+              </ul>
             </div>
           </div>
         </div>
