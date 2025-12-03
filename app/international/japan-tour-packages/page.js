@@ -6,6 +6,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import WhyChooseUs from '@/components/whychooseus';
@@ -106,8 +107,7 @@ const JapanTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img
-            width={100}
+          <Image width={100}
             height={100}
             src="/img/logo.png"
             alt="Paradise Bliss Tours Logo"
@@ -212,56 +212,55 @@ const JapanTour = () => {
         >
           <div className="py-6 space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">What to Expect</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Multi-city itineraries covering Tokyo, Kyoto, Osaka & more</li>
-                <li>Comfortable stays in a mix of traditional ryokans (Japanese inns) and modern hotels</li>
-                <li>Fast transport: high-speed bullet trains (Shinkansen) for inter-city travel</li>
-                <li>Local, English-speaking guides to help you experience the deeper culture: tea ceremonies, kimono rentals, sushi-making classes, shrines & temples, street food, nightlife & hidden gems</li>
-                <li>Optional add-ons: ski & snow adventures in winter, cherry blossom viewing in spring, hot springs (onsen), night markets, theme parks</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Spring (Mar-May):</strong> Cherry blossoms, mild weather - great for sightseeing & hanami strolls</li>
-                <li><strong>Summer (Jun-Aug):</strong> Festivals (matsuri), vibrant city life; coastal escapes and greenery in full bloom</li>
-                <li><strong>Autumn (Sep-Nov):</strong> Gorgeous autumn foliage; cooler, crisp weather; great for temples & rural landscapes</li>
-                <li><strong>Winter (Dec-Feb):</strong> Snow sports, onsen (hot spring) relaxation; winter light festivals</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Must-Visit Places & Highlights</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Tokyo:</strong> Shibuya Crossing, anime & technology districts, food streets, futuristic architecture</li>
-                <li><strong>Kyoto:</strong> Golden Pavilion, Fushimi Inari Shrine, geisha districts, traditional tea houses</li>
-                <li><strong>Osaka:</strong> Energetic street food, Dotonbori, vibrant nightlife, Osaka Castle</li>
-                <li><strong>Other regions:</strong> Mt Fuji & the Fuji Five Lakes area; Hiroshima & Miyajima; the snow regions like Hokkaido; hot springs in Hakone or Nagano; island escapes such as Okinawa</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Travel Tips & Practical Info</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Currency:</strong> Japanese Yen (JPY). Credit cards are widely accepted in cities; carry cash for smaller towns/temples.</li>
-                <li><strong>Language:</strong> Japanese. English works in tourist areas. Learning a few basic phrases goes a long way.</li>
-                <li><strong>Etiquette:</strong> Remove shoes indoors, respect quiet zones, be punctual, be polite, especially in traditional settings.</li>
-                <li><strong>Connectivity:</strong> Pocket WiFi or a local SIM are helpful; free WiFi is common in hotels and many cafes.</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why Travel Japan with Paradise Bliss Tours?</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Tailored Packages:</strong> You choose the pace - deep cultural immersion, relaxed travel, or fast-paced adventure.</li>
-                <li><strong>Seamless Logistics:</strong> Hotels, transport (including bullet trains), transfers, and tickets taken care of so you can experience.</li>
-                <li><strong>Curated Local Experiences:</strong> Let us connect you with local culture - tea ceremonies, local foods, hidden paths, and traditional inns.</li>
-                <li><strong>Expert Guidance & Support:</strong> English-speaking guides, 24/7 support, on-ground help; visa assistance as required.</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Ready to Go Further?</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">About Japan:</h3>
               <p className="text-gray-600 leading-relaxed">
-                Whether you're planning a Cherry Blossom tour, a Winter Ski Adventure, a Spring cultural wander, or a Summer festival road-trip, Paradise Bliss Tours will design your dream Japan itinerary. Reach out to us for departure dates, customizations, and special group offers.
+                Japan is also known as the land of “The Rising Sun”. More than 1,00,000 cherry trees are in bloom every spring. On the Pacific Ring of Fire, more than 100 active volcanoes continue to shape the landscape. It’s the details where Japan’s true magic lies. Japan is the World’s most travel-friendly destination as it offers efficient transportation, safe cities, and warm hospitality.
               </p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best places to visit:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-4 mt-4">
+                <li><strong>Tokyo:</strong> An ocean of skyscrapers merges with the sky, creating a metropolitan area that breathes to the rhythm of 37 million inhabitants. Among all the skyscrapers, the Sanso ji Temple stands resilient as a witness to a lost era. Incense rises to the sky while the tail of the bell marks time. At night, Tokyo transforms into a bioluminescent organism. In Akihabara, which is the electronic district, neon lights illuminate technology and video games stores, while just a few kilometers away in the alley of Shimokitazawa, the charm of old Japan remains perfectly preserved.</li>
+                <li><strong>Kyoto:</strong> Time flows differently in the city which features approximately 1600 temples at the golden Temple of kinkokuji, every morning the sun transform the ponds water into a mirror with coal carb swimming among the reflection the best time to visit Kyoto is certainly April when the cherry trees awaken and the battle dance in the year like pink snow transforming the city into a world suspended between reality and dream.</li>
+                <li><strong>Hiroshima:</strong> The Ota rivers flow through the city Centre, dividing into 7 branches that embrace the urban heart of Hiroshima. The Genbaku dome stands against the sky as an immobile witness to August 6, 1945, while its wall preserves the memory of that instant that changed the course of human history. In Peace Park, a fire has been burning for many years. This fire is like a promise from people around the world, saying that:</li>
+                <li>“We will keep this flame burning until all the nuclear bombs on Earth are gone forever.”The street of the modern series means that while pursuing life, you can also go to a restaurant where chefs prepare okonomiyaki according to Hiroshima tradition.</li>
+                <li><strong>Mount Fuji:</strong> It is Japan&apos;s most important symbol, and it dominates the horizon with 5 lakes arranged at its feet. Lake Kawaguchiko reflects the sacred mountain in its water, creating a painting that changes with the season. In spring, cherry blossoms the lake, while in autumn, maple leaves tint the shore red. Lake Yamanakaku is the largest of the five and hosts local fisherman with their ancestral fishing, while Lake Saiko conceals nearby ice caves with frozen stalactites even during summer. On Lake Shojiko, which is the smallest morning missed creates a surreal play of light. Lastly, Lake Motosuko is depicted on the 1000-yen bank note, which holds the deepest and most mysterious water.</li>
+                <li><strong>Nara:</strong> The Tadaiji dominates the Nara landscape with its imposing presence. Here, the great Buddha has sat in meditation for 1200 years while lit up with the beam of the world&apos;s largest wooden Temple. The sacred deer, messenger of the god in the Shinto tradition, roam freely through the National Park, peacefully interacting with the visitors. The paths, traversing old maple wood, lead to hidden shrines where the lanterns mark the way.</li>
+                <li><strong>Osaka:</strong> It&apos;s Japan&apos;s third-largest city, but its true distinction lies elsewhere in food. The dotonbori district is built around an ancient commercial canal, and it is the beating heart of the city. At night, the light of hundreds of restaurants reflects in its water, while thousands of people come here to taste its local specialities like Takayaki and okonomiyaki. In the heart of the modern city, meanwhile, stands Osaka Castle, which is a 500-year-old fortress that dominates The Skyline of skyscrapers. Shiteonnoji is the oldest temple in Japan, and it continues to ring all the time.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best time to visit:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li><strong>Spring (March to May):</strong> This is the most popular time in Japan. The country turns into a pink paradise due to cherry blossoms.</li>
+                <li><strong>Summer (June to August):</strong> This time is better for experiencing the festivals and hiking activities in the mountains.</li>
+                <li><strong>Autumn (September to November):</strong> This is the best time to explore the Kyoto Temples, when all the surrounding leaves turn yellow and orange.</li>
+                <li><strong>Winter (December to February):</strong> This time is best for the Hokkaido skiing experience and relaxing in the hot spring.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in Japan:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Explore City of the Future- Tokyo, to get some futuristic experiences.</li>
+                <li>Visit the sacred temples of Kyoto.</li>
+                <li>Explore Osaka, taste the specialties of Japan.</li>
+                <li>Discover the history of Hiroshima City.</li>
+                <li>Stroll the beauty of Mount Fuji and the 5 mesmerizing Lakes.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why choose Paradise Bliss Tours:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Experienced in Global and Personalized travel plans.</li>
+                <li>Tailored itinerary for all traveler as per their need and preferences.</li>
+                <li>Complete Tour services – Hotels, Visa, Flights, and sightseeing.</li>
+                <li>We provide you 24*7 customer support.</li>
+                <li>Affordable Luxury Tour packages without any hidden cost.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -286,8 +285,7 @@ const JapanTour = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <img
-              width={48}
+            <Image width={48}
               height={48}
               src={stat.img}
               alt={stat.text.split('<br/>')[0]}
@@ -354,8 +352,7 @@ const JapanTour = () => {
                   >
                     {/* Clickable area: image + info */}
                     <Link href={tour.link} className="flex-1 flex flex-col cursor-pointer">
-                      <img
-                        height={224}
+                      <Image height={224}
                         width={400}
                         src={tour.image}
                         alt={tour.title}
@@ -446,8 +443,7 @@ const JapanTour = () => {
             </button>
             {selectedTour && (
               <div className="mb-4">
-                <img
-                  height={128}
+                <Image height={128}
                   width={400}
                   src={selectedTour.image}
                   alt={selectedTour.title}

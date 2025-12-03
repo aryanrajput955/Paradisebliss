@@ -1,5 +1,6 @@
 // app/layout.js
 import "./globals.css";
+import Image from 'next/image';
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import WhatsAppButton from "@/components/WhatsAppButton";

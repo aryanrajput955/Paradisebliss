@@ -1,8 +1,9 @@
 'use client';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useCallback } from 'react';
 import { AiOutlineDown, AiOutlineUp, AiOutlineStar } from 'react-icons/ai';
-import Image from 'next/image';
+
 
 // Sample image for hero section (replace with actual image path)
 const heroImage = "/img/shoot/badrinath.jpg";

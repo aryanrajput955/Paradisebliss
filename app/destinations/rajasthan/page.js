@@ -6,6 +6,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import WhyChooseUs from '@/components/whychooseus';
@@ -16,7 +17,8 @@ const tours = [
     title: "Pushkar Holi Festival Extravaganza",
     dates: ["Dates on Request"],
     prices: ["", "Price on Request",],
-    image: "/img/rajasthan.jpg",
+
+    image: "https://images.unsplash.com/photo-1616787671803-e660b92c0d25?q=80&w=1034&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     duration: "3N4D",
     group: "Group Tour",
     link: "/indian-tours/pushkarholi-tour-package",
@@ -25,7 +27,7 @@ const tours = [
     title: "Udaipur Kumbhalgarh Royal Escape",
     dates: ["Dates on Request"],
     prices: [""," Price on Request",],
-    image: "/img/rajasthan.jpg",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Nakki_Lake_during_daytime.JPG/500px-Nakki_Lake_during_daytime.JPG",
     duration: "4N5D",
     group: "Group Tour",
     link: "/indian-tours/udaipur-mountabu-tour",
@@ -34,7 +36,7 @@ const tours = [
     title: "Jaipur Pushkar Heritage Adventure",
     dates: ["Dates on Request"],
     prices: ["", "Price on Request"],
-    image: "/img/rajasthan.jpg",
+    image: "https://images.unsplash.com/photo-1584245231969-b906af752fd3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     duration: "3N4D",
     group: "Group Tour",
     link: "/indian-tours/jaipur-pushkar-tour-package",
@@ -43,7 +45,7 @@ const tours = [
     title: "Jaipur Ranthambore Wildlife Safari",
     dates: ["Dates on Request"],
     prices: ["", "Price on Request"],
-    image: "/img/rajasthan.jpg",
+    image: "https://images.unsplash.com/photo-1661769212734-67877c79deff?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     duration: "3N4D",
     group: "Group Tour",
     link: "/indian-tours/jaipur-rathambore-tour-package",
@@ -146,7 +148,13 @@ const RajasthanTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img src="/img/logo.png" alt="Paradise Bliss Tours Logo" className="w-20 mx-auto mb-6" />
+          <Image
+            width={100}
+            height={100}
+            src="/img/logo.png"
+            alt="Paradise Bliss Tours Logo"
+            className="w-20 mx-auto mb-6"
+          />
 
           <label className="block text-left text-gray-700 text-sm mb-2">Name</label>
           <input
@@ -298,7 +306,13 @@ const RajasthanTour = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <img src={stat.img} alt="" className="w-12 h-12 mx-auto" />
+            <Image
+              width={48}
+              height={48}
+              src={stat.img}
+              alt=""
+              className="w-12 h-12 mx-auto"
+            />
             <p className="mt-2 text-lg font-bold" dangerouslySetInnerHTML={{ __html: stat.text }} />
           </motion.div>
         ))}
@@ -339,8 +353,10 @@ const RajasthanTour = () => {
                     className="h-full flex flex-col"
                   >
                     <Link href={tour.link} className="flex-1 flex flex-col">
-                      <img
+                      <Image
                         src={tour.image}
+                        width={400}
+                        height={224}
                         alt={tour.title}
                         className="w-full h-56 object-cover rounded-t-xl"
                         onError={(e) => (e.target.src = '/img/placeholder.jpg')}
@@ -411,8 +427,10 @@ const RajasthanTour = () => {
 
             {selectedTour && (
               <div className="mb-6 text-center">
-                <img
+                <Image
                   src={selectedTour.image}
+                  width={400}
+                  height={128}
                   alt={selectedTour.title}
                   className="w-full h-32 object-cover rounded-lg mb-4"
                   onError={(e) => (e.target.src = '/img/placeholder.jpg')}

@@ -6,6 +6,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import WhyChooseUs from '@/components/whychooseus';
@@ -146,7 +147,13 @@ const KeralaTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img src="/img/logo.png" alt="Paradise Bliss Tours Logo" className="w-20 mx-auto mb-6" />
+          <Image
+            width={100}
+            height={100}
+            src="/img/logo.png"
+            alt="Paradise Bliss Tours Logo"
+            className="w-20 mx-auto mb-6"
+          />
 
           <label className="block text-left text-gray-700 text-sm mb-2">Name</label>
           <input
@@ -287,7 +294,13 @@ const KeralaTour = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <img src={stat.img} alt="" className="w-12 h-12 mx-auto" />
+            <Image
+              width={48}
+              height={48}
+              src={stat.img}
+              alt=""
+              className="w-12 h-12 mx-auto"
+            />
             <p className="mt-2 text-lg font-bold" dangerouslySetInnerHTML={{ __html: stat.text }} />
           </motion.div>
         ))}
@@ -328,8 +341,10 @@ const KeralaTour = () => {
                     className="h-full flex flex-col"
                   >
                     <Link href={tour.link} className="flex-1 flex flex-col">
-                      <img
+                      <Image
                         src={tour.image}
+                        width={400}
+                        height={224}
                         alt={tour.title}
                         className="w-full h-56 object-cover rounded-t-xl"
                         onError={(e) => (e.target.src = '/img/placeholder.jpg')}
@@ -400,8 +415,7 @@ const KeralaTour = () => {
 
             {selectedTour && (
               <div className="mb-6 text-center">
-                <img
-                  src  src={selectedTour.image}
+                <Image src={selectedTour.image}
                   alt={selectedTour.title}
                   className="w-full h-32 object-cover rounded-lg mb-4"
                 />

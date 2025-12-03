@@ -6,6 +6,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import WhyChooseUs from '@/components/whychooseus';
@@ -149,8 +150,7 @@ const VietnamTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img
-            width={100}
+          <Image width={100}
             height={100}
             src="/img/logo.png"
             alt="Paradise Bliss Tours Logo"
@@ -256,54 +256,55 @@ const VietnamTour = () => {
         >
           <div className="py-6 space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why Visit Vietnam?</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">About Vietnam:</h3>
               <p className="text-gray-600 leading-relaxed">
-                Vietnam is a country where history, culture, and nature blend seamlessly. Explore ancient temples, colonial architecture, and vibrant street markets while enjoying stunning natural scenery. Whether you are seeking adventure, relaxation, or cultural immersion, Vietnam promises an experience of a lifetime.
+                Vietnam is the land of incredible landscapes, dynamic culture, great history, and warm hospitality. It is a beautiful mixture of history and modernism. From the dawn of the elderly people&apos;s practice trail in Urban parks at night, street markets dissolve like mist, giving way to open air where the aromas of coffee mingle with the first warm rays of the sun.
               </p>
-              <ul className="list-disc list-inside text-gray-600 space-y-2 mt-4">
-                <li><strong>Rich Culture & Heritage:</strong> Discover the traditional lifestyle, Buddhist temples, and UNESCO World Heritage sites like Hoi An Ancient Town and My Son Sanctuary.</li>
-                <li><strong>Stunning Landscapes:</strong> Cruise through the emerald waters of Halong Bay, trek the rice terraces in Sapa, or relax on pristine beaches in Da Nang and Phu Quoc.</li>
-                <li><strong>Adventure & Activities:</strong> Enjoy kayaking, hiking, cycling, cooking classes, and more, with options suitable for families, solo travelers, and adventure enthusiasts.</li>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Places to Visit:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-4 mt-4">
+                <li><strong>Ha Long Bay:</strong> In the Tanon Gulf, over 1,600 limestone islands emerge from the water. The marine Labyrinth was born 500 million years ago. Encompass a world where time seems to have stood still. The caves hidden in the bowels of these stone towers preserved the secret of the ancient civilization. A down and dusk took the sun-kissed water surface, and the bay transforms into a mirror reflecting the sky. A few km away, we find Can Hab revealing a more intimate face of this aquatic paradise.</li>
+                <li><strong>Hanoi:</strong> In northern Vietnam, Hanoi encapsulates centuries of history in the different 36 streets, each dedicated to a different craft. Here, the artists use the old methods to create jewelry as their ancestors did. In the heart of the maze alley, a train rushes through twice daily, brushing past houses and shops on a street so narrow that residents must pull in stools and display goods at the sound of the bell. Jaun Kim Lakes dominates the city center with the turtle tower at its heart in the Temple of Literature; instead, the students still touch the head of the turtle, hoping for luck in the exam.</li>
+                <li><strong>Phu Quak Island:</strong> Off the Cambodian coast, Quak emerges from the Gulf of Thailand. Cable cars source over the sea for almost 8 km, connecting the main island to three smaller islands. Glass cabins offer a spectacular view of the archipelago floating 100 m above the turquoise water. In the heart of the main city, Dong Dong, the Danka Temple rises on a rocky peak century dedicated to the sea goddess offering spiritual shorter to fishermen. The city develops rapidly between luxury and large shopping centers while keeping alive the traditional markets where fishermen sell their daily catch.</li>
+                <li><strong>Ho Chi Minh City:</strong> Seon’s glass towers challenge the sky in District One. The Zee unification place stands majestic. The city moves over the rhythm of over 8 million inhabitants and 7 million scooters, swimming between French colonial boulevard and ultra-modern skyscrapers. 250 km of these tunnels, 80 cm high, tell a story of war. In the darkness across three different depth levels, they show how the field, hospital, kitchen, weapons report, and even a theatre to entertain soldiers during the long year of conflicts.</li>
+                <li><strong>Hoi An:</strong> This is the ancient Vietnamese port City. Lanterns dominate every corner and Alley. When the sun disappeared, the city transformed the lantern lights one after another. River flows bounce off ancient wall painting, even the old Japanese bridge, with magic. The night market comes alive under the sky of lights, vendors arrange their wares while the Aroma of street food fills the air. Hoi An isn&apos;t just the city, it&apos;s a fall of light that repeats every night.</li>
+                <li><strong>Sapa:</strong> Northern Vietnamese mountains transform into their cases to the sky. Sapa&apos;s rice terrace extends for 100s of kilometers, shaped by sanctuaries of work by the home and down what flows from one level to another in an irrigation system created 2000 years ago. Each family guards a piece of green Canvas that covers the mountains up to the clouds.</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Top Destinations in Vietnam</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Ho Chi Minh City:</strong> A vibrant metropolis combining modern skyscrapers with historical landmarks such as the Reunification Palace and War Remnants Museum.</li>
-                <li><strong>Hanoi:</strong> The capital city, famous for its charming Old Quarter, Hoan Kiem Lake, French colonial architecture, and rich cultural scene.</li>
-                <li><strong>Halong Bay:</strong> Cruise among thousands of limestone islands, explore hidden caves, and enjoy kayaking in the calm emerald waters.</li>
-                <li><strong>Hoi An:</strong> Wander the lantern-lit streets, visit tailor shops, and enjoy authentic Vietnamese cuisine in this UNESCO World Heritage town.</li>
-                <li><strong>Sapa & Northern Highlands:</strong> Trek through terraced rice fields, visit ethnic minority villages, and experience the serene beauty of the northern mountains.</li>
-                <li><strong>Phu Quoc & Da Nang:</strong> Relax on pristine beaches, swim in clear waters, and indulge in water sports in Vietnam’s tropical paradises.</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best time to come:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li><strong>Best Season (November – April):</strong> This is the best time to visit Vietnam, as this season has pleasant weather. Best for city tour, beaches, and mountains. Ideal to visit Ha Long Bay, Hanoi, Hoi An, Da Nang, and Ho Chi Minh City.</li>
+                <li><strong>Spring (February – April):</strong> Best for sightseeing, cruises, and trekking in Sapa.</li>
+                <li><strong>Summer (May – August):</strong> Best for summer activities in Phu Quac, Da Nang.</li>
+                <li><strong>Autumn (September – November):</strong> fewer crowds and cool weather, best for Sapa, Hanoi.</li>
+                <li><strong>Monsoon Season (May – October):</strong> Best for indoor activities like spa and massage, not so favorable time to visit.</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit Vietnam</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>North Vietnam (Hanoi, Sapa):</strong> September to November & March to May – pleasant temperatures and clear skies.</li>
-                <li><strong>Central Vietnam (Hoi An, Da Nang):</strong> February to August – dry season and beach-perfect weather.</li>
-                <li><strong>South Vietnam (Ho Chi Minh City, Mekong Delta, Phu Quoc):</strong> December to April – warm and sunny.</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in Vietnam:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Try the cruise in Ha Long Bay and the Mekong Delta.</li>
+                <li>Explore the ancient quarters of Hanoi.</li>
+                <li>Trek through the rice fields of Sapa.</li>
+                <li>Visit Ba Na Hills, the Golden Bridge.</li>
+                <li>Visit Phu Quac Island.</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why Choose Paradise Bliss Tours for Vietnam?</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Tailor-Made Packages:</strong> Whether a luxury trip, backpacking adventure, or family holiday, we customize your itinerary.</li>
-                <li><strong>Affordable Pricing:</strong> Transparent costs with no hidden charges.</li>
-                <li><strong>Expert Local Guides:</strong> Knowledgeable guides enhance your experience with insights into history, culture, and hidden gems.</li>
-                <li><strong>Comfort & Convenience:</strong> Handpicked hotels, private transfers, and well-planned sightseeing.</li>
-                <li><strong>24/7 Customer Support:</strong> Assistance anytime during your journey.</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why choose Paradise Bliss Tours:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Experienced in Global and Personalized travel plans.</li>
+                <li>Tailored itinerary for all traveler as per their need and preferences.</li>
+                <li>Complete Tour services – Hotels, Visa, Flights, and sightseeing.</li>
+                <li>We provide you 24*7 customer support.</li>
+                <li>Affordable Luxury Tour packages without any hidden cost.</li>
               </ul>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Book Your Vietnam Tour with Paradise Bliss Tours</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Experience Vietnam like never before with Paradise Bliss Tours. Explore, relax, and create memories that will last a lifetime. From scenic landscapes to cultural treasures, your perfect Vietnam vacation awaits.
-              </p>
             </div>
           </div>
         </div>
@@ -328,8 +329,7 @@ const VietnamTour = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <img
-              width={48}
+            <Image width={48}
               height={48}
               src={stat.img}
               alt={stat.text.split('<br/>')[0]}
@@ -394,8 +394,7 @@ const VietnamTour = () => {
                     className="h-full flex flex-col"
                   >
                     <Link href={tour.link} className="flex-1 flex flex-col cursor-pointer">
-                      <img
-                        height={224}
+                      <Image height={224}
                         width={400}
                         src={tour.image}
                         alt={tour.title}
@@ -485,8 +484,7 @@ const VietnamTour = () => {
             </button>
             {selectedTour && (
               <div className="mb-4">
-                <img
-                  height={128}
+                <Image height={128}
                   width={400}
                   src={selectedTour.image}
                   alt={selectedTour.title}

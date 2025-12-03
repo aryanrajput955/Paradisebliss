@@ -2,18 +2,19 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect, useCallback } from 'react';
 import { AiOutlineCalendar, AiOutlineDown, AiOutlineUp, AiOutlineStar, AiOutlinePhone } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Image from 'next/image';
+
 import { memo } from 'react';
 
 // Updated images for Manali–Kasol–Sissu theme (replace with actual image paths)
-const heroImage = "/optimised/manali-kasol-hero.png";
+const heroImage = "https://images.unsplash.com/photo-1712388430474-ace0c16051e2?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 const highlightImages = [
-  "/optimised/hadimba-temple.webp",
-  "/optimised/solang-valley.jpeg",
-  "/optimised/kasol-market.png",
-  "/optimised/manikaran-gurudwara.png",
+  "https://images.unsplash.com/photo-1713981275586-9743b954e5d3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1670088776580-e44d6a2a29e3?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1612638039814-1a67ea727114?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1675515642414-d99b23e2d95f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
 const rightSideImage = "/img/logo.png";
 
@@ -135,17 +136,15 @@ const HighlightCard = memo(({ highlight, index, variants }) => (
   <motion.div
     variants={variants}
     whileHover={{ scale: 1.02 }}
-    className={`relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}`}
+    className="relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}"
     initial="hidden"
     animate="show"
   >
-    <Image
-      src={highlight.image}
+    <Image src={highlight.image}
       alt={highlight.title}
       width={500}
       height={192}
       className="w-full h-48 object-cover"
-      loading="lazy"
       quality={75}
     />
     <div className="p-5">
@@ -475,13 +474,11 @@ export default function ManaliKasolSissuPackage() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <Image
-              src={rightSideImage}
+            <Image src={rightSideImage}
               alt="Manali Kasol Icon"
               width={150}
               height={150}
               className="object-cover"
-              loading="lazy"
               quality={75}
             />
             <motion.button
@@ -650,13 +647,11 @@ export default function ManaliKasolSissuPackage() {
               X
             </button>
             <div className="mb-4">
-              <Image
-                src={heroImage}
+              <Image src={heroImage}
                 alt="Manali–Kasol–Sissu"
                 width={400}
                 height={128}
                 className="w-full h-32 object-cover rounded-lg"
-                loading="lazy"
                 quality={75}
               />
               <h3 className="mt-3 text-lg font-bold text-[#00453A] font-sans">Manali–Kasol–Sissu – 3 Nights / 4 Days - Paradise Bliss Tours</h3>

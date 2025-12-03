@@ -7,11 +7,12 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import WhyChooseUs from '@/components/whychooseus';
 import Link from 'next/link';
-import Image from 'next/image';
+
 
 const tours = [
   {
@@ -106,8 +107,7 @@ const EuropeTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Image
-            width={100}
+          <Image width={100}
             height={100}
             src="/img/logo.png"
             alt="Paradise Bliss Tours Logo"
@@ -214,171 +214,55 @@ const EuropeTour = () => {
         >
           <div className="py-6 space-y-8">
 
-            {/* Backpacking & Signature Tours */}
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Europe Backpacking & Signature Tours</h3>
-              <p className="text-gray-600">
-                One of our standout offerings is the <strong>Spain Backpacking – La Tomatina Special</strong>, a vibrant 9-day trip that weaves party energy, cultural jewels, and scenic relaxation into one epic itinerary.
-              </p>
-              <p className="text-gray-600 mt-2">Highlights include:</p>
-              <ul className="list-disc list-inside text-gray-600 space-y-1 mt-2">
-                <li>Electric nightlife and city walkabout in Madrid</li>
-                <li>The world’s most famous food fight at La Tomatina in Valencia</li>
-                <li>Architecture, beaches and Gaudí in Barcelona</li>
-                <li>Chill time at the Mediterranean coast (Costa Brava)</li>
-              </ul>
-              <p className="text-gray-600 mt-3">
-                Beyond Spain, our Europe catalog includes multi-country tours across France, Italy, Switzerland, Germany, the UK, the Nordics and more — mixing classic landmarks with offbeat discoveries.
-              </p>
-            </div>
-
-            {/* Best Time to Visit */}
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit Europe</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Spring (Mar-May):</strong> Gardens blooming, pleasant cities, fewer crowds</li>
-                <li><strong>Summer (Jun-Aug):</strong> Festival season, long daylight, coastal adventures</li>
-                <li><strong>Autumn (Sep-Nov):</strong> Harvest vibes, golden foliage, comfortable exploration</li>
-                <li><strong>Winter (Dec-Feb):</strong> Snowy Alps, Christmas markets, northern lights</li>
-              </ul>
-              <p className="text-gray-600 mt-2">For Spain’s La Tomatina, <strong>late August</strong> is the prime window.</p>
-            </div>
-
-            {/* How You Reach */}
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">How You Reach & Travel Around</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Flights:</strong> We coordinate international flights from major Indian cities into European hubs (Madrid, Paris, London, etc.).</li>
-                <li><strong>In-Europe Travel:</strong> High-speed trains, buses, and regional flights to maximize comfort and sightseeing.</li>
-                <li><strong>Visas:</strong> Schengen visa assistance and documentation support provided.</li>
-                <li><strong>Transfers:</strong> Airport pick-ups, intercity transfers, and in-country routing simplified.</li>
-              </ul>
-            </div>
-
-            {/* Sample Tour */}
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">What a Sample Europe Tour Could Look Like</h3>
-              <p className="text-gray-600">Your days might include:</p>
-              <ul className="list-disc list-inside text-gray-600 space-y-1 mt-2">
-                <li>Morning city walks through historic quarters</li>
-                <li>Afternoon museum visits, local food tastings or festival stops</li>
-                <li>Evening leisure — street music, local markets, strolls by rivers</li>
-                <li>Scenic coastal escape or countryside day trips</li>
-                <li>Occasional free time to wander or rest</li>
-              </ul>
-              <p className="text-gray-600 mt-3">We always keep balance — active days and relaxed ones.</p>
-            </div>
-
-            {/* Highlights */}
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Europe Highlights to Explore</h3>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-600">
-                <li><strong>Spain:</strong> Madrid, Valencia (La Tomatina), Barcelona, Costa Brava</li>
-                <li><strong>France & Italy:</strong> Paris, Nice, Rome, Florence, Venice</li>
-                <li><strong>Central Europe:</strong> Prague, Vienna, Budapest</li>
-                <li><strong>Alps & Nature:</strong> Switzerland (Interlaken, Zermatt), Austria, Slovenia</li>
-                <li><strong>Northern Europe:</strong> Scandinavia, fjords, northern lights</li>
-                <li><strong>UK & Ireland:</strong> London, Edinburgh, Dublin</li>
-              </ul>
-            </div>
-
-            {/* Inclusions & Exclusions */}
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">What’s Included & What’s Not</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-bold text-green-700 mb-2">Included:</h4>
-                  <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
-                    <li>8 nights’ hostel accommodation (shared rooms)</li>
-                    <li>Train journey: Madrid to Valencia</li>
-                    <li>La Tomatina: transport, entry, after-party</li>
-                    <li>Walking tours in Madrid & Barcelona</li>
-                    <li>Beach days, boat party in Ibiza, nightlife events</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-bold text-red-700 mb-2">Not Included:</h4>
-                  <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
-                    <li>International & domestic flights</li>
-                    <li>Visa & insurance</li>
-                    <li>Meals beyond specified</li>
-                    <li>Personal expenses, tips, drinks</li>
-                    <li>Upgrades or extra transfers</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Cost */}
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Cost & Options</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-1">
-                <li><strong>Base Price (Spain Only):</strong> ₹1,29,999 per person</li>
-                <li><strong>With Domestic Flights:</strong> Higher (adjusted based on flight costs)</li>
-                <li>Additional taxes/charges may apply</li>
-              </ul>
-            </div>
-
-            {/* Trip Vibe */}
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Trip Vibe & Who This Is For</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">About Europe:</h3>
               <p className="text-gray-600 leading-relaxed">
-                This is for those craving <strong>festivals, dance floors, party sunsets, sun-kissed beaches, art & architecture</strong>, and the energy of Spain’s wildest hour. Perfect for <strong>solo travellers, energetic groups</strong>, or anyone ready to live large.
+                Europe is known as the “Continent of Culture & Romance”. It is famous for its Architectural beauty, fairy-tale landscapes, artistic excellence, and marvelous cities. From Switzerland’s snowy mountains to the picture-perfect alley of Paris, Rome’s echoing historic past, the floral wonders of Amsterdam, and the colorful nightlife of Barcelona, Europe is astonishing, waiting to be explored. It is one of the most diverse, attractive, and enriching destinations on earth.
               </p>
             </div>
 
-            {/* Important Notes */}
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Important Notes</h3>
-              <ul className="list-disc list-inside text-gray-600 text-sm space-y-1">
-                <li>Hostel check-in/out times apply</li>
-                <li>Flight costs within Spain are dynamic</li>
-                <li>Cancellation policies apply</li>
-                <li>Valid Schengen visa & travel documents required</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best place to visit in Europe:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-4 mt-4">
+                <li><strong>Switzerland:</strong> Switzerland is a dreamy country that looks like it comes directly out of a dream. This place offers stunning mountains, beautiful scenery, tranquil lakes, and a peaceful environment. Its main attractions are Lucerne and Zurich, offering a seamless blend of natural beauty and a modern lifestyle. Travelers can enjoy iconic experiences, such as Jungfraujoch and Mt. Titlis, as well as scenic rail adventures like the Panoramic Express.</li>
+                <li><strong>France:</strong> The timeless beauty, which is celebrated for its culture, Fashion, and Romance. This place is the perfect blend of modernity and eternal charm. Paris is often called the &quot;City of Lights&quot;, offers the grand avenues, iconic monuments, stunning cafes, and the historic museums, which are worldwide famous. The Other attractions are the Provence, Bordeaux, and Normandy.</li>
+                <li><strong>Italy:</strong> A charming country known for its past, fabulous food, and the amazing places to explore. Italy offers lovely beaches, a calm landscape, a beautiful lake, and attractive streets. It is also popular for its world-famous food like pasta, gelato, and pizza. Its main tourist attractions are Rome, Venice, and Florence. With its delicious food, natural beauty, and great places to visit, it&apos;s a perfect escape for Vacations.</li>
+                <li><strong>Netherlands:</strong> This is an elegant and calm country that is renowned for its windmills, Tulip fields, and the peaceful canals. This country is famous for its cleanliness, modern lifestyle, and warm-hearted people. In the spring season, the tulips bloom in vibrant and bright colors, which look similar to those in a storybook. Its main attractions are Amsterdam and Rotterdam, where you can explore the Stunning streets, museums, and cozy cafes.</li>
+                <li><strong>Spain:</strong> Spain is a vital destination plugged with bright beaches, a historic legacy, intense culture, and lively cities. Barcelona, Madrid, Seville, and Valencia describe the iconic attractions like the Royal Palace, Sagrada Familia, and beautiful cathedrals. This country also offers the elegant islands like Ibiza and Mallorca. Spain is renowned for its flamenco dance, football, festivals, and delicious dishes like paella and tapas.</li>
+                <li><strong>Austria:</strong> Austria offers breathtaking views of towering peaks, crystal-clear lakes, and elegant cities. Vienna, the capital city, is famous for its ancient Palaces, classical music, and royal heritage. Salzburg, the birthplace of Mozart, fascinates travelers with its extensive architecture, fortress, and scenic landscapes. The country displays an ideal combination of nature, culture, and history</li>
               </ul>
             </div>
 
-            {/* Full Itinerary */}
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">9-Day La Tomatina Itinerary</h3>
-              <div className="space-y-3 text-sm text-gray-600">
-                <details className="border rounded-lg p-3 bg-white">
-                  <summary className="font-semibold cursor-pointer">Day 1: Arrival in Madrid</summary>
-                  <p className="mt-2">Land in Madrid, transfer to hostel. Explore rooftop bars, La Latina, Malasaña, Chueca. Dive into electric nightlife.</p>
-                </details>
-                <details className="border rounded-lg p-3 bg-white">
-                  <summary className="font-semibold cursor-pointer">Day 2: Madrid City Tour</summary>
-                  <p className="mt-2">Royal Palace, Plaza Mayor, Mercado de San Miguel, Prado/Reina Sofía, El Retiro Park. Evening: tapas & optional flamenco.</p>
-                </details>
-                <details className="border rounded-lg p-3 bg-white">
-                  <summary className="font-semibold cursor-pointer">Day 3: To Valencia</summary>
-                  <p className="mt-2">High-speed train to Valencia. Explore old town, Cathedral, beach, paella dinner.</p>
-                </details>
-                <details className="border rounded-lg p-3 bg-white">
-                  <summary className="font-semibold cursor-pointer">Day 4: La Tomatina Festival</summary>
-                  <p className="mt-2">Early trip to Buñol. Tomato fight at noon. Return, clean up, after-party with music & food.</p>
-                </details>
-                <details className="border rounded-lg p-3 bg-white">
-                  <summary className="font-semibold cursor-pointer">Day 5: Fly to Ibiza</summary>
-                  <p className="mt-2">Flight to Ibiza. Explore Dalt Vila, coastline. Night: world-famous club scene.</p>
-                </details>
-                <details className="border rounded-lg p-3 bg-white">
-                  <summary className="font-semibold cursor-pointer">Day 6: Ibiza Beach & Boat Party</summary>
-                  <p className="mt-2">Cala Comte, Playa d’en Bossa. Sunset boat party with music & drinks.</p>
-                </details>
-                <details className="border rounded-lg p-3 bg-white">
-                  <summary className="font-semibold cursor-pointer">Day 7: To Barcelona</summary>
-                  <p className="mt-2">Travel to Barcelona. Afternoon on beaches or Gothic Quarter. Tapas by the sea.</p>
-                </details>
-                <details className="border rounded-lg p-3 bg-white">
-                  <summary className="font-semibold cursor-pointer">Day 8: Gaudí & Barceloneta</summary>
-                  <p className="mt-2">Sagrada Família, Park Güell, Casa Batlló, La Pedrera. Relax on Barceloneta Beach.</p>
-                </details>
-                <details className="border rounded-lg p-3 bg-white">
-                  <summary className="font-semibold cursor-pointer">Day 9: Departure</summary>
-                  <p className="mt-2">Final breakfast, beach walk or shopping. Depart with memories.</p>
-                </details>
-              </div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in Europe:</h3>
+              <ul className="list-disc list-inside text-gray-600 space-y-2 mt-4">
+                <li>Explore the Iconic landmarks like the Eiffel Tower, the Colosseum, Big Ben, and Sagrada Familia.</li>
+                <li>Peaceful cruise trip in Amsterdam, and the romantic waterway ride in Venice.</li>
+                <li>Experience the Natural beauty, like snow-covered peaks, northern lights, lakes, and beaches.</li>
+                <li>Discover the historical architectures like the Vatican Museums, the Louvre Museum, the Prague Castle, and the Acropolis.</li>
+                <li>Taste the local taste of Europe, which is a paradise for food lovers.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best time to Visit:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li><strong>Spring (March to May):</strong> This is a good time to visit Europe, as the tulips bloom and the city looks fresh. The crowd is also less compared to summer.</li>
+                <li><strong>Summer (June to August):</strong> the most popular time for tourists to visit, best for outdoor and beach activities in Spain & Greece, lakes exploration in Switzerland.</li>
+                <li><strong>Autumn (September to November):</strong> In this season, leaves turn golden and make the landscape look stunning. This is best for a budget-friendly trip.</li>
+                <li><strong>Winter (December to February):</strong> In some parts of Europe, it looks majestic in winter. Best for skiing, Northern lights, and the winter holiday.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why choose Paradise Bliss Tours:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Experienced in Global and Personalized travel plans.</li>
+                <li>Tailored itinerary for all traveler as per their need and preferences.</li>
+                <li>Complete Tour services – Hotels, Visa, Flights, and sightseeing.</li>
+                <li>We provide you 24*7 customer support.</li>
+                <li>Affordable Luxury Tour packages without any hidden cost.</li>
+              </ul>
             </div>
 
           </div>
@@ -405,8 +289,7 @@ const EuropeTour = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <Image
-              width={48}
+            <Image width={48}
               height={48}
               src={stat.img}
               alt={stat.text.split('<br/>')[0]}
@@ -469,8 +352,7 @@ const EuropeTour = () => {
                     className="h-full flex flex-col"
                   >
                     <Link href={tour.link} className="flex-1 flex flex-col cursor-pointer">
-                      <Image
-                        height={224}
+                      <Image height={224}
                         width={400}
                         src={tour.image}
                         alt={tour.title}
@@ -560,8 +442,7 @@ const EuropeTour = () => {
             </button>
             {selectedTour && (
               <div className="mb-4">
-                <Image
-                  height={128}
+                <Image height={128}
                   width={400}
                   src={selectedTour.image}
                   alt={selectedTour.title}

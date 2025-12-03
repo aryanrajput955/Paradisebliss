@@ -2,18 +2,19 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect, useCallback } from 'react';
 import { AiOutlineCalendar, AiOutlineDown, AiOutlineUp, AiOutlineStar, AiOutlinePhone } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Image from 'next/image';
+
 import { memo } from 'react';
 
 // Updated images for Sangla Holi Tour theme (replace with actual image paths)
-const heroImage = "/optimised/sangla-holi-hero.png";
+const heroImage = "https://images.unsplash.com/photo-1603228254119-e6a4d095dc59?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 const highlightImages = [
-  "/optimised/tabo-monastery.webp",
-  "/optimised/key-monastery.jpeg",
-  "/optimised/sangla-holi-festival.png",
-  "/optimised/chicham-bridge.png",
+  "https://images.unsplash.com/photo-1579187626396-5a9dc3e09522?q=80&w=1264&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1748365836747-f344b99b1981?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1617184003107-0df15fea4903?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1597755472102-15fb225feee1?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
 const rightSideImage = "/img/logo.png";
 
@@ -166,17 +167,15 @@ const HighlightCard = memo(({ highlight, index, variants }) => (
   <motion.div
     variants={variants}
     whileHover={{ scale: 1.02 }}
-    className={`relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}`}
+    className="relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}"
     initial="hidden"
     animate="show"
   >
-    <Image
-      src={highlight.image}
+    <Image src={highlight.image}
       alt={highlight.title}
       width={500}
       height={192}
       className="w-full h-48 object-cover"
-      loading="lazy"
       quality={75}
     />
     <div className="p-5">
@@ -506,13 +505,11 @@ export default function SanglaHoliTourPackage() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <Image
-              src={rightSideImage}
+            <Image src={rightSideImage}
               alt="Sangla Holi Icon"
               width={150}
               height={150}
               className="object-cover"
-              loading="lazy"
               quality={75}
             />
             <motion.button
@@ -681,13 +678,11 @@ export default function SanglaHoliTourPackage() {
               X
             </button>
             <div className="mb-4">
-              <Image
-                src={heroImage}
+              <Image src={heroImage}
                 alt="Sangla Holi Tour"
                 width={400}
                 height={128}
                 className="w-full h-32 object-cover rounded-lg"
-                loading="lazy"
                 quality={75}
               />
               <h3 className="mt-3 text-lg font-bold text-[#00453A] font-sans">Sangla Holi Tour – 9 Nights / 10 Days - Paradise Bliss Tours</h3>

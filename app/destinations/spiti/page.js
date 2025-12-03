@@ -6,6 +6,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import WhyChooseUs from '@/components/whychooseus';
@@ -17,18 +18,18 @@ const tours = [
     dates: ["March 28", "April 01", "April 15"],
     prices: ["Starting ₹20,990*", "₹17,990*"],
     image: "/img/spiti.jpg",
-    duration: "8D7N",
+    duration: "9D8N",
     group: "Group Tour",
-    link: "/indian-tours/spitiwinter-tour-package",
+    link: "/indian-tours/spiti-winter-tour-package",
   },
   {
     title: "Spiti Valley with Chandra Taal",
     dates: ["March 29", "April 02", "April 15"],
     prices: ["Starting ₹20,990*", "₹16,000*"],
     image: "/img/chandrataal.png",
-    duration: "5D4N",
+    duration: "7D6N",
     group: "Group Tour",
-    link: "/indian-tours/spitichandratal-tour-package",
+    link: "/indian-tours/spiti-chandratal-tour-package",
   },
   {
     title: "Spiti Valley Bike Tour Package",
@@ -37,14 +38,14 @@ const tours = [
     image: "/img/bike.jpg",
     duration: "5D6N",
     group: "Group Adventure",
-    link: "/indian-tours/spitibike-tour-package",
+    link: "/indian-tours/spiti-bike-tour-package",
   },
   {
     title: "Spiti Valley Full Circuit Tour",
     dates: ["Jan 18", "Feb 08", "Feb 15"],
     prices: ["Starting ₹30,990*", "₹21,999*"],
     image: "/img/spiti3.jpg",
-    duration: "7D6N",
+    duration: "9D8N",
     group: "Group Tour",
     link: "/indian-tours/spitifullcircuit-tour-package",
   },
@@ -52,17 +53,17 @@ const tours = [
     title: "Spiti Valley – Cold Desert Adventure",
     dates: ["Feb 01", "Feb 15", "Mar 01"],
     prices: ["Starting ₹32,990*", "Price On Request*"],
-    image: "/img/holi.jpg",
-    duration: "7D6N",
+    image: "https://images.unsplash.com/photo-1651955670895-9aa2e9243b66?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    duration: "9D8N",
     group: "Group Adventure",
-    link: "/indian-tours/spiti-valley-tour-package",
+    link: "/indian-tours/spiti-winter-tour-package",
   },
     {
-    title: "Spiti Tour Package",
+    title: "Spiti Valley Himalayan Odyssey",
     dates: ["Feb 01", "Feb 15", "Mar 01"],
     prices: ["Starting ₹32,990*", "Price On Request*"],
-    image: "/img/holi.jpg",
-    duration: "7D6N",
+    image: "https://wallpaperaccess.com/full/7928594.jpg",
+    duration: "8D7N",
     group: "Group Adventure",
     link: "/indian-tours/spiti-tour-package",
   },
@@ -163,7 +164,13 @@ const SpitiValleyTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img src="/img/logo.png" alt="Paradise Bliss Tours Logo" className="w-20 mx-auto mb-6" />
+          <Image
+            width={100}
+            height={100}
+            src="/img/logo.png"
+            alt="Paradise Bliss Tours Logo"
+            className="w-20 mx-auto mb-6"
+          />
 
           <label className="block text-left text-gray-700 text-sm mb-2">Name</label>
           <input
@@ -297,7 +304,13 @@ const SpitiValleyTour = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <img src={stat.img} alt="" className="w-12 h-12 mx-auto" />
+            <Image
+              width={48}
+              height={48}
+              src={stat.img}
+              alt=""
+              className="w-12 h-12 mx-auto"
+            />
             <p className="mt-2 text-lg font-bold" dangerouslySetInnerHTML={{ __html: stat.text }} />
           </motion.div>
         ))}
@@ -338,8 +351,10 @@ const SpitiValleyTour = () => {
                     className="h-full flex flex-col"
                   >
                     <Link href={tour.link} className="flex-1 flex flex-col">
-                      <img
+                      <Image
                         src={tour.image}
+                        width={400}
+                        height={224}
                         alt={tour.title}
                         className="w-full h-56 object-cover rounded-t-xl"
                         onError={(e) => (e.target.src = '/img/placeholder.jpg')}
@@ -409,8 +424,10 @@ const SpitiValleyTour = () => {
 
             {selectedTour && (
               <div className="mb-6 text-center">
-                <img
+                <Image
                   src={selectedTour.image}
+                  width={400}
+                  height={128}
                   alt={selectedTour.title}
                   className="w-full h-32 object-cover rounded-lg mb-4"
                   onError={(e) => (e.target.src = '/img/placeholder.jpg')}

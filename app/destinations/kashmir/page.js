@@ -6,6 +6,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import WhyChooseUs from '@/components/whychooseus';
@@ -156,7 +157,7 @@ const KashmirTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img
+          <Image
             width={100}
             height={100}
             src="/img/logo.png"
@@ -310,7 +311,7 @@ const KashmirTour = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <img width={48} height={48} src={stat.img} alt="" className="w-12 h-12 mx-auto" />
+            <Image width={48} height={48} src={stat.img} alt="" className="w-12 h-12 mx-auto" />
             <p className="mt-2 text-lg font-bold" dangerouslySetInnerHTML={{ __html: stat.text }} />
           </motion.div>
         ))}
@@ -351,8 +352,10 @@ const KashmirTour = () => {
                     className="h-full flex flex-col"
                   >
                     <Link href={tour.link} className="flex-1 flex flex-col">
-                      <img
+                      <Image
                         src={tour.image}
+                        width={400}
+                        height={224}
                         alt={tour.title}
                         className="w-full h-56 object-cover rounded-t-xl"
                         onError={(e) => (e.target.src = '/img/placeholder.jpg')}
@@ -423,7 +426,13 @@ const KashmirTour = () => {
             <button onClick={handleCloseModal} className="absolute top-3 right-4 text-2xl text-gray-500 hover:text-gray-800">×</button>
             {selectedTour && (
               <>
-                <img src={selectedTour.image} alt={selectedTour.title} className="w-full h-32 object-cover rounded-lg" />
+                <Image
+                  src={selectedTour.image}
+                  width={400}
+                  height={128}
+                  alt={selectedTour.title}
+                  className="w-full h-32 object-cover rounded-lg"
+                />
                 <h3 className="mt-4 text-xl font-bold text-gray-900">{selectedTour.title}</h3>
               </>
             )}

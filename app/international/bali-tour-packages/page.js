@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay, Navigation } from 'swiper/modules';
@@ -104,7 +105,7 @@ const BaliTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img
+          <Image
             width={100}
             height={100}
             src="/img/logo.png"
@@ -279,7 +280,7 @@ const BaliTour = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <img
+            <Image
               width={48}
               height={48}
               src={stat.img}
@@ -345,7 +346,7 @@ const BaliTour = () => {
                     className="h-full flex flex-col"
                   >
                     <Link href={tour.link} className="flex-1 flex flex-col cursor-pointer">
-                      <img
+                      <Image
                         height={224}
                         width={400}
                         src={tour.image}
@@ -436,7 +437,7 @@ const BaliTour = () => {
             </button>
             {selectedTour && (
               <div className="mb-4">
-                <img
+                <Image
                   height={128}
                   width={400}
                   src={selectedTour.image}

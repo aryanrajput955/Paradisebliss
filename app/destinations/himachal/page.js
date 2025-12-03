@@ -6,6 +6,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import WhyChooseUs from '@/components/whychooseus';
@@ -25,16 +26,16 @@ const tours = [
     title: "Manali–Kasol–Sissu Tour",
     dates: ["Dates on Request"],
     prices: ["₹8,999*", "₹7,499*"],
-    image: "/img/himachal.jpg",
+    image: "https://images.unsplash.com/photo-1675515642414-d99b23e2d95f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     duration: "3N4D",
     group: "Group Tour",
-    link: "/indian-tours/manali-kasol-sissu-tour ",
+    link: "/indian-tours/manali-kasol-sissu-tour",
   },
   {
     title: "Sangla Holi Festival Tour",
     dates: ["Dates on Request"],
     prices: ["₹12,999*", "₹10,999*"],
-    image: "/img/himachal.jpg",
+    image: "https://images.unsplash.com/photo-1617184003170-1f266c325ff3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     duration: "9N10D",
     group: "Group Tour",
     link: "/indian-tours/sangla-holi-tour",
@@ -43,7 +44,7 @@ const tours = [
     title: "Kasol–Tosh Trek",
     dates: ["Dates on Request"],  
     prices: ["₹15,999*", "₹13,499*"],
-    image: "/img/himachal.jpg",
+    image: "https://images.unsplash.com/photo-1573465679176-c3a87941baa2?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     duration: "2N3D",
     group: "Group Tour",
     link: "/indian-tours/kasol-tosh-trek",
@@ -131,8 +132,7 @@ const HimachalTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img
-            width={100}
+          <Image width={100}
             height={100}
             src="/img/logo.png"
             alt="Paradise Bliss Tours Logo"
@@ -297,8 +297,7 @@ const HimachalTour = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <img
-              width={48}
+            <Image width={48}
               height={48}
               src={stat.img}
               alt={stat.text.split('<br/>')[0]}
@@ -365,8 +364,7 @@ const HimachalTour = () => {
                   >
                     {/* Clickable area: image + info */}
                     <Link href={tour.link} className="flex-1 flex flex-col cursor-pointer">
-                      <img
-                        height={224}
+                      <Image height={224}
                         width={400}
                         src={tour.image}
                         alt={tour.title}
@@ -461,8 +459,7 @@ const HimachalTour = () => {
             </button>
             {selectedTour && (
               <div className="mb-4">
-                <img
-                  height={128}
+                <Image height={128}
                   width={400}
                   src={selectedTour.image}
                   alt={selectedTour.title}

@@ -2,18 +2,19 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect, useCallback } from 'react';
 import { AiOutlineCalendar, AiOutlineDown, AiOutlineUp, AiOutlineStar, AiOutlinePhone } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Image from 'next/image';
+
 import { memo } from 'react';
 
 // Updated images for McLeodganj–Triund Trek theme (replace with actual image paths)
-const heroImage = "/optimised/mcleodganj-hero.png";
+const heroImage = "https://images.unsplash.com/photo-1626621338418-713655538d99?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 const highlightImages = [
-  "/optimised/tsuglagkhang-complex.webp",
-  "/optimised/triund-trek.jpeg",
-  "/optimised/campfire-triund.png",
-  "/optimised/sunrise-dhauladhar.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Domaro_en_McLeod_Ganj.jpg/500px-Domaro_en_McLeod_Ganj.jpg",
+  "https://images.unsplash.com/photo-1654414885585-51e8c4ad9f7b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
 const rightSideImage = "/img/logo.png";
 
@@ -130,17 +131,15 @@ const HighlightCard = memo(({ highlight, index, variants }) => (
   <motion.div
     variants={variants}
     whileHover={{ scale: 1.02 }}
-    className={`relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}`}
+    className="relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}"
     initial="hidden"
     animate="show"
   >
-    <Image
-      src={highlight.image}
+    <Image src={highlight.image}
       alt={highlight.title}
       width={500}
       height={192}
       className="w-full h-48 object-cover"
-      loading="lazy"
       quality={75}
     />
     <div className="p-5">
@@ -470,13 +469,11 @@ export default function McLeodganjTriundTrekPackage() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <Image
-              src={rightSideImage}
+            <Image src={rightSideImage}
               alt="McLeodganj Triund Icon"
               width={150}
               height={150}
               className="object-cover"
-              loading="lazy"
               quality={75}
             />
             <motion.button
@@ -645,13 +642,11 @@ export default function McLeodganjTriundTrekPackage() {
               X
             </button>
             <div className="mb-4">
-              <Image
-                src={heroImage}
+              <Image src={heroImage}
                 alt="McLeodganj–Triund Trek"
                 width={400}
                 height={128}
                 className="w-full h-32 object-cover rounded-lg"
-                loading="lazy"
                 quality={75}
               />
               <h3 className="mt-3 text-lg font-bold text-[#00453A] font-sans">McLeodganj–Triund Trek – 3 Days - Paradise Bliss Tours</h3>

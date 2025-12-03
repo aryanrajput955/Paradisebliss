@@ -6,6 +6,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import WhyChooseUs from '@/components/whychooseus';
@@ -105,8 +106,7 @@ const GeorgiaTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img
-            width={100}
+          <Image width={100}
             height={100}
             src="/img/logo.png"
             alt="Paradise Bliss Tours Logo"
@@ -211,108 +211,44 @@ const GeorgiaTour = () => {
         >
           <div className="py-6 space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Spring (Mar–May): Blooming vineyards and pleasant sightseeing weather.</li>
-                <li>Summer (Jun–Aug): Warm days, festivals and excellent mountain treks.</li>
-                <li>Autumn (Sep–Nov): Harvest season — vibrant fall colours and wine festivals.</li>
-                <li>Winter (Dec–Feb): Snow sports in Gudauri and a magical alpine atmosphere.</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">How to Reach</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>By Air: Major international carriers operate flights to Tbilisi from hubs in the Middle East and Europe. We assist with flight planning from Indian cities.</li>
-                <li>Visa: Georgia offers e-visa options and visa facilitation for Indian travellers — Paradise Bliss Tours will guide you through the process.</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Must-Visit Places</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Tbilisi: Historic old town, Narikala Fortress, Rustaveli Avenue and vibrant cafe culture.</li>
-                <li>Gudauri: Skiing, paragliding and panoramic Caucasus views.</li>
-                <li>Kazbegi / Stepantsminda: Gergeti Trinity Church with Mount Kazbek as a backdrop.</li>
-                <li>Kakheti: Vineyards, cellar tours and picturesque Signagi.</li>
-                <li>Mtskheta & Ananuri: UNESCO sites, ancient monasteries and riverside forts.</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Trip Highlights</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Guided walking tours of Old & New Tbilisi</li>
-                <li>Wine tastings in family-run wineries in Kakheti</li>
-                <li>4x4 ascent to Gergeti Trinity Church in Kazbegi</li>
-                <li>Cable-car and funicular rides with panoramic views</li>
-                <li>Ski and snow-activity options in Gudauri</li>
-                <li>Handpicked hotels and private transfers</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Practical Tips</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Currency: Georgian Lari (GEL). Cards are widely accepted; carry some cash for local markets.</li>
-                <li>Language: Georgian is the official language; English is commonly understood in major towns.</li>
-                <li>Food to try: Khachapuri (cheese bread), Khinkali (dumplings) and Churchkhela (sweet nut snack).</li>
-                <li>Connectivity: Free WiFi is available in many hotels and cafes.</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why Travel Georgia with Paradise Bliss Tours?</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Tailor-made comfort: Handpicked hotels, private transfers, and flexible itineraries to match your travel style — romance, adventure, or a relaxed cultural escape.</li>
-                <li>Local expertise: English-speaking guides and experienced trip leaders who bring Georgia’s history, food and wines to life.</li>
-                <li>End-to-end support: Visa guidance, airport transfers, 24x7 assistance and small-group departures for a stress-free journey.</li>
-                <li>Unique experiences: Wine tastings in family-run wineries, 4x4 rides to Gergeti Trinity, cable-car rides in Tbilisi and curated local encounters.</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Tour Itinerary</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Day 1: Arrival in Tbilisi</li>
-                <li>Day 2: Discover Tbilisi — Old & New</li>
-                <li>Day 3: Journey Through Kakheti — Wine, Culture & Romance</li>
-                <li>Day 4: En Route to Gudauri — Fortresses & Scenic Drives</li>
-                <li>Day 5: Day Trip to Kazbegi (Stepantsminda)</li>
-                <li>Day 6: Return to Tbilisi, Evening at Leisure</li>
-                <li>Day 7: Departure</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">What’s Included</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Accommodations in carefully chosen hotels: 4 nights in Tbilisi, 2 nights in Gudauri, with daily breakfast</li>
-                <li>Private transfers and transportation throughout</li>
-                <li>Experienced English-speaking guide / driver</li>
-                <li>Sightseeing as per itinerary: cable-car & funicular in Tbilisi, visits to old towns, monasteries, forts, etc.</li>
-                <li>Wine tasting in Kakheti</li>
-                <li>4×4 transfer to Gergeti Trinity Church</li>
-                <li>Entry fees/tickets for listed sites in the itinerary</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">What’s Excluded</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Flights (international/domestic), visa, travel & medical insurance</li>
-                <li>Meals other than breakfast, drinks, snacks unless specified</li>
-                <li>Personal expenses: tips, laundry, phone/internet usage, etc.</li>
-                <li>Any extra activities not mentioned in the itinerary</li>
-                <li>Costs due to delays, weather, or factors beyond control</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Important Notes</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Passport validity: at least 6 months from the date of entry.</li>
-                <li>Hotel check-in/check-out times: check-in usually ~3 PM, check-out around noon — early/late options subject to availability.</li>
-                <li>Group age focus/customization available (if required).</li>
-                <li>Cancellation & rescheduling policies apply (depending on how close to departure).</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Ready to discover Georgia?</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">About Georgia:</h3>
               <p className="text-gray-600 leading-relaxed">
-                Let Paradise Bliss Tours craft the perfect Georgian escape for you — whether it’s a snow-filled adventure, a romantic vineyard retreat, or a cultural road trip. Contact us today for a customized itinerary, confirmed departures, and exclusive group departures.
+                It is located where Europe and Asia meet. This country has the highest mountain range, some of which are Europe’s ancient peaks that bring the history of Europe. Georgia holds an important role in human life, with the discovery of the oldest Human skull. Not only these, but the warmth of the people, which makes it a special place, they see the guest as a gift from God. The Georgian language is one of the most ancient languages that is still spoken.
               </p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best places to visit:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-4 mt-4">
+                <li><strong>Kazbegi Region:</strong> Known for its breathtaking landscapes, it is one of Georgia’s most captivating areas. Tucked away in the mountains of Georgia, and dominated by the stunning Mount Kasbek, one of the tallest peaks of Georgia. Here you can get the true taste of the culture and tradition of Georgian mountain life.</li>
+                <li><strong>People’s Friendship Monument:</strong> Perched on the cliff, this colorful monument was built in 1983 to commemorate the 200th anniversary of Georgia. It also offers panoramic views of the Caucasus Mountains. This is the favorite spot for the traveler and the photographers.</li>
+                <li><strong>Albano Pass:</strong> It is the highest and most dangerous drivable road in the world, navigating short twists and turns along with cliffs as the road finds its way between the remote region of Tetti and Ken Surti. They are so isolated that it looks as if you step back in time. These roads are open in summer, and when winter rolls in, heavy snow shuts them off completely. Here, the roads feel like an adventure.</li>
+                <li><strong>Gergeti Trinity Church:</strong> This 14th-century Church is nothing short of iconic. This is not just a religious site but also a resilient one, standing strong through invasion and political shifts over the centuries. This gives a breathtaking view of the Valley of towering mountains, blending the region’s natural beauty with its deep cultural roots.</li>
+                <li><strong>Akhaltsikhe:</strong> Which means new fortress. Its highlight is the Rabati Castle. It is the blend of Georgian and Persian architecture. Inside it, you will find a church, a mosque, and some other holy buildings, which tells the diversity of this place. From the wall of this fort, you can get a view of the stunning landscape.</li>
+                <li><strong>Tbilisi:</strong> The new capital of Georgia, which was founded in the 5th century. This town is the perfect blend of history and modern power. The most iconic places to visit are:  Mother of Georgia statue, Narikala Fortress, Metekhi Church, the Bridge of Peace, Sameba Cathedral, and the Chronicle of Georgia. The name of this city comes from the natural hot spring that has shaped the city for Centuries.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in Georgia:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Explore the ancient city of Tbilisi, view Narikala Fortress, Bridge of Peace, and take the sulphur bath.</li>
+                <li>Explore the local taste of Georgia Khachapuri, Khinkali, and Churchkhela.</li>
+                <li>Khachapuri, Khinkali, and Churchkhela.</li>
+                <li>Visit Mtskheta - Jvari Monastery and Svetitskhoveli Cathedral, both UNESCO World Heritage Sites.</li>
+                <li>Explore the Gergeti Trinity Church, which offers panoramic mountain views.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why choose Paradise Bliss Tours:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Experienced in Global and Personalised travel plans.</li>
+                <li>Tailored itinerary for all traveler as per their need and preferences.</li>
+                <li>Complete Tour services – Hotels, Visa, Flights, and sightseeing.</li>
+                <li>We provide you 24*7 customer support.</li>
+                <li>Affordable Luxury Tour packages without any hidden cost.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -337,8 +273,7 @@ const GeorgiaTour = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <img
-              width={48}
+            <Image width={48}
               height={48}
               src={stat.img}
               alt={stat.text.split('<br/>')[0]}
@@ -405,8 +340,7 @@ const GeorgiaTour = () => {
                   >
                     {/* Clickable area: image + info */}
                     <Link href={tour.link} className="flex-1 flex flex-col cursor-pointer">
-                      <img
-                        height={224}
+                      <Image height={224}
                         width={400}
                         src={tour.image}
                         alt={tour.title}
@@ -497,8 +431,7 @@ const GeorgiaTour = () => {
             </button>
             {selectedTour && (
               <div className="mb-4">
-                <img
-                  height={128}
+                <Image height={128}
                   width={400}
                   src={selectedTour.image}
                   alt={selectedTour.title}

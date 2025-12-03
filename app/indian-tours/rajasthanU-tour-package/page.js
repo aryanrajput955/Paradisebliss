@@ -2,9 +2,10 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { AiOutlineCalendar, AiOutlineDown, AiOutlineUp, AiOutlineStar, AiOutlinePhone } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Image from 'next/image';
+
 
 // Rajasthan Images (replace with actual paths)
 const heroImage = "/img/rajasthan-hero.jpg";
@@ -327,15 +328,13 @@ export default function RajasthanTripPackage() {
               key={index}
               variants={itemVariants}
               whileHover={{ scale: 1.05, y: -10 }}
-              className={`relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}`}
+              className="relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}"
             >
-              <Image
-                src={highlight.image}
+              <Image src={highlight.image}
                 alt={highlight.title}
                 width={500}
                 height={192}
                 className="w-full h-48 object-cover"
-                loading="lazy"
               />
               <div className="p-5">
                 <h3 className="text-lg font-semibold text-[#00453A] font-sans">{highlight.title}</h3>
@@ -425,13 +424,11 @@ export default function RajasthanTripPackage() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <Image
-              src={rightSideImage}
+            <Image src={rightSideImage}
               alt="Thar Desert"
               width={150}
               height={150}
               className="rounded-full shadow-md object-cover"
-              loading="lazy"
             />
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -515,8 +512,7 @@ export default function RajasthanTripPackage() {
           >
             <button onClick={handleCloseModal} className="absolute top-3 right-3 text-gray-500 hover:text-gray-700">X</button>
             <div className="mb-4">
-              <Image
-                src={heroImage}
+              <Image src={heroImage}
                 alt="Rajasthan"
                 width={400}
                 height={128}

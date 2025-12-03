@@ -6,6 +6,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import WhyChooseUs from '@/components/whychooseus';
@@ -105,8 +106,7 @@ const ThailandTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img
-            width={100}
+          <Image width={100}
             height={100}
             src="/img/logo.png"
             alt="Paradise Bliss Tours Logo"
@@ -213,30 +213,52 @@ const ThailandTour = () => {
         >
           <div className="py-6 space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit Thailand</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>November to February: Cool and dry season, ideal for beach activities and sightseeing.</li>
-                <li>March to May: Hot season, great for water sports and exploring islands.</li>
-                <li>June to October: Rainy season, perfect for indoor activities and enjoying lush landscapes.</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">About Thailand:</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Also known as the Land of Smiles. Here, the Elephants are seen as the symbol of nationality, and the golden temples of Buddhist statues testify to a spirituality deeply rooted in daily life. It is the only country that was never colonized by a European power. The country is a mosaic of wonders compressed into a space that represents only 0.3% of the world’s surface.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best places to visit:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-4 mt-4">
+                <li><strong>Bangkok:</strong> The Thai capital that never sleeps, with a frantic rhythm that pulses incessantly in its warm climate. The grand palace stands imposingly against the horizon, with its golden spires capturing the rays of the tropical sun. Bangkok is a living paradox. Here, monks are wrapped in their saffron colored robes, crossing the street with the skyscrapers, witnessing an encounter between eras, nowhere else manifest with such intensity. On their water boats, they continue their daily journey, transporting goods and people, exactly as they did hundreds of years ago.</li>
+                <li><strong>Ayutthaya:</strong> Lies in the plains of Thailand, a city that was not just a capital once, but a true empire that dominated the entire Asian continent. Now the ruin of Ayutthaya, recognized as a UNESCO World Heritage site, remains motionless in time, guardians of memories of a kingdom that made the world tremble. It was once the most fascinating kingdom that Asia ever had.</li>
+                <li><strong>Chiang Mai:</strong> the morning mist envelops the northern mountains where Chiang Mai guards the legacy of the ancient Lana Na Kingdom, which once dominated this region. More than 300 golden temples lie in the urban landscapes with golden Buddhas silently watching the faithful who come to pray day after day. With the arrival of evening instead, the night market transformed into a kaleidoscope of life and colors. Where artisans work with silver and silk, following techniques passed down through generations. During the Yeong festivals, thousands of lanterns float in the night sky, carrying the hopes & wishes of those who release them to the stars.</li>
+                <li><strong>Phuket:</strong> In the Andaman Sea stretches the largest island of Thailand, once the center of tin trade between India & China usually the Western coastal areas have filled with visitors seeking the sun. The big Buddha, 45m tall, watches over the island from its hills while monks recite prayers inside. Then there are night markets which come alive at sunset, filling the air with intense aromas of spices & street food that taste the rich local culinary traditions. Phuket thus lives between modernity & traditions, continuously reinventing itself without forgetting its roots.</li>
+                <li><strong>Krabi:</strong> From the turquoise water of Krabi emerge the formations of grey limestone that dominate the horizon. The Majestic rocky walls have shaped a shoreline that has no equal, where hidden coves and isolated beaches wait to be discovered. Rail Beach presents itself as a corner of paradise nestled between two cliffs and is a place reachable only by sea, since no land leads to this marvel. Venturing into the territory, the Tongta forest is the hidden gem, which is a natural mirror of emerald colored water surrounded by lush tropical vegetation.</li>
+                <li><strong>Pattaya:</strong> This place has accomplished an extraordinary metamorphosis. From the modest fishing village to a coastal metropolis that never stops. In the evening, there is a walking street that comes to life with multicolored luminous signs and music that fills the air and creates a crossroads where tourists meet from every corner of the planet. The sanctuary of truth stands as a testimony to traditional craftsmanship. A monument entirely made of precious teak wood, where every single dement has been patiently carved to tell the fundamental principles of oriental philosophies. Kolan Island represents an oasis of tranquility with its immaculate beaches and clear waters, offering a regenerating pause from the frenetic rhythm of the city.</li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Traveler Tips</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Visa Requirements: Indian passport holders can avail of a visa on arrival for Thailand.</li>
-                <li>Currency: Thai Baht (THB); credit cards are widely accepted, but it's advisable to carry some cash.</li>
-                <li>Language: Thai is the official language; English is commonly spoken in tourist areas.</li>
-                <li>Dress Code: Modest attire is recommended when visiting temples and religious sites.</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in Thailand:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Visit Phuket and Krabi to explore the stunning beaches.</li>
+                <li>Stroll the iconic temples in Bangkok.</li>
+                <li>Explore the Nightlife of Thailand at Phuket and Pattaya.</li>
+                <li>Take a look at the islands like Phi Phi, James Bond, and Koh Samui.</li>
+                <li>Visit the Elephant Sanctuary in Chiang Mai and Phuket for a great day.</li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why Choose Paradise Bliss Tours?</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Expertly Curated Itineraries: Tailored experiences that cater to your interests and preferences.</li>
-                <li>Comfortable Accommodations: Stay in handpicked hotels and resorts that offer comfort and convenience.</li>
-                <li>Local Guides: Knowledgeable guides who provide insights into Thailand's rich culture and history.</li>
-                <li>Local Transfers: Hassle-free airport pickups, intercity transfers, and local transportation.</li>
-                <li>24/7 Support: Dedicated support throughout your journey for a stress-free experience.</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best time to visit:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li><strong>Winter (November-February):</strong> This is the best time to visit Thailand; the weather is cool, dry, and pleasant. Good for exploring the beach, viewing the sights, and doing cultural things.</li>
+                <li><strong>Summers (July-October):</strong> During this time, the weather is so dry and hot, ideal for beach lovers who love to soak up the sunlight, as the temperature rises high.</li>
+                <li><strong>Monsoon (July to October):</strong> This time brings the lush greenery and a peaceful vibe. Best for yoga retreat and the spa. Perfect for those who are seeking an off-season trip.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why choose Paradise Bliss Tours:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Experienced in Global and Personalized travel plans.</li>
+                <li>Tailored itinerary for all traveler as per their need and preferences.</li>
+                <li>Complete Tour services – Hotels, Visa, Flights, and sightseeing.</li>
+                <li>We provide you 24*7 customer support.</li>
+                <li>Affordable Luxury Tour packages without any hidden cost.</li>
               </ul>
             </div>
           </div>
@@ -262,8 +284,7 @@ const ThailandTour = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <img
-              width={48}
+            <Image width={48}
               height={48}
               src={stat.img}
               alt={stat.text.split('<br/>')[0]}
@@ -330,8 +351,7 @@ const ThailandTour = () => {
                   >
                     {/* Clickable area: image + info */}
                     <Link href={tour.link} className="flex-1 flex flex-col cursor-pointer">
-                      <img
-                        height={224}
+                      <Image height={224}
                         width={400}
                         src={tour.image}
                         alt={tour.title}
@@ -422,8 +442,7 @@ const ThailandTour = () => {
             </button>
             {selectedTour && (
               <div className="mb-4">
-                <img
-                  height={128}
+                <Image height={128}
                   width={400}
                   src={selectedTour.image}
                   alt={selectedTour.title}

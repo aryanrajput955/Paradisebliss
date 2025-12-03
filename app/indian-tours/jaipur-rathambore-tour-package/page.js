@@ -2,18 +2,19 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect, useCallback } from 'react';
 import { AiOutlineCalendar, AiOutlineDown, AiOutlineUp, AiOutlineStar, AiOutlinePhone } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Image from 'next/image';
+
 import { memo } from 'react';
 
 // Jaipur & Ranthambore Images (using online links)
-const heroImage = "https://images.unsplash.com/photo-1578916171728-46686eac8d58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80";
+const heroImage = "https://images.unsplash.com/photo-1706961121527-4017856774c7?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 const highlightImages = [
-  "https://images.unsplash.com/photo-1604654267874-4e0f3a5e12f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-  "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-  "https://images.unsplash.com/photo-1558618047-3c8d6c3a91ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-  "https://images.unsplash.com/photo-1571847229996-9c5f6e7e48d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+  "https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1706961121527-4017856774c7?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1725990076174-a3448eb86e76?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1706961121783-4ae6c933983a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
 const rightSideImage = "/img/logo.png";
 
@@ -134,17 +135,15 @@ const HighlightCard = memo(({ highlight, index, variants }) => (
   <motion.div
     variants={variants}
     whileHover={{ scale: 1.02 }}
-    className={`relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}`}
+    className="relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}"
     initial="hidden"
     animate="show"
   >
-    <Image
-      src={highlight.image}
+    <Image src={highlight.image}
       alt={highlight.title}
       width={500}
       height={192}
       className="w-full h-48 object-cover"
-      loading="lazy"
       quality={75}
     />
     <div className="p-5">
@@ -475,13 +474,11 @@ export default function JaipurRanthambore4DayPackage() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <Image
-              src={rightSideImage}
+            <Image src={rightSideImage}
               alt="Jaipur Ranthambore Icon"
               width={150}
               height={150}
               className="object-cover"
-              loading="lazy"
               quality={75}
             />
             <motion.button
@@ -650,13 +647,11 @@ export default function JaipurRanthambore4DayPackage() {
               X
             </button>
             <div className="mb-4">
-              <Image
-                src={heroImage}
+              <Image src={heroImage}
                 alt="Jaipur & Ranthambore"
                 width={400}
                 height={128}
                 className="w-full h-32 object-cover rounded-lg"
-                loading="lazy"
                 quality={75}
               />
               <h3 className="mt-3 text-lg font-bold text-[#00453A] font-sans">Jaipur & Ranthambore – 3 Nights / 4 Days</h3>

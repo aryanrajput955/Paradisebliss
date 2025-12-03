@@ -2,9 +2,10 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect, useCallback } from 'react';
 import { AiOutlineCalendar, AiOutlineDown, AiOutlineUp, AiOutlineStar, AiOutlinePhone } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Image from 'next/image';
+
 import { memo } from 'react';
 
 // Updated images for Japan theme (replace with actual image paths)
@@ -103,7 +104,7 @@ const importantInfo = [
     content: (
       <div className="space-y-4">
         <div>
-          <strong className="block mb-2">What's Included:</strong>
+          <strong className="block mb-2">What&apos;s Included:</strong>
           <ul className="list-disc pl-5 space-y-1">
             <li>Hotel stays selected for both comfort and local flavor.</li>
             <li>Internal transportation (train, bus, local flights as per itinerary).</li> {/* fixed stray 'li>' */}
@@ -113,7 +114,7 @@ const importantInfo = [
           </ul>
         </div>
         <div>
-          <strong className="block mb-2">What's Not Included:</strong>
+          <strong className="block mb-2">What&apos;s Not Included:</strong>
           <ul className="list-disc pl-5 space-y-1">
             <li>International air tickets.</li>
             <li>Meals beyond those specified</li>
@@ -138,7 +139,7 @@ const importantInfo = [
     title: "Who Should Join & Trip Vibe",
     content: (
       <p>
-        Perfect for solo travelers, pairs, friends, anime fans, food lovers, and anyone who wants to see both futuristic Japan and its rich traditions. You'll travel with a group that starts as strangers and ends up as friends - lots of laughs, discovery, deep culture, and joy in the journey.
+        Perfect for solo travelers, pairs, friends, anime fans, food lovers, and anyone who wants to see both futuristic Japan and its rich traditions. You&apos;ll travel with a group that starts as strangers and ends up as friends - lots of laughs, discovery, deep culture, and joy in the journey.
       </p>
     ),
   },
@@ -161,17 +162,15 @@ const HighlightCard = memo(({ highlight, index, variants }) => (
   <motion.div
     variants={variants}
     whileHover={{ scale: 1.02 }}
-    className={`relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : 'rotate--2'}`} // use the defined CSS class
+    className="relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : 'rotate--2'}" // use the defined CSS class
     initial="hidden"
     animate="show"
   >
-    <Image
-      src={highlight.image}
+    <Image src={highlight.image}
       alt={highlight.title}
       width={500}
       height={192}
       className="w-full h-48 object-cover"
-      loading="lazy"
       quality={75}
     />
     <div className="p-5">
@@ -321,7 +320,7 @@ export default function JapanAdventurePackage() {
         >
           <div className="space-y-4">
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-              Embark on a 10-day journey through Japan's highlights with Paradise Bliss Tours
+              Embark on a 10-day journey through Japan&apos;s highlights with Paradise Bliss Tours
             </p>
             <ul className="space-y-2 text-gray-700 text-sm sm:text-base">
               <li className="flex items-center">
@@ -503,13 +502,11 @@ export default function JapanAdventurePackage() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <Image
-              src={rightSideImage}
+            <Image src={rightSideImage}
               alt="Japan Adventure Icon"
               width={150}
               height={150}
               className="object-cover"
-              loading="lazy"
               quality={75}
             />
             <motion.button
@@ -678,13 +675,11 @@ export default function JapanAdventurePackage() {
               ✕
             </button>
             <div className="mb-4">
-              <Image
-                src={heroImage}
+              <Image src={heroImage}
                 alt="Japan Adventure"
                 width={400}
                 height={128}
                 className="w-full h-32 object-cover rounded-lg"
-                loading="lazy"
                 quality={75}
               />
               <h3 className="mt-3 text-lg font-bold text-[#00453A] font-sans">10-Day Japan Adventure - Paradise Bliss Tours</h3>

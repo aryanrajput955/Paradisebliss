@@ -6,6 +6,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import WhyChooseUs from '@/components/whychooseus';
@@ -13,32 +14,24 @@ import Link from 'next/link';
 
 const tours = [
   {
-    title: "Ladakh tour package",
+    title: "Leh to Turtuk Tour",
     dates: ["May 15", "June 01", "July 10"],
     prices: ["Starting ₹25,990*", "₹22,990*"],
     image: "/img/ladakh.jpg",
     duration: "7D6N",
     group: "Group Tour",
-    link: "/indian-tours/ladakh-tour-package",
+    link: "/indian-tours/leh-to-turtuk-tour",
   },
   {
-    title: "ladakh Bike tour Package",
+    title: "Ladakh Bike Expedition",
     dates: ["May 20", "June 05", "July 15"],
     prices: ["Starting ₹22,990*", "₹19,990*"],
-    image: "/img/ladakh.jpg",
+    image: "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     duration: "5D4N",
     group: "Group Tour",
-    link: "/indian-tours/ladakhbike-tour-package",
+    link: "/indian-tours/ladakh-bike-trip",
   },
-  {
-    title: "ladakh Package",
-    dates: ["June 10", "July 05", "Aug 01"],
-    prices: ["Starting ₹35,990*", "₹32,990*"],
-    image: "/img/ladakh.jpg",
-    duration: "6D5N",
-    group: "Group Tour",
-    link: "/indian-tours/ladakhU-tour-package",
-  },
+
 ];
 
 const LadakhTour = () => {
@@ -136,7 +129,13 @@ const LadakhTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img src="/img/logo.png" alt="Paradise Bliss Tours Logo" className="w-20 mx-auto mb-6" />
+          <Image
+            width={100}
+            height={100}
+            src="/img/logo.png"
+            alt="Paradise Bliss Tours Logo"
+            className="w-20 mx-auto mb-6"
+          />
 
           <label className="block text-left text-gray-700 text-sm mb-2">Name</label>
           <input
@@ -281,7 +280,13 @@ const LadakhTour = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <img src={stat.img} alt="" className="w-12 h-12 mx-auto" />
+            <Image
+              width={48}
+              height={48}
+              src={stat.img}
+              alt=""
+              className="w-12 h-12 mx-auto"
+            />
             <p className="mt-2 text-lg font-bold" dangerouslySetInnerHTML={{ __html: stat.text }} />
           </motion.div>
         ))}
@@ -323,8 +328,10 @@ const LadakhTour = () => {
                   >
                     {/* Clickable Area */}
                     <Link href={tour.link} className="flex-1 flex flex-col">
-                      <img
+                      <Image
                         src={tour.image}
+                        width={400}
+                        height={224}
                         alt={tour.title}
                         className="w-full h-56 object-cover rounded-t-xl"
                         onError={(e) => (e.target.src = '/img/placeholder.jpg')}
@@ -395,8 +402,10 @@ const LadakhTour = () => {
 
             {selectedTour && (
               <div className="mb-6 text-center">
-                <img
+                <Image
                   src={selectedTour.image}
+                  width={400}
+                  height={128}
                   alt={selectedTour.title}
                   className="w-full h-32 object-cover rounded-lg mb-4"
                   onError={(e) => (e.target.src = '/img/placeholder.jpg')}

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import AdventureTours from "@/components/adventure";
 import Banner1 from "@/components/banner1";
 import Banner2 from "@/components/banner2";

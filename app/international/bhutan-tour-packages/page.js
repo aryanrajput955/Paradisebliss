@@ -6,6 +6,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import WhyChooseUs from '@/components/whychooseus';
@@ -113,8 +114,7 @@ const BhutanTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img
-            width={100}
+          <Image width={100}
             height={100}
             src="/img/logo.png"
             alt="Paradise Bliss Tours Logo"
@@ -220,53 +220,52 @@ const BhutanTour = () => {
         >
           <div className="py-6 space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why Visit Bhutan?</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">About Bhutan:</h3>
               <p className="text-gray-600 leading-relaxed">
-                Bhutan is a destination like no other, where tradition and nature coexist in perfect harmony:
+                It is the “Land of Thunder Dragon.” Popularly known for its raw beauty, the spiritual monasteries, and the breathtaking landscapes. Here, the snowcapped mountain peaks kiss the cloud, the emerald valley stretches endlessly, and spirituality infuses every aspect of daily life. It remains one of the most beautiful destinations on earth.
               </p>
-              <ul className="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                <li>Cultural Heritage: Explore majestic dzongs, centuries-old monasteries, and sacred temples, including the world-famous Tiger’s Nest Monastery (Paro Taktsang).</li>
-                <li>Stunning Landscapes: Traverse the Himalayan mountains, lush valleys, and terraced fields. Enjoy scenic drives through Dochula Pass with panoramic Himalayan views.</li>
-                <li>Festivals & Local Life: Witness colorful Tshechu festivals, interact with locals, and experience Bhutanese hospitality and traditions.</li>
-                <li>Adventure & Wellness: Trekking, hiking, and hot stone baths provide both adventure and rejuvenation for the soul.</li>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best place to visit in Bhutan:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-4 mt-4">
+                <li><strong>Paro:</strong> Located in a picturesque valley surrounded by lush green hills and snow-capped mountains. It is Bhutan&apos;s most charming town and home to the iconic Tiger&apos;s Nest monastery, perched dramatically on a cliffside, which is a must-visit for every traveler. The monastery not only gives a spiritual retreat but also offers a breathtaking view of the surrounding valley. The National Museum of Bhutan is housed in a former watch tower that offers insight into Bhutan&apos;s rich history and culture. With its a blend of natural beauty, cultural landmarks, and serene atmosphere. Paro is a gateway to Bhutan&apos;s great Heritage and spirituality.</li>
+                <li><strong>Thimphu:</strong> This is Bhutan&apos;s vibrant capital, a fascinating blend of tradition and modernity. As the political and cultural heart of the nation, it offers an array of attractions that reflect its Heritage and contemporary life. The towering Buddha Dordenma statue, standing at 51 m, overlooks the city and symbolizes peace and prosperity. Tashi Cho Zong, an impressive fortress and monastery, served as the seat of the government and a summer residence for the monastic body. It also offers a weekend market, which offers visitors handicrafts and textiles.</li>
+                <li><strong>Punakha:</strong> It was recognized as the ancient capital of Bhutan for its stunning landscape and historic significance. The majestic Punakha Zong, located at the confluences of the Pho chuu and mo chuu rivers, is one of the country’s most beautiful fortresses. Built in 1637, it played a crucial role in Bhutan’s history and continues to serve as a religious and administrative center. the dong is especially captivating in spring when its surroundings are adorned with blooming jakarando trees. The Punakha suspension Bridge, one of the longest in Bhutan, offers a panoramic view of the valley and is a popular spot.</li>
+                <li><strong>Phobjika Valley:</strong> A glacier valley located in Central Bhutan is a heaven for nature lovers and wildlife enthusiasts. Known for its beauty and tranquility, the valley is home to the Gangtey monastery, a significant spiritual site and one of the main seats of the Nyingmapa School of Buddhism. It is best known for being the winter habitat for the endangered black necked cranes, which migrate from Tibet every year. surrounded by the lush green forest and dotted with traditional Bhutanese farmhouses, the leisurely Hike and immersing oneself in the local way of life.</li>
+                <li><strong>Bumthang:</strong> Referred to as the spiritual heartland of Bhutan, it comprises four picturesque valleys. Jakar Dzong, also known as the fortress of the white bird, of a stunning view of the surrounding valley. Kurje Lhakhang, a sacred site associated with Guru Rinpoche and Tamshing Lhakhang, known for its ancient murals are significant pilgrimage destination. It is also famous for its festival, including the Jambay Lhakhang Drup, featuring traditional mask dances and fire rituals.</li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Top Attractions in Bhutan</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Paro Taktsang (Tiger’s Nest Monastery): Perched on a cliff 900 meters above the valley, this iconic monastery is a must-visit.</li>
-                <li>Punakha Dzong: A magnificent fortress-monastery located at the confluence of the Pho and Mo Chhu rivers.</li>
-                <li>Thimphu: Bhutan’s capital city, home to the Buddha Dordenma Statue, National Memorial Chorten, and the Royal Takin Preserve.</li>
-                <li>Dochula Pass: 108 memorial stupas with breathtaking panoramic views of the Himalayan peaks.</li>
-                <li>Phuentsholing: Gateway to Bhutan, offering a glimpse of Bhutanese culture and lifestyle.</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in Bhutan:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Explore the Paro Valley and visit the Tiger&apos;s Nest Monastery.</li>
+                <li>Experience Bhutanese festivals filled with mask dance, music, and traditional culture.</li>
+                <li>Visit the famous Farmhouse in Paro.</li>
+                <li>Walk through Thimphu city and shop for the locals.</li>
+                <li>Visit Dochula pass to enjoy the scenic views.</li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit Bhutan</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Bhutan is enchanting throughout the year, but the ideal seasons are:
-              </p>
-              <ul className="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                <li>Spring (March–May): Blooming flowers and mild temperatures.</li>
-                <li>Autumn (September–November): Clear skies, perfect for trekking and sightseeing.</li>
-                <li>Winter (December–February): Cold but beautiful, with fewer tourists and snow-capped mountains.</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best time to Visit:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li><strong>Spring Season (March to May):</strong> This time is the best for visiting Bhutan, due to its clear sky, delightful weather, and the blooming valleys.</li>
+                <li><strong>Autumn Season (September to November):</strong> This is the peak season for the visitors, the sunny weather, and clear sky attract most of the visitors.</li>
+                <li><strong>Winter Season (December to February):</strong> this season has the snow-covered mountains, and has the less numbers of travelers.</li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why Choose Paradise Bliss Tours?</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Tailored Itineraries: Fully customizable packages to suit your preferences and travel style.</li>
-                <li>Comfort & Convenience: Handpicked hotels, private transfers, and well-planned sightseeing.</li>
-                <li>Expert Guides: Knowledgeable local guides for a seamless and enriching experience.</li>
-                <li>Affordable Pricing: Transparent and value-for-money tours with no hidden costs.</li>
-                <li>24/7 Support: Assistance at every step of your Bhutan journey.</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why choose Paradise Bliss Tours:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Experienced in Global and Personalized travel plans.</li>
+                <li>Tailored itinerary for all traveler as per their need and preferences.</li>
+                <li>Complete Tour services – Hotels, Visa, Flights, and sightseeing.</li>
+                <li>We provide you 24*7 customer support.</li>
+                <li>Affordable Luxury Tour packages without any hidden cost.</li>
               </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Book Your Bhutan Tour</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Experience the spiritual and natural wonders of Bhutan with Paradise Bliss Tours. From majestic monasteries and colorful festivals to serene valleys and scenic drives, Bhutan promises a journey of tranquility, adventure, and cultural discovery.
-              </p>
             </div>
           </div>
         </div>
@@ -291,8 +290,7 @@ const BhutanTour = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <img
-              width={48}
+            <Image width={48}
               height={48}
               src={stat.img}
               alt={stat.text.split('<br/>')[0]}
@@ -359,8 +357,7 @@ const BhutanTour = () => {
                   >
                     {/* Clickable area: image + info */}
                     <Link href={tour.link} className="flex-1 flex flex-col cursor-pointer">
-                      <img
-                        height={224}
+                      <Image height={224}
                         width={400}
                         src={tour.image}
                         alt={tour.title}
@@ -451,8 +448,7 @@ const BhutanTour = () => {
             </button>
             {selectedTour && (
               <div className="mb-4">
-                <img
-                  height={128}
+                <Image height={128}
                   width={400}
                   src={selectedTour.image}
                   alt={selectedTour.title}

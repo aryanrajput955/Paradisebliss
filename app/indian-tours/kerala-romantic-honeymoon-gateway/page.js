@@ -2,19 +2,20 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect, useCallback } from 'react';
 import { AiOutlineCalendar, AiOutlineDown, AiOutlineUp, AiOutlineStar, AiOutlinePhone } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Image from 'next/image';
+
 import { memo } from 'react';
 
 // Kerala Honeymoon Images
-const heroImage = "https://images.pexels.com/photos/30188721/pexels-photo-30188721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+const heroImage = "https://images.unsplash.com/photo-1696966358360-f64c761e0cb5?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9ydCUyMGtvY2hpfGVufDB8fDB8fHww";
 const highlightImages = [
   "https://images.pexels.com/photos/32262506/pexels-photo-32262506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/2076936/pexels-photo-2076936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/1436775/pexels-photo-1436775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/1320684/pexels-photo-1320684.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY7IFWxi1mX2LIhz7ZA2s1IiJ2Y_lsB2XUOg&s1",
+  "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/Yg29QB8qK5hGvxnr/eravi1-d95g967w7liZJJ76.jpg",
+  "https://plus.unsplash.com/premium_photo-1667401373119-f9af8c7ccf8e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmhpbmUlMjBmYWxsc3xlbnwwfHwwfHx8MA%3D%3D",
+  "https://images.unsplash.com/photo-1696966358360-f64c761e0cb5?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9ydCUyMGtvY2hpfGVufDB8fDB8fHww",
 ];
 const rightSideImage = "/img/logo.png";
 
@@ -79,7 +80,7 @@ const importantInfo = [
     content: (
       <div className="space-y-4">
         <div>
-          <strong className="block mb-2">What's Included:</strong>
+          <strong className="block mb-2">What&apos;s Included:</strong>
           <ul className="list-disc pl-5 space-y-1">
             <li>3 nights’ accommodation (2 N Munnar + 1 N Alleppey resort or houseboat).</li>
             <li>Daily breakfast and dinner as per plan.</li>
@@ -88,7 +89,7 @@ const importantInfo = [
           </ul>
         </div>
         <div>
-          <strong className="block mb-2">What's Not Included:</strong>
+          <strong className="block mb-2">What&apos;s Not Included:</strong>
           <ul className="list-disc pl-5 space-y-1">
             <li>Air/train fare.</li>
             <li>Lunches & meals not specified.</li>
@@ -149,17 +150,15 @@ const HighlightCard = memo(({ highlight, index, variants }) => (
   <motion.div
     variants={variants}
     whileHover={{ scale: 1.02 }}
-    className={`relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}`}
+    className="relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}"
     initial="hidden"
     animate="show"
   >
-    <Image
-      src={highlight.image}
+    <Image src={highlight.image}
       alt={highlight.title}
       width={500}
       height={192}
       className="w-full h-48 object-cover"
-      loading="lazy"
       quality={75}
     />
     <div className="p-5">
@@ -490,13 +489,11 @@ export default function RomanticKeralaHoneymoonGetaway4Days() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <Image
-              src={rightSideImage}
+            <Image src={rightSideImage}
               alt="Kerala Honeymoon Icon"
               width={150}
               height={150}
               className="object-cover"
-              loading="lazy"
               quality={75}
             />
             <motion.button
@@ -665,13 +662,11 @@ export default function RomanticKeralaHoneymoonGetaway4Days() {
               X
             </button>
             <div className="mb-4">
-              <Image
-                src={heroImage}
+              <Image src={heroImage}
                 alt="Romantic Kerala Honeymoon Getaway"
                 width={400}
                 height={128}
                 className="w-full h-32 object-cover rounded-lg"
-                loading="lazy"
                 quality={75}
               />
               <h3 className="mt-3 text-lg font-bold text-[#00453A] font-sans">Romantic Kerala Honeymoon Getaway – 4 Days / 3 Nights</h3>

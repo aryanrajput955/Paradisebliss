@@ -2,18 +2,19 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect, useCallback } from 'react';
 import { AiOutlineCalendar, AiOutlineDown, AiOutlineUp, AiOutlineStar, AiOutlinePhone } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Image from 'next/image';
+
 import { memo } from 'react';
 
 // Updated images for Kasol–Tosh Trek theme (replace with actual image paths)
-const heroImage = "/optimised/kasol-tosh-hero.png";
+const heroImage = "https://images.unsplash.com/photo-1573465679176-c3a87941baa2?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 const highlightImages = [
-  "/optimised/kasol-market.webp",
-  "/optimised/chalal-village-hike.jpeg",
-  "/optimised/tosh-waterfall.png",
-  "/optimised/manikaran-hot-springs.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Camp-kasol.jpg/1280px-Camp-kasol.jpg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6UR-HpYNAWKdlMeYUT2Y76VzRUP10B9hNMg&s",
+  "https://images.unsplash.com/photo-1610630019474-8a20b6e06412?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1675515642414-d99b23e2d95f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
 const rightSideImage = "/img/logo.png";
 
@@ -133,17 +134,15 @@ const HighlightCard = memo(({ highlight, index, variants }) => (
   <motion.div
     variants={variants}
     whileHover={{ scale: 1.02 }}
-    className={`relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}`}
+    className="relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}"
     initial="hidden"
     animate="show"
   >
-    <Image
-      src={highlight.image}
+    <Image src={highlight.image}
       alt={highlight.title}
       width={500}
       height={192}
       className="w-full h-48 object-cover"
-      loading="lazy"
       quality={75}
     />
     <div className="p-5">
@@ -473,13 +472,11 @@ export default function KasolToshTrekPackage() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <Image
-              src={rightSideImage}
+            <Image src={rightSideImage}
               alt="Kasol Tosh Icon"
               width={150}
               height={150}
               className="object-cover"
-              loading="lazy"
               quality={75}
             />
             <motion.button
@@ -648,13 +645,11 @@ export default function KasolToshTrekPackage() {
               X
             </button>
             <div className="mb-4">
-              <Image
-                src={heroImage}
+              <Image src={heroImage}
                 alt="Kasol–Tosh Trek"
                 width={400}
                 height={128}
                 className="w-full h-32 object-cover rounded-lg"
-                loading="lazy"
                 quality={75}
               />
               <h3 className="mt-3 text-lg font-bold text-[#00453A] font-sans">Kasol–Tosh Trek – 3 Days - Paradise Bliss Tours</h3>

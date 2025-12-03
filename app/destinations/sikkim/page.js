@@ -6,6 +6,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import WhyChooseUs from '@/components/whychooseus';
@@ -118,7 +119,13 @@ const SikkimTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img src="/img/logo.png" alt="Paradise Bliss Tours Logo" className="w-20 mx-auto mb-6" />
+          <Image
+            width={100}
+            height={100}
+            src="/img/logo.png"
+            alt="Paradise Bliss Tours Logo"
+            className="w-20 mx-auto mb-6"
+          />
 
           <label className="block text-left text-gray-700 text-sm mb-2">Name</label>
           <input
@@ -206,6 +213,52 @@ const SikkimTour = () => {
         >
           <div className="py-6 space-y-8 text-gray-600">
             <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">🌄 Explore Heaven on Earth – Sikkim Tour Packages by Paradise Bliss Tours Pvt. Ltd.</h3>
+              <p className="leading-relaxed">
+                We explains a joyful beauty of Sikkim – the place has ice-capped peaks, peaceful monasteries, lush green valley and a vital mixture of culture. In Paradise Bliss Tours Pvt. Ltd., we are sharing you planned tour packages that defines adventure, nature and devotion – we authorize you to experience the beauty of Himalayas and charm. 
+                In Gangtok, find the stunning view and crystal clear water in Tsomgo Lake, every corner of Sikkim defines a story of peace of mind and Harmony culture. Feel the spiritual aura of Rumtek Monastery, explore the raw beauty of Lachung and Lachen, and discover the vibrant blooms in Yumthang Valley.  
+                Whether you are finding a romantic gateway, a family trip, or an adventure escape, Our Sikkim Tour Package are planned to suit every traveler. We make sure of smooth travelers, comfortable stays, and unforgettable experiences surrounded by the scenic beauty of Himalayas. With Paradise Bliss Tours Pvt. Ltd., visit Sikkim – where every journey is a memorable moment for lifetime.    
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">🏞️ Top Destinations Covered in Our Kerala Packages</h3>
+              <ol className="list-decimal list-inside space-y-2">
+                <li><strong>Gangtok:</strong> The glamour capital of Sikkim, Gangtok combines modernism with natural beauty covered with cloudy mountains and monasteries, it boasts stunning views of the Kanchenjunga Range. Travelers can visit the attractions like Rumtek Monastery, MG Marg, and Tashi View Point. Its tranquil ambiance and vibrant markets, these are the spots to start the Sikkim journey.</li>
+                <li><strong>Tsomgo Lake:</strong> Exist at an altitude of 12,000 feet, Tsomgo Lake is one of the most attractive glacial lakes in India. This lake changes the color as per the season, creating an adorable sight. Covered with snow-capped peaks and picturesque beauty of nature and also experience yak rides. Perfect for those who love calmness and natural of beauty.</li>
+                <li><strong>Lachen:</strong> It is a peaceful mountain range untouched beauty and warmth and affection. It determines the base to visit the holy Gurudongmar Lake, one of the highest lake in the world. The Journey from Lachen offers the picturesque views of snowy peaks and valleys.</li>
+                <li><strong>Lachung & Yumthang Valley:</strong> It known as the ‘Valley of Flowers’, it covers with colorful blooms and offers quit hot springs and majestic mountain views. Known for its apple orchids and rich local culture, it’s one of the north Sikkim’s most beautiful regions.</li>
+                <li><strong>Pelling:</strong> Pelling is the attractive hill town that defines the elevated views of Mount Kanchenjunga. Its home to the famous Sky Walk, Pemayangtse Monastery, and the blessed khecheopalri lake.</li>
+              </ol>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">🌸 Best Time to Visit Kerala</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li><strong>Spring Season (March to June):</strong> This season paints the valleys with colors as flowers bloom around the hills. This season temperature is comfortable for sightseeing, adventure, and nature walks.</li>
+                <li><strong>Autumn and early winter (September to December):</strong> In this season view of snow-capped peaks are crystal clear and making it ideal for picture spot and high altitude places like Nathula Pass and Tsomgo Lake.</li>
+                <li><strong>Winter Season (December to February):</strong> If you love to travel cold weather, then December to February is great for undergo snowfall in North Sikkim but some high passes may be closed during this season because of high snow fall.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">🌸 Things to do in Sikkim</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li><strong>Visit Monasteries:</strong> Explore calm monasteries like Rumtek and Pemayangtse to undergo Sikkim’s rich Buiddhist Culture.</li>
+                <li><strong>Experience Local Culture:</strong> Visit MG Marg, taste local delicacies like momos and thukpa, and shops for Sikkim’s craft.</li>
+                <li><strong>Adventure Activities:</strong> Feel the joy of paragliding, river rafting and thrilling view of the Himalayas through cable car rides.</li>
+                <li><strong>Yumthang Valley:</strong> Admiring the vibrant colorful flowers blooms, wonderful, and hot springs, mountain environment.</li>
+                <li><strong>Visit Scenic Lakes:</strong> Observe the beauty of Tsomgo Lake, Nathula Pass, and Gurudongmar Lake covered by snow- capped peaks.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Kerala Trip?</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>We have a tailored itinerary for all traveler as per their need and preferences.</li>
+                <li>We provide you with the best accommodation.</li>
+                <li>Private Cab and local Assistance, Enjoy Hassle-free transfer with professional drivers.</li>
+                <li>Enjoy local sightseeing for whatever package you choose.</li>
+                <li>We provide you 24*7 customer support.</li>
+              </ul>
+            </div>
+            <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">A Land Where Nature Meets Peace</h3>
               <p className="leading-relaxed">
                 The mighty Kanchenjunga dominates the skyline. Gangtok blends tradition with modernity — offering scenic views, lively markets, and spiritual calm.
@@ -253,7 +306,13 @@ const SikkimTour = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <img src={stat.img} alt="" className="w-12 h-12 mx-auto" />
+            <Image
+              width={48}
+              height={48}
+              src={stat.img}
+              alt={stat.text}
+              className="w-12 h-12 mx-auto"
+            />
             <p className="mt-2 text-lg font-bold" dangerouslySetInnerHTML={{ __html: stat.text }} />
           </motion.div>
         ))}
@@ -294,10 +353,11 @@ const SikkimTour = () => {
                     className="h-full flex flex-col"
                   >
                     <Link href={tour.link} className="flex-1 flex flex-col">
-                      <img
-                        src={tour.image}
+                      <Image src={tour.image}
                         alt={tour.title}
                         className="w-full h-56 object-cover rounded-t-xl"
+                        width="400"
+                        height="224"
                         onError={(e) => (e.target.src = '/img/placeholder.jpg')}
                       />
                       <div className="p-6 flex-1">
@@ -368,10 +428,11 @@ const SikkimTour = () => {
 
             {selectedTour && (
               <div className="mb-6 text-center">
-                <img
-                  src={selectedTour.image}
+                <Image src={selectedTour.image}
                   alt={selectedTour.title}
                   className="w-full h-32 object-cover rounded-lg mb-4"
+                  width="400"
+                  height="128"
                   onError={(e) => (e.target.src = '/img/placeholder.jpg')}
                 />
                 <h3 className="text-xl font-bold text-gray-900">{selectedTour.title}</h3>

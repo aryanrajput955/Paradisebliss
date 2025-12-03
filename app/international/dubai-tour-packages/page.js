@@ -6,6 +6,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import WhyChooseUs from '@/components/whychooseus';
@@ -105,8 +106,7 @@ const DubaiTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img
-            width={100}
+          <Image width={100}
             height={100}
             src="/img/logo.png"
             alt="Paradise Bliss Tours Logo"
@@ -153,8 +153,8 @@ const DubaiTour = () => {
             aria-label="Tour package selection"
           >
             <option value="Dubai Tour">Dubai Tour</option>
-            <option value="Cherry Blossom Tour">Cherry Blossom Tour</option>
-            <option value="Winter Japan">Winter Japan</option>
+            <option value="Dubai Desert Safari">Dubai Desert Safari</option>
+            <option value="Dubai Luxury">Dubai Luxury</option>
           </select>
           <label htmlFor="email" className="block mb-2 text-left text-gray-700 text-sm sm:text-base">
             Email
@@ -211,47 +211,54 @@ const DubaiTour = () => {
         >
           <div className="py-6 space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">What Makes Dubai a Must-Visit</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>• Burj Khalifa observation decks — see Dubai from the top</li>
-                <li>• Palm Jumeirah & Atlantis The Palm — architectural marvels & oceanfront luxury</li>
-                <li>• Dubai Mall & Dubai Fountain — top shopping + spectacular evening light & water shows</li>
-                <li>• Old Dubai (Deira, Dubai Creek) — souks, dhow cruises, traditional market life</li>
-                <li>• Desert adventures — dune bashing, camel rides, Bedouin-style camps under the stars</li>
-                <li>• Theme parks & luxury experiences for all ages</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Ideal Weather  (November to March ):</strong> — cool, pleasant, great for outdoor activities and sightseeing</li>
-                <li><strong>Shoulder Seasons  (April & October ):</strong> shoulder seasons also work though slightly warmer</li>
-                <li><strong>Summer (June to September):</strong> are very hot; indoor options and water-based activities are better</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Travel Tips & Practical Info</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Visa & Entry :</strong>Visa formalities are streamlined; we assist you with the paperwork</li>
-                <li><strong>Currency:</strong>: UAE Dirham (AED) — credit cards are widely accepted; cash is useful for markets & tips</li>
-                <li><strong>Culture and Dress :</strong> Modest clothing respectful of local customs; public behavior more liberal in tourist areas but always show respect</li>
-                <li><strong>Language :</strong> Arabic is official; English is commonly spoken in hotels, malls & tourist areas</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why Travel Dubai with Paradise Bliss Tours?</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>•	Expertly curated itineraries with comfort and excitement balanced</li>
-                <li>•	Flexible customization — more adventure, more luxury, or more relaxation, as per your style</li>
-                <li>•	All major inclusions taken care of: transfers, sightseeing, guides, accommodations</li>
-                <li>•	24/7 support in-destination to make your trip smooth & stress-free</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Ready to Explore Dubai Like Never Before?</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">About Dubai:</h3>
               <p className="text-gray-600 leading-relaxed">
-               Whether you're dreaming of luxury stays, desert escapes, high-octane fun, cultural insights, or just recovering from shopping sprees — Paradise Bliss Tours will tailor the trip just for you. Reach out, share your travel dates, how you like to travel (luxury / adventure / chill), and we’ll craft the perfect Dubai escape.
+                Dubai is a global hub for tourism, which is famous for its iconic beaches, innovative architecture, and charming nightlife. It is the world&apos;s most loved destination, as it offers Warm hospitality and a safe travel experience. It is heaven for adventure seekers as it offers the thrilling sky diving over the palm, dune bashing in the Lahbab Desert, jet skiing, or enjoying a helicopter ride above the skyline. It transforms the dream into reality.
               </p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best places to visit:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-4 mt-4">
+                <li><strong>Burj Khalifa:</strong> The tallest building in the world, is Dubai&apos;s most iconic landmark, standing at 828 m. It offers breathtaking views of the city from its observation decks on the 124th and 148th floors. Visitors can enjoy a fine dining atmosphere at the world&apos;s highest restaurant, are relax at the lounge on levels 15 to 154. Whether admiring the city Skyline from above or watching the tower illuminate at night, Burj Khalifa is an unforgettable experience.</li>
+                <li><strong>Dubai Mall:</strong> Located next to Burj Khalifa, the Dubai Mall is the world’s largest shopping and entertainment destination. Over 1,200 stores, an Olympic-size ice rink, and the Underwater Zoo and Dubai aquarium, a world with thousands of marine animals. At the edge of the Dubai fountain captivates tourists with its charming water and light shows. Where jets soar 150m in the sky, accompanied by music. Whether indulging in luxury brands, enjoying fine dining restaurants, or watching a fountain’s nightly performances, this area is a top attraction in Dubai.</li>
+                <li><strong>Palm Jumeirah and Atlantis the Palm:</strong> A standout sample of modern engineering. Palm Jumeirah is a stunning artificial man-made island that looks like a giant palm tree. It is famous for its luxury resorts, clean beaches, and incredible views. Atlantis the Palm, located on the island, is a world-famous resort offering its record-breaking Aquaventure Waterpark, where adventurers can slide among the sharks, and the Lost Room Aquarium, which has fish and other marine life, fine dining, private beaches, and a lively nightlife scene. Palm Jumeirah is a paradise for tourists seeking relaxation and adventure.</li>
+                <li><strong>Dubai Desert Safari:</strong> In the Arabian Desert, a Desert Safari is essential for every Dubai Traveler. The Dubai desert safari offers thrilling Camel rides, Dune Bashing, and sand sledding as the sun sets over the golden Dunes. Whether you are seeking thrills or cultural experiences, the desert safari offers a memorable glimpse into Dubai&apos;s legacy and natural beauty.</li>
+                <li><strong>Dubai Frame:</strong> A sign of Dubai’s Past, present, and future, Dubai Frame stands 150 m tall, offering wonderful, extensive views of both old and new Dubai. Located at Zabel Park, the formation is like an enormous picture frame, capturing the beauty of Dubai, including the skyscrapers. From the Sky Deck, visitors enjoy an unforgettable blend of traditional Dubai gives a stunning contrast between the historical districts of Dubai on one side and the innovative skyscrapers on the other.</li>
+                <li><strong>Bluewater’s Island:</strong> A luxurious artificial island near JBR. It is the home to the world’s largest observation wheel. The island approaches a blend of world-class dining, shopping for brands, and entertainment options with astonishing waterfront views. Also explore Caesar’s Palace Dubai, a high-end resort with private beaches and Michelin-starred restaurants. A wander through the pedestrian-friendly promenade, crowded with stylish cafés and exclusive shops.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best time to visit Dubai:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li><strong>November to March:</strong> This is the best time to visit, and it is the peak tourist time, as the weather is cool and perfect for sightseeing.</li>
+                <li><strong>April to May:</strong> This is the time when the seasons start to get drier, but the evenings and the mornings are still cool.</li>
+                <li><strong>June to September:</strong> This is the hottest time of Dubai. Dubai’s summer is extremely hot, but the indoor activities remain open, like- Mall, Aquarium, theme parks, and restaurants.</li>
+                <li>In October, the season started getting colder. The best time to visit is before the crowded season.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in Dubai:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Famous Burj Khalifa world’s tallest tower, on the 124th & 148th floors.</li>
+                <li>Arabian Desert Safari Adventure.</li>
+                <li>Explore the Dubai Mall and the Indore Dubai Aquarium.</li>
+                <li>Visit Palm Jumeirah & Atlantis.</li>
+                <li>Dubai Marina Dhow cruise.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why choose Paradise Bliss Tours:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Experienced in Global and Personalized travel plans.</li>
+                <li>Tailored itinerary for all traveler as per their need and preferences.</li>
+                <li>Complete Tour services – Hotels, Visa, Flights, and sightseeing.</li>
+                <li>We provide you 24*7 customer support.</li>
+                <li>Affordable Luxury Tour packages without any hidden cost.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -276,8 +283,7 @@ const DubaiTour = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <img
-              width={48}
+            <Image width={48}
               height={48}
               src={stat.img}
               alt={stat.text.split('<br/>')[0]}
@@ -339,8 +345,7 @@ const DubaiTour = () => {
                     className="h-full flex flex-col"
                   >
                     <Link href={tour.link} className="flex-1 flex flex-col cursor-pointer">
-                      <img
-                        height={224}
+                      <Image height={224}
                         width={400}
                         src={tour.image}
                         alt={tour.title}
@@ -430,8 +435,7 @@ const DubaiTour = () => {
             </button>
             {selectedTour && (
               <div className="mb-4">
-                <img
-                  height={128}
+                <Image height={128}
                   width={400}
                   src={selectedTour.image}
                   alt={selectedTour.title}

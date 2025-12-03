@@ -2,9 +2,10 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { AiOutlineCalendar, AiOutlineDown, AiOutlineUp, AiOutlineStar, AiOutlinePhone } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Image from 'next/image';
+
 
 // Sample images (replace with actual image paths)
 const heroImage = "/img/spiti2.jpg";
@@ -344,15 +345,13 @@ export default function SpitiValleyTripPackage() {
               key={index}
               variants={itemVariants}
               whileHover={{ scale: 1.05, y: -10, transition: { duration: 0.2 } }}
-              className={`relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}`}
+              className="relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}"
             >
-              <Image
-                height={500}
+              <Image height={500}
                 width={500}
                 src={highlight.image}
                 alt={highlight.title}
                 className="w-full h-48 object-cover"
-                loading="lazy"
                 onError={(e) => (e.target.src = '/img/placeholder.jpg')}
               />
               <div className="p-5">
@@ -451,13 +450,11 @@ export default function SpitiValleyTripPackage() {
               </AnimatePresence>
             </div>
             {/* Small Image */}
-            <Image
-              src={rightSideImage}
+            <Image src={rightSideImage}
               alt="Spiti Icon"
               width={150}
               height={150}
               className="object-cover"
-              loading="lazy"
               onError={(e) => (e.target.src = '/img/placeholder.jpg')}
             />
             {/* Primary Button */}
@@ -558,8 +555,7 @@ export default function SpitiValleyTripPackage() {
               ✕
             </button>
             <div className="mb-4">
-              <Image
-                height={200}
+              <Image height={200}
                 width={400}
                 src={heroImage}
                 alt="Spiti Valley Trip"

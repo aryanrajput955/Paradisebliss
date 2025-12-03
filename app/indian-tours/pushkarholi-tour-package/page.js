@@ -2,18 +2,19 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect, useCallback } from 'react';
 import { AiOutlineCalendar, AiOutlineDown, AiOutlineUp, AiOutlineStar, AiOutlinePhone } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Image from 'next/image';
+
 import { memo } from 'react';
 
 // Updated images for Pushkar Holi Festival theme (replace with actual image paths)
-const heroImage = "/optimised/pushkar-holi-hero.png";
+const heroImage = "https://images.unsplash.com/photo-1616787671803-e660b92c0d25?q=80&w=1034&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 const highlightImages = [
-  "/optimised/holika-dahan.webp",
-  "/optimised/rangwali-holi.jpeg",
-  "/optimised/desert-safari.jpeg",
-  "/optimised/brahma-temple.png",
+  "https://media1.thrillophilia.com/filestore/hkjj4eovd23ib98bq6plyivalkzu_1608620005_shutterstock_1347246542.jpg",
+  "https://images.unsplash.com/photo-1603228254119-e6a4d095dc59?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://upload.wikimedia.org/wikipedia/en/6/68/Dune_Dubai_DesertSafari.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Brahma_Temple%2C_Pushkar.jpg/250px-Brahma_Temple%2C_Pushkar.jpg",
 ];
 const rightSideImage = "/img/logo.png";
 
@@ -135,17 +136,15 @@ const HighlightCard = memo(({ highlight, index, variants }) => (
   <motion.div
     variants={variants}
     whileHover={{ scale: 1.02 }}
-    className={`relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}`}
+    className="relative bg-white rounded-2xl shadow-xl overflow-hidden ${index % 2 === 0 ? 'rotate-2' : '-rotate-2'}"
     initial="hidden"
     animate="show"
   >
-    <Image
-      src={highlight.image}
+    <Image src={highlight.image}
       alt={highlight.title}
       width={500}
       height={192}
       className="w-full h-48 object-cover"
-      loading="lazy"
       quality={75}
     />
     <div className="p-5">
@@ -475,13 +474,11 @@ export default function PushkarHoliFestivalPackage() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <Image
-              src={rightSideImage}
+            <Image src={rightSideImage}
               alt="Pushkar Holi Icon"
               width={150}
               height={150}
               className="object-cover"
-              loading="lazy"
               quality={75}
             />
             <motion.button
@@ -650,13 +647,11 @@ export default function PushkarHoliFestivalPackage() {
               X
             </button>
             <div className="mb-4">
-              <Image
-                src={heroImage}
+              <Image src={heroImage}
                 alt="Pushkar Holi Festival"
                 width={400}
                 height={128}
                 className="w-full h-32 object-cover rounded-lg"
-                loading="lazy"
                 quality={75}
               />
               <h3 className="mt-3 text-lg font-bold text-[#00453A] font-sans">Pushkar Holi Festival – 3 Nights / 4 Days - Paradise Bliss Tours</h3>

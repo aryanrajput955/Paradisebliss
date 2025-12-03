@@ -6,6 +6,7 @@ import { Pagination, Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from 'next/image';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import WhyChooseUs from '@/components/whychooseus';
@@ -123,8 +124,7 @@ const AlmatyTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img
-            width={100}
+          <Image width={100}
             height={100}
             src="/img/logo.png"
             alt="Paradise Bliss Tours Logo"
@@ -229,54 +229,53 @@ const AlmatyTour = () => {
         >
           <div className="py-6 space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why Visit Almaty?</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">About Almaty:</h3>
               <p className="text-gray-600 leading-relaxed">
-                Almaty is a destination that caters to every type of traveler. Adventure seekers, culture enthusiasts, and leisure travelers alike will find plenty to explore:
+                This is the largest city and the cultural heart of Kazakhstan. It is surrounded by the snow-capped peaks of the Trans-Ili Alatau Mountains. Renowned as the &quot;City of Apple&quot;, it welcomes travelers with exclusive stays, wide-lined alleyways, colorful markets, cozy cafes, and peaceful parks. It has a unique fusion of European and Asian cultures, and it is one of the most captivating cities in Central Asia.
               </p>
-              <ul className="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                <li>Breathtaking Natural Landscapes: Discover the turquoise waters of Big Almaty Lake, hike through Kolsai Lake, or relax at the Alma Arasan Mountain Resort.</li>
-                <li>Adventure Activities: Ski or snowboard at Shymbulak Ski Resort, trek through the mountains, or explore the surrounding canyons.</li>
-                <li>Rich Cultural Heritage: Visit the colorful Zenkov Cathedral, explore Panfilov Park, and learn about Kazakh history at the Central State Museum.</li>
-                <li>Vibrant City Life: Enjoy shopping at local markets like Green Bazaar, indulge in traditional Kazakh cuisine, and stroll along scenic boulevards.</li>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Top places to visit in Almaty:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-4 mt-4">
+                <li><strong>Kok Tobe Hill:</strong> Perched at the hill top, overlooking the city. This place offers an outstanding bird&apos;s-eye view of Almaty. The best way to get there is by cable car, which offers scenic views of the charming neighboring cities. This area has numerous restaurants, local shops, mini-parks, and a famous Beatles statue. This Place turns into a magical escape every evening when the city illuminates the skyline.</li>
+                <li><strong>Shymbulak Ski Resort:</strong> This is one of the most amazing winter destinations in Kazakhstan, located near the stunning Zailiyskiy Alatau mountains. Its charming surroundings and the high-altitude beauty make it a must-visit destination. And if you are not skiing, you can also take the Gandola ride from Medeu to Shymbulak, which offers an unforgettable experience.</li>
+                <li><strong>Big Almaty Lake:</strong> This lake is situated in the southern mountains of Almaty. This lake is famous for its turquoise water, which changes its color through different seasons. It has crystal clear water, which is also an important source of water in Almaty.</li>
+                <li><strong>Zenkov Cathedral (Ascension Cathedral):</strong> This is a wooden structure that is such a masterpiece. It is among the iconic landmarks of Almaty. This is located in the Panfilov Park, in a peaceful environment. The entire cathedral was built of wood, without using a single nail. This place holds an important role in Kazakhstan&apos;s religious history and culture.</li>
+                <li><strong>Medeu Ice Skating Park:</strong> The highest skating rink in the world is located in a short distance from the main city. This is renowned for its Olympic-sized rink and the charming natural surroundings. This is the perfect place for adventure lovers; they can enjoy skating and get fresh mountain air. It becomes one of the most fascinating spots of Almaty in winter.</li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Top Attractions in Almaty</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Big Almaty Lake: A stunning turquoise lake set against mountain backdrops.</li>
-                <li>Shymbulak Ski Resort: A world-class destination for winter sports and summer hiking.</li>
-                <li>Kok Tobe Hill: Take a cable car to enjoy panoramic views of the city.</li>
-                <li>Medeu Ice Rink: The world’s highest outdoor skating rink, perfect for winter fun.</li>
-                <li>Zenkov Cathedral: A unique wooden cathedral located in Panfilov Park.</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best time to visit:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li><strong>Spring (April to June) –</strong> this is the perfect time for exploring, sightseeing, and outdoor activities. It offers the blooming of colorful flowers.</li>
+                <li><strong>Summer (July to September) –</strong> Ideal for visiting nature, like Almaty Lake, hiking, and mountain trails, and also best for exploring markets.</li>
+                <li><strong>Autumn (September to November) –</strong> This season turns the city into a golden paradise. This is the best time for photography, sightseeing, and rides through cable cars.</li>
+                <li><strong>Winter (December to March) –</strong> This place turns into a snow heaven in winter, especially for snow lovers. Best for snow activities like skiing, snowboarding, and ice skating.</li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Almaty is beautiful year-round, but the ideal seasons are:
-              </p>
-              <ul className="list-disc list-inside text-gray-600 space-y-2 mt-2">
-                <li>Spring (April–June): Blooming flowers, mild temperatures, and lush landscapes.</li>
-                <li>Autumn (September–October): Golden foliage and clear skies perfect for sightseeing.</li>
-                <li>Winter (December–March): Ideal for skiing and snow activities.</li>
-                <li>Summer (June–August): Perfect for trekking, hiking, and exploring natural parks.</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in Almaty:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Ride in the cable car at Kok Tobe.</li>
+                <li>Skating at the highest ice rink at Medeu.</li>
+                <li>Explore the stunning turquoise Almaty Lake.</li>
+                <li>Visit the central State Museum and the museum of folk instruments.</li>
+                <li>Enjoy the taste of local cuisine.</li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why Choose Paradise Bliss Tours?</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Tailor-Made Itineraries: Customize your Almaty trip according to your interests and schedule.</li>
-                <li>Affordable Pricing: Transparent, value-for-money packages with no hidden costs.</li>
-                <li>Expert Guides: Knowledgeable local guides make your journey informative and hassle-free.</li>
-                <li>Comfort & Convenience: Handpicked hotels, private transfers, and well-planned sightseeing.</li>
-                <li>24/7 Support: Assistance throughout your Almaty adventure.</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why choose Paradise Bliss Tours:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Experienced in Global and Personalized travel plans.</li>
+                <li>Tailored itinerary for all traveler as per their need and preferences.</li>
+                <li>Complete Tour services – Hotels, Visa, Flights, and sightseeing.</li>
+                <li>We provide you 24*7 customer support.</li>
+                <li>Affordable Luxury Tour packages without any hidden cost.</li>
               </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Book Your Almaty Tour</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Experience the perfect mix of nature, adventure, and city life with Paradise Bliss Tours. From breathtaking lakes and mountains to vibrant markets and historical sites, Almaty offers an unforgettable travel experience.
-              </p>
             </div>
           </div>
         </div>
@@ -301,8 +300,7 @@ const AlmatyTour = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <img
-              width={48}
+            <Image width={48}
               height={48}
               src={stat.img}
               alt={stat.text.split('<br/>')[0]}
@@ -369,8 +367,7 @@ const AlmatyTour = () => {
                   >
                     {/* Clickable area: image + info */}
                     <Link href={tour.link} className="flex-1 flex flex-col cursor-pointer">
-                      <img
-                        height={224}
+                      <Image height={224}
                         width={400}
                         src={tour.image}
                         alt={tour.title}
@@ -461,8 +458,7 @@ const AlmatyTour = () => {
             </button>
             {selectedTour && (
               <div className="mb-4">
-                <img
-                  height={128}
+                <Image height={128}
                   width={400}
                   src={selectedTour.image}
                   alt={selectedTour.title}
