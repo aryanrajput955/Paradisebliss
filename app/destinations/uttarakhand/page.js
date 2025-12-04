@@ -181,7 +181,7 @@ const UttarakhandTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Uttarakhand – The Dev Bhoomi of India
+         Explore the Land of Gods – Uttarakhand Tour Packages by Paradise Bliss Tours Pvt. Ltd.
         </motion.h2>
         <motion.p
           className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
@@ -189,9 +189,17 @@ const UttarakhandTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Nestled in the lap of the mighty Himalayas, Uttarakhand is truly the Land of Gods. From sacred temples and holy rivers to serene lakes, snow-clad peaks, and lush green valleys — this divine state offers peace, adventure, and spirituality like no other.
+         Discover the beauty of Dev Bhoomi (Uttarakhand), the land where spirituality meets tranquility. It is situated in the foothills of the Himalayas. It has snow-capped mountains, lush Valleys, sacred rivers, and pleasant hill stations. At paradise Bliss Tours, we bring you the best Uttarakhand Tour Package, which is a perfect combination of spirituality, peace, and Adventure.
+Whether you want to seek blessings from the Chardham yatra, or want the thrill of a snow adventure in Auli, or want peace in Mussoorie and Nainital, we have tailored packages for all travelers.
         </motion.p>
-
+                <motion.p
+          className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+         Uttarakhand is also known as the Dev Bhoomi (Land of God). It offers many destinations to every traveler, Rishikesh and Haridwar, for peace and spirituality, Chopta and Auli for adventure, and for scenic views, Nainital and Mussoorie. Uttarakhand is mostly known for its rich tradition and culture. 
+        </motion.p>
         <div
           ref={contentRef}
           className={`text-left w-full max-w-5xl overflow-hidden transition-all duration-700 ease-in-out transform ${
@@ -205,13 +213,13 @@ const UttarakhandTour = () => {
               <p>Home to the sacred Char Dham Yatra (Yamunotri, Gangotri, Kedarnath, Badrinath), Rishikesh (Yoga Capital of the World), and Haridwar — where the holy Ganga touches the plains.</p>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Nature’s Paradise</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Places  to Visit </h3>
               <ul className="list-disc list-inside space-y-2">
-                <li>Nainital, Bhimtal, Almora – Pristine lakes & colonial charm</li>
-                <li>Valley of Flowers & Hemkund Sahib – UNESCO World Heritage blooms</li>
-                <li>Auli – India’s top skiing destination</li>
-                <li>Chopta – Known as “Mini Switzerland of India”</li>
-                <li>Jim Corbett National Park – Home to Royal Bengal Tigers</li>
+               <li><strong>Haridwar and Rishikesh </strong>They are the Heart of Uttarakhand. These twin cities offer the perfect blend of spirituality and serenity. Rishikesh is known as the Yoga Capital of the World, which gives the thrill and peace both, through its divine aarti, ancient ashrams, and the adventurous hub like River rafting, Bungee jumping and etc.</li>
+               <li><strong>Nainital</strong>It is also known as the city of lakes. A beautiful city surrounded by the charming Naini Lake. This city is full of charm, peaceful lakes, and colonial architecture. You can experience a soothing walk on the Mall Road and the panoramic views from the Snow Viewpoint, and a boat ride on the Naini Lake. Every corner of Nainital emanates peace and romance.</li>
+                <li><strong>Mussoorie</strong>Popularly known as the Queen of Hills. This is located at 6,000 ft. above sea level. This place offers the picturesque hills and breathtaking Himalayan views. Here you can explore the scenic Kempty Falls and the romantic Camel’s Back Road. Adventure lovers can explore Gun Hill Point for the panoramic view, or could explore the Lal Tibba, the town’s highest peak. You can also go to Jim Corbett National Park, India’s oldest wildlife sanctuary. </li>
+                 <li><strong>Auli</strong> It is a popular hill station in India, which is situated at an altitude of 8,000 ft. It is surrounded by the Peaks of Nanda Devi, Mana Parvat, and Kamet. It is a premium Skiing destination in India. During winter, Auli transforms into a snow wonderland best for skiing, snowboarding, and cable car rides, and in summer, it has lush green meadows, best for trekking and walking. And the famous Auli ropeway is Asia’s longest ropeway, which gives panoramic views is an experience that should not be missed.</li>
+                  <li><strong>Kedarnath and Badrinath</strong>These are the two main shrines among the Chardham dham of Uttarakhand. Kedarnath temple is dedicated to lord shiva, which holds a supreme spiritual eminence for devotees. It is believed that it was constructed by the Pandavas and rebuilt by Adi Shankaracharya. And it is also one of the 12 Jyotirlingas of lord shiva. Badrinath is dedicated to Lord Vishnu. This temple is situated between the high snowcapped mountains. Every year, thousands of devotees travel here to seek blessings and take a view of Mana village, the last village of India, and Vasudhara falls. </li>
               </ul>
             </div>
             <div>
@@ -221,9 +229,29 @@ const UttarakhandTour = () => {
             <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li><strong>March–June</strong>: Ideal for hill stations & adventure</li>
-                <li><strong>July–September</strong>: Lush greenery, Valley of Flowers in full bloom</li>
-                <li><strong>October–February</strong>: Snow in Auli, perfect for honeymoon & winter lovers</li>
+                <li><strong>March–June</strong>: This season is great for trekking, Temple visits, and ideal for hill stations.</li>
+                <li><strong>July–August</strong>: this is the perfect time for snow lovers and the best time for Auli skiing. </li>
+                <li><strong>Decembber–February</strong>: This time is better for Nature lovers, as it looks like the lush green Landscape. But try to avoid to visit at hilly areas, as it will be quite risky due to the heavy chances of Landslides. </li>
+              </ul>
+            </div>
+             <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in Uttarakhand</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>1.	Took part in the evening arti at Rishikesh and Haridwar.</li>
+                 <li>2.	Skiing and a cable car ride at Auli.</li>
+                  <li>3.	Explore the beautiful lakes of Nainital and the elegant hills of Mussoorie.</li>
+                   <li>4.	Undertake the Chardham Yatra.</li>
+                    <li>5.	Go for the Jungle safari in Jim Corbett National Park. </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Kerala Trip?</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>We have a tailored itinerary for all traveler as per their need and preferences.</li>
+                <li>We provide you with the best accommodation.</li>
+                <li>Private Cab and local Assistance, Enjoy Hassle-free transfer with professional drivers.</li>
+                <li>Enjoy local sightseeing for whatever package you choose.</li>
+                <li>We provide you 24*7 customer support.</li>
               </ul>
             </div>
           </div>

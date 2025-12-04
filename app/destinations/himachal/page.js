@@ -215,7 +215,7 @@ const HimachalTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Himachal Pradesh – The Abode of Natural Beauty
+          Explore the Beauty of Himachal Pradesh with Paradise Bliss Tours Pvt Ltd.
         </motion.h2>
         <motion.p
           className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
@@ -223,7 +223,18 @@ const HimachalTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Cradled in the majestic Himalayas, Himachal Pradesh is a land where nature paints its most beautiful picture. From snow-covered peaks and lush valleys to sparkling rivers and ancient temples, Himachal is a true paradise for nature lovers and adventure seekers alike. Whether you’re looking for peace in the mountains or the thrill of adventure, Himachal welcomes you with open arms and warm smiles.
+         Explore Himachal Pradesh – A complete paradise for nature lovers and adventure seekers. This place offers the snow-covered peaks, valleys filled with the fragrance of Pine trees, ancient monasteries, and orchards of Apples. 
+At Paradise Bliss Tours, we organized a package that is the perfect blend of comfort, scenic beauty, and thrill. Whether you want a romantic gateway at Manali, a soothing holiday at Dharamshala, or a Thrilling Experience at Shimla and Spiti. we make sure that your trip will be memorable as never before. 
+
+        </motion.p>
+                <motion.p
+          className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+         Himachal Pradesh is a Dream destination for many travelers who are seeking Natural, untouched beauty and adventure. This state gives the perfect blend of spirituality, peace, and thrill. The most visited places are: Shimla, Manali, Spiti Valley, Dharmshala, and Dalhousie. Here, you can see the colonial charms, snow paradise, spiritual aura, and inner peace. Every place in Himachal has its own beauty that tells an amazing story.
+
         </motion.p>
         <div
           ref={contentRef}
@@ -246,19 +257,22 @@ const HimachalTour = () => {
             <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">Must-Visit Destinations</h3>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Shimla</strong>: The Queen of Hills, known for Mall Road, Ridge, Jakhoo Temple, and toy train rides.</li>
-                <li><strong>Manali</strong>: A favorite among adventure lovers — enjoy paragliding, rafting, skiing, and visit Solang Valley & Rohtang Pass.</li>
-                <li><strong>Dharamshala & McLeodganj</strong>: The home of the Dalai Lama, offering spiritual calmness and Tibetan charm.</li>
-                <li><strong>Dalhousie & Khajjiar</strong>: Often called “Mini Switzerland of India,” these towns are perfect for honeymooners and peace seekers.</li>
-                <li><strong>Kasol & Tosh</strong>: Paradise for backpackers and trekkers, surrounded by the Parvati Valley’s mesmerizing beauty.</li>
-                <li><strong>Spiti Valley</strong>: The land between Tibet and India, known for its monasteries, cold deserts, and starry skies.</li>
+                <li><strong>Shimla</strong>: This is one of the popular hill station in India, which is famous for its Colonial-era Architecture, endless mountain Horizon, and the highly acclaimed Mall Road. It is a perfect mix of adventure and peace, and it’s an all-time favorite destination for honeymooners and families as well. </li>
+                <li><strong>Manali</strong>:A paradise for Adventure and Romance, nestled in the Kullu Valley. Snowcapped mountains, river-facing cafes, cozy resorts, and apple orchards make it an admirable hill station of India. Explore the natural beauty and thrill in Solang Valley, Rohtang Pass, and old Manali.</li>
+                <li><strong>Dharamshala & McLeodganj</strong>: This is situated opposite the Dhuladhar Range. Dharamshala is a perfect blend of natural charm and the Tibetan culture. This is the Home of the Dalai Lama, known for its monasteries, picturesque charm, and Calm aura. Visit McLeod Ganj to chill at the hillside cafes, stroll through the pine forests, and enjoy the natural charm.</li>
+                <li><strong>Dalhousie & Khajjiar</strong>:An enchanting hill station with the Vintage Charm. This is known as the Mini Switzerland of India. With whispering pine valleys, a Vintage Victorian structure, and the snow-covered pir pinjal range, it is a perfect destination for friends and family. Explore Khajjiur, Panchpula, and St. John’s Church. </li>
+                <li><strong>Spiti Valley</strong>: It is called the Middle Land, as it lies between India and Tibet. This is a high-altitude desert with untouched beauty, the Rocky Mountains, and Ancient Monasteries. Visit Asia’s highest bridge, Chicham Bridge, the key monastery, Kaza, and experience the most unique starlit night. </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Adventures That Awaken Your Soul</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Himachal Pradesh is heaven for those who crave adventure. From trekking through snow trails in Manali to river rafting in Kullu, paragliding in Bir Billing, and skiing in Solang Valley, the state offers countless thrilling experiences. Nature lovers can go camping by the Beas River or explore the apple orchards of Kinnaur. Every season in Himachal brings its own charm — lush green valleys in summer and snow-kissed mountains in winter.
-              </p>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in Himachal </h3>
+              <ul className="list-disc list-inside text-gray-600 space-y-2">
+                <li>1.	Step into the Hill stations & colonial Charms in Shimla and Dalhousie.</li>
+                <li>2.	Experience the thrilling snow adventure in Solang Valley and Rohtang Pass.</li>
+                <li>3.	Visit Monasteries and uncover peace and the spiritual vibes in Dhramshala</li>
+                <li>4.	Explore trekking and camping in Thirthan Valley, Kheerganga, and Triund. </li>
+                <li>5.	Discover the Raw natural beauty of the Spiti Valley.</li>
+              </ul>
             </div>
             <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">Culture, Food and Festivals</h3>
@@ -269,9 +283,19 @@ const HimachalTour = () => {
             <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit Himachal Pradesh</h3>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Summer (March to June)</strong>: Perfect for sightseeing, trekking, and exploring hill stations.</li>
-                <li><strong>Monsoon (July to September)</strong>: The valleys bloom with freshness, though landslides are possible in some areas.</li>
-                <li><strong>Winter (October to February)</strong>: Best for snow lovers, honeymoon trips, and winter sports.</li>
+                <li><strong>Summer (March to June)</strong>: This season has the delightful weather, clear sky, and the floral Valley, ideal for Friends and family Trip. </li>
+                <li><strong>Monsoon (July to September)</strong>: Discover Majestic snow in Shimla, Manali, and Kufri. Perfect for Honeymooners and the family trip.</li>
+                <li><strong>Winter (October to February)</strong>:Experience the lush greenery everywhere, which creates a peaceful and romantic essence. Great for nature lovers.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why choose Paradise Bliss Tours:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li>Experienced in Global and Personalized travel plans.</li>
+                <li>Tailored itinerary for all traveler as per their need and preferences.</li>
+                <li>Complete Tour services – Hotels, Visa, Flights, and sightseeing.</li>
+                <li>We provide you 24*7 customer support.</li>
+                <li>Affordable Luxury Tour packages without any hidden cost.</li>
               </ul>
             </div>
           </div>

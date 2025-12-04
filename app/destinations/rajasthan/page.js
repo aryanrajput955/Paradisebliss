@@ -221,7 +221,7 @@ const RajasthanTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Rajasthan – The Land of Royalty and Heritage
+          Royal Rajasthan Tour Packages by Paradise Bliss Tours Pvt. Ltd.
         </motion.h2>
         <motion.p
           className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
@@ -229,7 +229,19 @@ const RajasthanTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Welcome to Rajasthan, a land where every fort tells a story, every palace whispers history, and every desert dune echoes the songs of valor and romance. Known as the Land of Kings, Rajasthan is India’s most vibrant and culturally rich state — a perfect blend of royal grandeur, colorful traditions, and timeless beauty.
+         Step into the Land of Royal Legacy, Vibrant culture, and ageless beauty - Rajasthan, Land of Kings. Here you can experience the perfect blend of royalty and beauty, from royal forts to the dunes. 
+At Paradise Bliss Tours, we provide you with a premium Rajasthan Heritage Package, which gives you a great experience of history, luxury, and the local taste. Whether you want to experience the boat ride on the lakes, stroll the golden dunes, taste local flavors, or shop at local markets. 
+
+        </motion.p>
+
+                <motion.p
+          className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+         Rajasthan is a Fascinating state of India, which is the home of the most iconic palaces and forts that tell the glorious history of India. Here you can explore the pink city Jaipur, Romantic lakes at Udaipur, the golden sand at Jaisalmer, and royal forts at Jodhpur, with their warm hospitality. It is the perfect destination for couples and families as well. 
+
         </motion.p>
 
         <div
@@ -249,12 +261,11 @@ const RajasthanTour = () => {
             <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">Must-Visit Destinations</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li><strong>Jaipur</strong>: The Pink City – Hawa Mahal, Amber Fort, City Palace</li>
-                <li><strong>Udaipur</strong>: City of Lakes – Lake Pichola, Jag Mandir, City Palace</li>
-                <li><strong>Jodhpur</strong>: The Blue City – Mehrangarh Fort, Umaid Bhawan</li>
-                <li><strong>Jaisalmer</strong>: Golden City – Sonar Quila, Sam Sand Dunes</li>
-                <li><strong>Pushkar</strong>: Sacred lake, Brahma Temple & Camel Fair</li>
-                <li><strong>Mount Abu</strong>: Rajasthan’s only hill station</li>
+                <li><strong>Jaipur</strong>: It is the heart of Rajasthan’s great heritage, which is popularly known as the Pink City. It offers the glorious forts and the royal palaces, which are the perfect blend of history and modernism. The most famous places to visit are: City Palace, Hawa Mahal, and Amber Fort. </li>
+                <li><strong>Udaipur</strong>: It is known as the City of Lakes. Udaipur is India’s most romantic city, so it's a perfect escape for honeymoon couples. The most famous places of Udaipur are: The great city palace, Lake Pichola, and the Jagmag Mandir, which looks like a dreamy place. </li>
+                <li><strong>Jodhpur</strong>: It is known as the Blue City, which offers the vibrant views that make a complete mixture of history and charm. It is famous for its handicraft markets and the rich traditions of Rajasthan. Popular places to visit are: Mehrangarh fort, Jaswant Thada, and the Umaid Bhawan Palace.</li>
+                <li><strong>Jaisalmer</strong>:It is popularly known as the Golden City. Jaisalmer is the heart of the Thar Desert. The Famous Jaisalmer Fort, magnificent Havelis, and the exciting Desert safari, which makes it the best place for adventure lovers and cultural seekers.  </li>
+                <li><strong>Mount Abu</strong>: It is the only hill station of Rajasthan, which is the perfect escape from the blazing temperature of the desert. The most famous places to visit here are Nakki Lake, the beautiful Dilwara Temple, and the panoramic viewpoint at Sunset Point</li>
               </ul>
             </div>
             <div>
@@ -270,6 +281,16 @@ const RajasthanTour = () => {
               </p>
             </div>
             <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in Rajasthan </h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>1.	Visit ancient Palaces and Majestic Forts like City Palace, Hawa Mahal, and Amber Fort.</li>
+                <li>2.	Desert Camping & Camel Safari in Jaisalmer. </li>
+                 <li>3.	Tiger Safari in Ranthambore National Park.</li>
+                  <li>4.	A scenic boat ride in the evening at Picholia Lake. </li>
+                   <li>5.	Take part in the Authentic activities like: folk dance and puppet show </li>
+              </ul>
+              </div>
+            <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">A Culinary Royal Treat</h3>
               <p className="leading-relaxed">
                 Savor Dal Baati Churma, Laal Maas, Gatte ki Sabzi, Ker Sangri, and sweets like Ghewar & Malpua — pure royal indulgence.
@@ -278,9 +299,19 @@ const RajasthanTour = () => {
             <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit Rajasthan</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li><strong>Oct–Mar:</strong> Peak season – pleasant weather, festivals</li>
-                <li><strong>Apr–Jun:</strong> Good for Mount Abu & off-season deals</li>
-                <li><strong>Jul–Sep:</strong> Monsoon beauty in palaces & lakes</li>
+                <li><strong>Oct–Mar:</strong> This is the perfect time to explore cities like Jaipur, Jodhpur, Udaipur, and Jaisalmer. Days are cool and comfortable for outdoor activities and walking to the Heritage.</li>
+                <li><strong>Apr–Jun:</strong> this is the best time to visit Mount Abu, and you can enjoy less crowd at the Heritage places. </li>
+                <li><strong>Jul–Sep:</strong> the ideal time to be at the Allavari Hills, to get its perfect lush green beauty.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Kerala Trip?</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>We have a tailored itinerary for all traveler as per their need and preferences.</li>
+                <li>We provide you with the best accommodation.</li>
+                <li>Private Cab and local Assistance, Enjoy Hassle-free transfer with professional drivers.</li>
+                <li>Enjoy local sightseeing for whatever package you choose.</li>
+                <li>We provide you 24*7 customer support.</li>
               </ul>
             </div>
           </div>
