@@ -85,14 +85,14 @@ export default function DomesticGetaways() {
 
 				{/* Slider Container */}
 				<div className="relative overflow-visible">
-					{/* Centered overlay nav arrows */}
+					{/* Centered overlay nav arrows - Hidden on mobile */}
 					<button
-						className="domestic-button-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[70%] sm:-translate-x-[90%] md:-translate-x-[110%] lg:-translate-x-[130%] z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full shadow-lg flex items-center justify-center hover:scale-110  bg-[#00453A] text-white transition-all ease-in-out cursor-pointer border"
+						className="domestic-button-prev hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[70%] lg:-translate-x-[90%] xl:-translate-x-[110%] z-20 w-10 h-10 lg:w-12 lg:h-12 rounded-full shadow-lg items-center justify-center hover:scale-110 bg-[#00453A] text-white transition-all ease-in-out cursor-pointer border"
 						aria-label="Previous"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							className="h-5 w-5 sm:h-6 sm:w-6"
+							className="h-5 w-5 lg:h-6 lg:w-6"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -101,12 +101,12 @@ export default function DomesticGetaways() {
 						</svg>
 					</button>
 					<button
-						className="domestic-button-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-[70%] sm:translate-x-[90%] md:translate-x-[110%] lg:translate-x-[130%] z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full cursor-pointer hover:scale-110 shadow-lg flex items-center justify-center bg-[#00453A] text-white transition-all ease-in-out"
+						className="domestic-button-next hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-[70%] lg:translate-x-[90%] xl:translate-x-[110%] z-20 w-10 h-10 lg:w-12 lg:h-12 rounded-full cursor-pointer hover:scale-110 shadow-lg items-center justify-center bg-[#00453A] text-white transition-all ease-in-out"
 						aria-label="Next"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							className="h-5 w-5 sm:h-6 sm:w-6"
+							className="h-5 w-5 lg:h-6 lg:w-6"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -128,6 +128,7 @@ export default function DomesticGetaways() {
 						navigation={{
 							nextEl: '.domestic-button-next',
 							prevEl: '.domestic-button-prev',
+							enabled: true,
 						}}
 						breakpoints={{
 							640: { slidesPerView: 2 },
@@ -214,7 +215,7 @@ export default function DomesticGetaways() {
 			<style jsx global>{`
 				.domestic-pagination {
 					display: flex;
-					justify-content: center; /* center the dots */
+					justify-content: center;
 					align-items: center;
 					gap: 8px;
 					min-height: 20px;

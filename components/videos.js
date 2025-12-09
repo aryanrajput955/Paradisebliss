@@ -42,30 +42,32 @@ export default function VideoSlider() {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4">
         <h1
           style={{ color: 'var(--color-dark)', fontFamily: 'salazur' }}
-          className="text-4xl md:text-6xl font-bold pt-10 text-center"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold pt-8 sm:pt-10 text-center"
         >
           See What It Feels Like
         </h1>
       </div>
-      <div style={{ backgroundColor: 'var(--light-green)' }} className="flex items-center justify-center relative">
-        <div className="max-w-4xl w-full px-4 py-10 relative overflow-visible">
-          {/* Nav arrows */}
-          <button style={{ backgroundColor: 'var(--color-dark)' }} 
-            className="video-swiper-button-prev  hover:scale-110 ease-in-out transition-all cursor-pointer absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[90%] sm:-translate-x-[110%] md:-translate-x-[130%] lg:-translate-x-[150%] z-20 bg-white w-11 h-11 rounded-full shadow-md flex items-center justify-center border border-[#00453a]/30"
+      <div style={{ backgroundColor: 'var(--light-green)' }} className="flex items-center justify-center relative overflow-hidden">
+        <div className="max-w-7xl w-full px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-8 sm:py-10 md:py-12 relative">
+          {/* Nav arrows - Hidden on mobile, visible on larger screens */}
+          <button 
+            style={{ backgroundColor: 'var(--color-dark)' }} 
+            className="video-swiper-button-prev hidden md:flex hover:scale-110 ease-in-out transition-all cursor-pointer absolute left-2 lg:left-4 xl:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 lg:w-11 lg:h-11 xl:w-12 xl:h-12 rounded-full shadow-lg items-center justify-center border border-[#00453a]/30"
             aria-label="Previous"
           >
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 lg:w-6 lg:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-           <button style={{ backgroundColor: 'var(--color-dark)' }} 
-            className="video-swiper-button-next hover:scale-110 ease-in-out transition-all cursor-pointer absolute right-0 top-1/2 -translate-y-1/2 translate-x-[90%] sm:translate-x-[110%] md:translate-x-[130%] lg:translate-x-[150%] z-20 bg-white w-11 h-11 rounded-full shadow-md flex items-center justify-center border border-[#00453a]/30"
+          <button 
+            style={{ backgroundColor: 'var(--color-dark)' }} 
+            className="video-swiper-button-next hidden md:flex hover:scale-110 ease-in-out transition-all cursor-pointer absolute right-2 lg:right-4 xl:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 lg:w-11 lg:h-11 xl:w-12 xl:h-12 rounded-full shadow-lg items-center justify-center border border-[#00453a]/30"
             aria-label="Next"
           >
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 lg:w-6 lg:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
             </svg>
           </button>
@@ -75,7 +77,11 @@ export default function VideoSlider() {
             spaceBetween={10}
             slidesPerView={1}
             pagination={{ clickable: true, dynamicBullets: false, el: '.video-pagination' }}
-            navigation={{ nextEl: '.video-swiper-button-next', prevEl: '.video-swiper-button-prev' }}
+            navigation={{ 
+              nextEl: '.video-swiper-button-next', 
+              prevEl: '.video-swiper-button-prev',
+              enabled: true 
+            }}
             onInit={(swiper) => {
               swiper.params.navigation.prevEl = '.video-swiper-button-prev';
               swiper.params.navigation.nextEl = '.video-swiper-button-next';
@@ -83,9 +89,36 @@ export default function VideoSlider() {
               swiper.navigation.update();
             }}
             breakpoints={{
-              640: { slidesPerView: 1.5, spaceBetween: 15 },
-              768: { slidesPerView: 2, spaceBetween: 15 },
-              1024: { slidesPerView: 4, spaceBetween: 20 },
+              // Mobile: 1 video
+              0: { 
+                slidesPerView: 1, 
+                spaceBetween: 10 
+              },
+              // Small tablets: 1.5 videos
+              480: { 
+                slidesPerView: 1.5, 
+                spaceBetween: 12 
+              },
+              // Tablets: 2 videos
+              640: { 
+                slidesPerView: 2, 
+                spaceBetween: 15 
+              },
+              // Small laptops: 3 videos
+              768: { 
+                slidesPerView: 2.5, 
+                spaceBetween: 18 
+              },
+              // Laptops: 4 videos (bigger size)
+              1024: { 
+                slidesPerView: 3.5, 
+                spaceBetween: 20 
+              },
+              // Large screens: 4 videos (even bigger)
+              1280: { 
+                slidesPerView: 4, 
+                spaceBetween: 24 
+              },
             }}
             className="py-4"
           >
@@ -103,6 +136,7 @@ export default function VideoSlider() {
                       ref={(el) => (videoRefs.current[index] = el)}
                       src={video.src}
                       loop
+                  
                       playsInline
                       className="absolute top-0 left-0 w-full h-full object-cover rounded-xl"
                       onMouseEnter={() => handleMouseEnter(index)}
@@ -116,31 +150,43 @@ export default function VideoSlider() {
 
           <style jsx global>{`
             .video-pagination {
-             width: 100% !important;
-             display: flex !important;
-             justify-content: center !important; /* center the dots */
-             align-items: center !important;
-             gap: 8px;
-             min-height: 20px;
-             margin: 0 auto; /* ensure centered container */
+              width: 100% !important;
+              display: flex !important;
+              justify-content: center !important;
+              align-items: center !important;
+              gap: 8px;
+              min-height: 20px;
+              margin: 0 auto;
+              padding: 0 20px;
             }
             .video-pagination .swiper-pagination-bullet {
-              background: #d1d5db; /* gray */
-              width: 10px;
-              height: 10px;
+              background: #d1d5db;
+              width: 8px;
+              height: 8px;
               opacity: 1;
               transition: all 0.3s ease;
               margin: 0 !important;
               display: inline-block;
               flex-shrink: 0;
             }
+            @media (min-width: 640px) {
+              .video-pagination .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+              }
+            }
             .video-pagination .swiper-pagination-bullet-active {
-              background: #00453A; /* dark green */
-              width: 28px;
+              background: #00453A;
+              width: 24px;
               border-radius: 5px;
             }
+            @media (min-width: 640px) {
+              .video-pagination .swiper-pagination-bullet-active {
+                width: 28px;
+              }
+            }
           `}</style>
-          <div className="video-pagination mt-6 w-full flex justify-center"></div>
+          <div className="video-pagination mt-4 sm:mt-6 w-full flex justify-center"></div>
         </div>
       </div>
     </>

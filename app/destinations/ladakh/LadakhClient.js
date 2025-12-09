@@ -14,17 +14,27 @@ import Link from 'next/link';
 
 const tours = [
   {
-    title: "Uttarakhand Tour Package",
-    dates: ["Dates on Request"],
-    prices: ["₹12,999*", "₹9,999*"],
-    image: "/img/uttarakhand2.jpg",
-    duration: "5N6D",
-    group: "Group Departure",
-    link: "/indian-tours/uttarakhand-tour-package",
+    title: "Leh to Turtuk Tour",
+    dates: ["May 15", "June 01", "July 10"],
+    prices: ["Starting ₹25,990*", "₹22,990*"],
+    image: "/img/ladakh.jpg",
+    duration: "7D6N",
+    group: "Group Tour",
+    link: "/indian-tours/leh-to-turtuk-tour",
   },
+  {
+    title: "Ladakh Bike Expedition",
+    dates: ["May 20", "June 05", "July 15"],
+    prices: ["Starting ₹22,990*", "₹19,990*"],
+    image: "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    duration: "5D4N",
+    group: "Group Tour",
+    link: "/indian-tours/ladakh-bike-trip",
+  },
+
 ];
 
-const UttarakhandTour = () => {
+const LadakhTour = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [contentHeight, setContentHeight] = useState(0);
   const contentRef = useRef(null);
@@ -36,7 +46,7 @@ const UttarakhandTour = () => {
     date: null,
     travellers: '',
     email: '',
-    package: 'Uttarakhand Tour',
+    package: 'Ladakh Tour',
   });
 
   const handleOpenModal = (tour) => {
@@ -47,7 +57,14 @@ const UttarakhandTour = () => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedTour(null);
-    setFormData({ name: '', phone: '', date: null, travellers: '', email: '', package: 'Uttarakhand Tour' });
+    setFormData((prev) => ({
+      ...prev,
+      name: '',
+      phone: '',
+      date: null,
+      travellers: '',
+      email: '',
+    }));
   };
 
   const handleInputChange = (e) => {
@@ -61,16 +78,22 @@ const UttarakhandTour = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', { ...formData, tour: selectedTour });
-    alert('Thank you! We will contact you shortly for your Uttarakhand journey.');
+    console.log('Modal Form Submitted:', { ...formData, tour: selectedTour?.title });
+    alert('Thank you! We will contact you soon.');
     handleCloseModal();
   };
 
   const handleHeroFormSubmit = (e) => {
     e.preventDefault();
-    console.log('Hero form submitted:', formData);
-    alert('Thank you! Your inquiry has been received.');
-    setFormData({ name: '', phone: '', date: null, travellers: '', email: '', package: 'Uttarakhand Tour' });
+    console.log('Hero Form Submitted:', formData);
+    alert('Thank you! Your inquiry has been sent.');
+    setFormData((prev) => ({
+      ...prev,
+      name: '',
+      phone: '',
+      email: '',
+      package: 'Ladakh Tour',
+    }));
   };
 
   useEffect(() => {
@@ -80,7 +103,7 @@ const UttarakhandTour = () => {
   }, [isOpen]);
 
   const stats = [
-    { img: '/img/instagram.png', text: 'Community of<br/> 400k+ On Instagram' },
+    { img: '/img/smile.png', text: '400k+<br/>Happy Customers' },
     { img: '/img/star.png', text: '4.8<br/>Ratings' },
     { img: '/img/travel.png', text: '400+<br/>Itineraries' },
     { img: '/img/wallet.png', text: 'Book Now &<br/>Pay Later' },
@@ -91,12 +114,12 @@ const UttarakhandTour = () => {
       {/* Hero Section */}
       <div
         className="relative w-full h-screen bg-cover bg-center flex justify-center lg:justify-end items-center px-4 sm:px-6 lg:px-8"
-        style={{ backgroundImage: "url('/img/uttarakhand2.jpg')" }}
+        style={{ backgroundImage: "url('/img/ladakh.jpg')" }}
       >
         <h2
           className="absolute top-1/2 left-1/2 lg:left-auto lg:right-[60%] transform -translate-x-1/2 lg:translate-x-1/2 -translate-y-1/2 text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center lg:text-left z-10 font-serif"
         >
-          Uttarakhand Tour
+          Ladakh Tour
         </h2>
 
         <motion.form
@@ -144,11 +167,9 @@ const UttarakhandTour = () => {
             required
             className="w-full p-3 mb-4 border rounded focus:ring-[#00453A] focus:border-[#00453A]"
           >
-            <option value="Uttarakhand Tour">Uttarakhand – Dev Bhoomi</option>
-            <option value="Char Dham Yatra">Char Dham Yatra</option>
-            <option value="Rishikesh & Haridwar">Rishikesh & Haridwar</option>
-            <option value="Nainital & Corbett">Nainital & Jim Corbett</option>
-            <option value="Auli & Chopta">Auli & Chopta Adventure</option>
+            <option value="Ladakh Tour">Ladakh Tour</option>
+            <option value="Kerala Tour">Kerala Tour</option>
+            <option value="Sikkim">Sikkim</option>
           </select>
 
           <label className="block text-left text-gray-700 text-sm mb-2">Email</label>
@@ -181,7 +202,7 @@ const UttarakhandTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-         Explore the Land of Gods – Uttarakhand Tour Packages by Paradise Bliss Tours Pvt. Ltd.
+          Explore the Land of High Passes – Ladakh Tour Packages by Paradise Bliss Tours Pvt. Ltd.
         </motion.h2>
         <motion.p
           className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
@@ -189,17 +210,20 @@ const UttarakhandTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-         Discover the beauty of Dev Bhoomi (Uttarakhand), the land where spirituality meets tranquility. It is situated in the foothills of the Himalayas. It has snow-capped mountains, lush Valleys, sacred rivers, and pleasant hill stations. At paradise Bliss Tours, we bring you the best Uttarakhand Tour Package, which is a perfect combination of spirituality, peace, and Adventure.
-Whether you want to seek blessings from the Chardham yatra, or want the thrill of a snow adventure in Auli, or want peace in Mussoorie and Nainital, we have tailored packages for all travelers.
+          Explore the journey of Ladakh, where you will feel Adventure in every turn. Here, you will experience scenic snowcapped peaks, crystal clear lakes, wonderful landscapes, and ancient monasteries that will make your journey full of thrills. At Paradise Bliss Tours, we ensure that you will receive a handpicked Ladakh Package that combines adventure and spirituality. 
+Whether you are planning a family trip or the Leh-Ladakh Bike trip, we have all the customized packages for every traveler. 
+
         </motion.p>
+
                 <motion.p
           className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-         Uttarakhand is also known as the Dev Bhoomi (Land of God). It offers many destinations to every traveler, Rishikesh and Haridwar, for peace and spirituality, Chopta and Auli for adventure, and for scenic views, Nainital and Mussoorie. Uttarakhand is mostly known for its rich tradition and culture. 
+         Ladakh is situated at an Altitude of 1,000 ft. It is a fascinating union territory that offers a perfect blend of adventure and peace. Here you can experience the snowcapped peaks and the calm lakes like Pangong Tso, which offer a mesmerizing view. A bike trip to Leh is a lifetime experience that provides a blend of thrill and adventure. And here, you can visit the ancient monasteries that will give a spiritual and cultural vibe.
         </motion.p>
+
         <div
           ref={contentRef}
           className={`text-left w-full max-w-5xl overflow-hidden transition-all duration-700 ease-in-out transform ${
@@ -209,42 +233,42 @@ Whether you want to seek blessings from the Chardham yatra, or want the thrill o
         >
           <div className="py-6 space-y-8 text-gray-600">
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Spiritual Heart of India</h3>
-              <p>Home to the sacred Char Dham Yatra (Yamunotri, Gangotri, Kedarnath, Badrinath), Rishikesh (Yoga Capital of the World), and Haridwar — where the holy Ganga touches the plains.</p>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">A Paradise for Adventure and Peace Seekers</h3>
+              <p className="leading-relaxed">
+                Ladakh isn’t just about breathtaking views—it’s about feeling alive in the purest sense. From motorbike rides on the world’s highest motorable roads to trekking through scenic valleys, every moment in Ladakh is filled with excitement and wonder.
+              </p>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Places  to Visit </h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Top places to visit in Ladakh</h3>
               <ul className="list-disc list-inside space-y-2">
-               <li><strong>Haridwar and Rishikesh </strong>They are the Heart of Uttarakhand. These twin cities offer the perfect blend of spirituality and serenity. Rishikesh is known as the Yoga Capital of the World, which gives the thrill and peace both, through its divine aarti, ancient ashrams, and the adventurous hub like River rafting, Bungee jumping and etc.</li>
-               <li><strong>Nainital</strong>It is also known as the city of lakes. A beautiful city surrounded by the charming Naini Lake. This city is full of charm, peaceful lakes, and colonial architecture. You can experience a soothing walk on the Mall Road and the panoramic views from the Snow Viewpoint, and a boat ride on the Naini Lake. Every corner of Nainital emanates peace and romance.</li>
-                <li><strong>Mussoorie</strong>Popularly known as the Queen of Hills. This is located at 6,000 ft. above sea level. This place offers the picturesque hills and breathtaking Himalayan views. Here you can explore the scenic Kempty Falls and the romantic Camel’s Back Road. Adventure lovers can explore Gun Hill Point for the panoramic view, or could explore the Lal Tibba, the town’s highest peak. You can also go to Jim Corbett National Park, India’s oldest wildlife sanctuary. </li>
-                 <li><strong>Auli</strong> It is a popular hill station in India, which is situated at an altitude of 8,000 ft. It is surrounded by the Peaks of Nanda Devi, Mana Parvat, and Kamet. It is a premium Skiing destination in India. During winter, Auli transforms into a snow wonderland best for skiing, snowboarding, and cable car rides, and in summer, it has lush green meadows, best for trekking and walking. And the famous Auli ropeway is Asia’s longest ropeway, which gives panoramic views is an experience that should not be missed.</li>
-                  <li><strong>Kedarnath and Badrinath</strong>These are the two main shrines among the Chardham dham of Uttarakhand. Kedarnath temple is dedicated to lord shiva, which holds a supreme spiritual eminence for devotees. It is believed that it was constructed by the Pandavas and rebuilt by Adi Shankaracharya. And it is also one of the 12 Jyotirlingas of lord shiva. Badrinath is dedicated to Lord Vishnu. This temple is situated between the high snowcapped mountains. Every year, thousands of devotees travel here to seek blessings and take a view of Mana village, the last village of India, and Vasudhara falls. </li>
+                <li><strong>Leh:</strong> Leh is the cultural and spiritual Capital of Ladakh. Here you can experience the breathtaking landscape views and the spiritual monasteries. It is the perfect blend of old traditions and the modern Adventure. If you are an Adventure lover, then you can go on a bike trip, rafting, and trekking. And if you are a Spiritual Seeker, then you can go to Thiksey and Hemis monasteries. </li>
+                <li><strong>Pangong Lake:</strong> This is a scenic natural wonder of Ladakh. This lake has crystal clear water that changes its color throughout the day, from Azure blue, emerald green, and turquoise. This lake stretches 134 km and also extends to Tibet. It is surrounded by the barren mountains and open blue sky. </li>
+                <li><strong>Nubra Valley:</strong> This place is a panoramic blend of white desert and dunes, lush green valleys, and glacier rivers. You can go for a camel safari on the back of a double-humped Bactrian camel. And the Diskit monastery, with a 106 ft Maitrey Budha statue, is a famous part of it that gives a bird’s eye view of the valley and a Spiritual calm.</li>
+                <li><strong>Magnetic Hill:</strong> It is a fascinating phenomenon of Ladakh; this place gives the optical illusion that the vehicles are moving up hills on their own. It is located 3 km from Leh on the Leh-Kargil highway. It is surrounded by the magnificent mountains and the blue sky. This is a great place for photography. </li>
+                <li><strong>Tuktuk:</strong> This is India’s last village in the north, perched at the Indo-Pak border. This place is truly magical, which takes you to a different world. You can experience the Bali tradition and cuisine. It offers the picture-perfect stone house, apricot orchards, wooden bridge, and warm hospitality.</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Adventure Hub</h3>
-              <p>River rafting in Rishikesh, trekking to Kedarnath & Tungnath, camping in Chopta, skiing in Auli, wildlife safari in Corbett.</p>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Culture and People of Ladakh</h3>
+              <p className="leading-relaxed">
+                The people of Ladakh, with their warm smiles and rich traditions, add soul to this cold desert. Deeply rooted in Buddhist culture, the region celebrates vibrant festivals like Hemis Festival and Losar.
+              </p>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit</h3>
-              <ul className="list-disc list-inside space-y-2">
-                <li><strong>March–June</strong>: This season is great for trekking, Temple visits, and ideal for hill stations.</li>
-                <li><strong>July–August</strong>: this is the perfect time for snow lovers and the best time for Auli skiing. </li>
-                <li><strong>Decembber–February</strong>: This time is better for Nature lovers, as it looks like the lush green Landscape. But try to avoid to visit at hilly areas, as it will be quite risky due to the heavy chances of Landslides. </li>
-              </ul>
-            </div>
-             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in Uttarakhand</h3>
-              <ul className="list-disc list-inside space-y-2">
-                <li>1.	Took part in the evening arti at Rishikesh and Haridwar.</li>
-                 <li>2.	Skiing and a cable car ride at Auli.</li>
-                  <li>3.	Explore the beautiful lakes of Nainital and the elegant hills of Mussoorie.</li>
-                   <li>4.	Undertake the Chardham Yatra.</li>
-                    <li>5.	Go for the Jungle safari in Jim Corbett National Park. </li>
-              </ul>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Ladakhi Cuisine</h3>
+              <p className="leading-relaxed">
+                Savor Thukpa, Momos, Skyu, and Butter Tea — hearty meals perfect for high-altitude living.
+              </p>
             </div>
             <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit Ladakh</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li><strong>May–Sep:</strong> This time has the pleasant weather, roads are open, and the vibrant territory. Best for the road trips, sightseeing, and thrilling adventure activities in Leh, Nubra Valley, Pangong Lake, and Turtuk.</li>
+                <li><strong>Oct–April:</strong>During winter, Ladakh turns into the Snow heaven. This time is perfect for the Chadar trek. </li>
+                <li><strong>Note :</strong>During winter, Ladakh turns into the Snow heaven. This time is perfect for the Chadar trek. </li>
+              </ul>
+            </div>
+               <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Kerala Trip?</h3>
               <ul className="list-disc list-inside space-y-2">
                 <li>We have a tailored itinerary for all traveler as per their need and preferences.</li>
@@ -295,7 +319,7 @@ Whether you want to seek blessings from the Chardham yatra, or want the thrill o
           style={{ color: 'var(--color-dark)', fontFamily: 'salazur' }}
           className="text-4xl sm:text-5xl md:text-7xl font-bold py-6 text-center"
         >
-          Uttarakhand Tour Packages
+          Ladakh Tour Packages
         </h1>
       </div>
 
@@ -306,7 +330,7 @@ Whether you want to seek blessings from the Chardham yatra, or want the thrill o
             spaceBetween={20}
             slidesPerView={1}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
-            pagination={{ clickable: true, el: '.swiper-pagination-custom' }}
+            pagination={{ clickable: true, el: '.swiper-pagination-custom', dynamicBullets: true }}
             breakpoints={{
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3.5 },
@@ -315,15 +339,16 @@ Whether you want to seek blessings from the Chardham yatra, or want the thrill o
           >
             {tours.map((tour, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 h-full">
+                <div className="bg-white rounded-xl shadow-2xl overflow-hidden h-full flex flex-col">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    whileHover={{ scale: 1.05, boxShadow: '0 10px 20px rgba(0,0,0,0.2)' }}
+                    whileHover={{ scale: 1.05, boxShadow: '0 15px 30px rgba(0,0,0,0.2)' }}
                     className="h-full flex flex-col"
                   >
-                    <Link href={tour.link} className="flex-1 flex flex-col cursor-pointer">
+                    {/* Clickable Area */}
+                    <Link href={tour.link} className="flex-1 flex flex-col">
                       <Image
                         src={tour.image}
                         width={400}
@@ -332,15 +357,14 @@ Whether you want to seek blessings from the Chardham yatra, or want the thrill o
                         className="w-full h-56 object-cover rounded-t-xl"
                         onError={(e) => (e.target.src = '/img/placeholder.jpg')}
                       />
-                      <div className="p-6 flex-1 flex flex-col">
+                      <div className="p-6 flex-1">
                         <h3 className="text-xl font-bold text-gray-900">{tour.title}</h3>
                         <p className="text-sm text-gray-700 mt-1">{tour.duration} • {tour.group}</p>
 
                         <div className="mt-4 flex flex-wrap gap-2">
                           {tour.dates.map((date, i) => (
                             <span key={i} className="bg-[#F1FDF3] text-[#00453a] px-3 py-1 rounded-full text-sm flex items-center gap-1">
-                              <AiOutlineCalendar />
-                              {date}
+                              <AiOutlineCalendar /> {date}
                             </span>
                           ))}
                         </div>
@@ -352,6 +376,7 @@ Whether you want to seek blessings from the Chardham yatra, or want the thrill o
                       </div>
                     </Link>
 
+                    {/* Request Callback Button */}
                     <div className="px-6 pb-6">
                       <motion.button
                         onClick={(e) => {
@@ -361,7 +386,7 @@ Whether you want to seek blessings from the Chardham yatra, or want the thrill o
                         }}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="w-full py-3 bg-[#00453A] text-white rounded-lg flex items-center justify-center gap-2 font-semibold hover:bg-[#00332A] transition"
+                        className="w-full py-3 bg-[#00453A] text-white rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-[#00332A] transition"
                       >
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -381,13 +406,18 @@ Whether you want to seek blessings from the Chardham yatra, or want the thrill o
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={handleCloseModal}></div>
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={handleCloseModal} aria-hidden="true"></div>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
             className="relative bg-white rounded-xl shadow-2xl w-full max-w-md mx-4 p-6"
           >
-            <button onClick={handleCloseModal} className="absolute top-3 right-4 text-2xl text-gray-600 hover:text-gray-900">
+            <button
+              onClick={handleCloseModal}
+              className="absolute top-3 right-4 text-2xl text-gray-600 hover:text-gray-900"
+              aria-label="Close modal"
+            >
               ×
             </button>
 
@@ -406,13 +436,46 @@ Whether you want to seek blessings from the Chardham yatra, or want the thrill o
             )}
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              <input type="text" name="name" value={formData.name} onChange={handleInputChange} placeholder="Your Name" required className="w-full p-3 border rounded-lg focus:ring-[#00453A]" />
-              <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="Phone Number" required className="w-full p-3 border rounded-lg focus:ring-[#00453A]" />
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                placeholder="Your Name"
+                required
+                className="w-full p-3 border rounded-lg focus:ring-[#00453A]"
+              />
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleInputChange}
+                placeholder="Phone Number"
+                required
+                className="w-full p-3 border rounded-lg focus:ring-[#00453A]"
+              />
               <div className="relative">
-                <DatePicker selected={formData.date} onChange={handleDateChange} minDate={new Date()} dateFormat="dd/MM/yyyy" placeholderText="Preferred Date" required className="w-full p-3 border rounded-lg focus:ring-[#00453A]" />
-                <AiOutlineCalendar className="absolute right-3 top-4 text-gray-500" />
+                <DatePicker
+                  selected={formData.date}
+                  onChange={handleDateChange}
+                  minDate={new Date()}
+                  dateFormat="dd/MM/yyyy"
+                  placeholderText="Preferred Travel Date"
+                  required
+                  className="w-full p-3 border rounded-lg focus:ring-[#00453A]"
+                />
+                <AiOutlineCalendar className="absolute right-3 top-4 text-gray-500 pointer-events-none" />
               </div>
-              <input type="number" name="travellers" value={formData.travellers} onChange={handleInputChange} placeholder="No. of Travellers" min="1" required className="w-full p-3 border rounded-lg focus:ring-[#00453A]" />
+              <input
+                type="number"
+                name="travellers"
+                value={formData.travellers}
+                onChange={handleInputChange}
+                placeholder="Number of Travellers"
+                min="1"
+                required
+                className="w-full p-3 border rounded-lg focus:ring-[#00453A]"
+              />
               <motion.button
                 type="submit"
                 whileHover={{ scale: 1.05 }}
@@ -427,9 +490,19 @@ Whether you want to seek blessings from the Chardham yatra, or want the thrill o
       )}
 
       <style jsx>{`
-        .swiper-pagination-bullet { background: rgba(255,255,255,0.8); width: 12px; height: 12px; }
-        .swiper-pagination-bullet-active { background: #00453A; width: 14px; height: 14px; }
-        .react-datepicker-wrapper { width: 100%; }
+        .swiper-pagination-bullet {
+          background: rgba(255, 255, 255, 0.8);
+          width: 12px;
+          height: 12px;
+        }
+        .swiper-pagination-bullet-active {
+          background: #00453A;
+          width: 14px;
+          height: 14px;
+        }
+        .react-datepicker-wrapper {
+          width: 100%;
+        }
       `}</style>
 
       <WhyChooseUs />
@@ -437,4 +510,4 @@ Whether you want to seek blessings from the Chardham yatra, or want the thrill o
   );
 };
 
-export default UttarakhandTour;
+export default LadakhTour;

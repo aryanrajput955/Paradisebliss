@@ -64,12 +64,13 @@ const HolidaySaleBanner = () => {
   );
 
   return (
-    <div className="w-full">
+    <>
       <style>{`
         @keyframes shimmer { 0%, 100% { opacity: 0.6; } 50% { opacity: 0.8; } }
         .animate-shimmer { animation: shimmer 3s ease-in-out infinite; }
         #destinations-scroll::-webkit-scrollbar { display: none; }
       `}</style>
+      <div className="w-full">
       <div className="relative bg-[#00453a] overflow-hidden shadow-2xl">
         <div className="absolute inset-0 opacity-40" style={{ backgroundImage: `url('/img/snowbg.png')`, backgroundSize: '200px 200px' }}></div>
         <div className="absolute inset-0 bg-black opacity-5"></div>
@@ -119,7 +120,8 @@ const HolidaySaleBanner = () => {
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-200 to-transparent opacity-60"></div>
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white to-transparent opacity-40"></div>
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

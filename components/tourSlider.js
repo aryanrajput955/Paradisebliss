@@ -44,7 +44,7 @@ const tours = [
     title: "Kashmir Backpacking",
     dates: ["Jan 18", "Feb 08", "Feb 15"],
     prices: ["Starting ₹32,990*", "₹29,990*"],
-    image: "/img/shoot/pexels-sanket-barik-7846563 (1).jpg", // Ensure this path is correct
+    image: "/img/shoot/pexels-sanket-barik-7846563(1).jpg", // Ensure this path is correct
     duration: "5D6N",
     group: "Group Tour",
     link: "/uttarakhand/trip-packages/badrinath-yatra",
@@ -53,7 +53,7 @@ const tours = [
     title: "Manali Adventure",
     dates: ["Feb 01", "Feb 15", "Mar 01"],
     prices: ["Starting ₹32,990*", "₹29,990*"],
-    image: "/img/shoot/pexels-sanket-barik-7846474 (1).jpg", // Ensure this path is correct
+    image: "/img/shoot/pexels-sanket-barik-7846474(1).jpg", // Ensure this path is correct
     duration: "5D6N",
     group: "Group Tour",
     link: "/uttarakhand/trip-packages/badrinath-yatra",

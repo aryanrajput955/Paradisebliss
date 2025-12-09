@@ -60,7 +60,7 @@ export default function InternationalSlider() {
   }, [banners.length]);
 
   return (
-    <div className="relative w-screen py-8 px-0 overflow-hidden">
+    <>
       <style jsx global>{`
         .international-pagination {
           display: flex;
@@ -89,6 +89,8 @@ export default function InternationalSlider() {
           cursor: not-allowed;
         }
       `}</style>
+
+      <div className="relative w-screen py-8 px-0 overflow-hidden">
 
       {/* Full-width slider */}
       <div className="relative w-full">
@@ -155,5 +157,6 @@ export default function InternationalSlider() {
       {/* Centered dots below */}
       <div className="international-pagination mt-6"></div>
     </div>
+    </>
   );
 }

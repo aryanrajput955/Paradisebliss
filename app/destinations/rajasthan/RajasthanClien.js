@@ -122,7 +122,7 @@ const RajasthanTour = () => {
   }, [isOpen]);
 
   const stats = [
-    { img: '/img/instagram.png', text: 'Community of<br/> 400k+ On Instagram' },
+    { img: '/img/smile.png', text: '400k+<br/>Happy Customers' },
     { img: '/img/star.png', text: '4.8<br/>Ratings' },
     { img: '/img/travel.png', text: '400+<br/>Itineraries' },
     { img: '/img/wallet.png', text: 'Book Now &<br/>Pay Later' },

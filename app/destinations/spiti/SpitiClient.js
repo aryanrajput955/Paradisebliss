@@ -14,27 +14,62 @@ import Link from 'next/link';
 
 const tours = [
   {
-    title: "Leh to Turtuk Tour",
-    dates: ["May 15", "June 01", "July 10"],
-    prices: ["Starting ₹25,990*", "₹22,990*"],
-    image: "/img/ladakh.jpg",
-    duration: "7D6N",
+    title: "Winter Spiti Valley Tour",
+    dates: ["March 28", "April 01", "April 15"],
+    prices: ["Starting ₹20,990*", "₹17,990*"],
+    image: "/img/spiti.jpg",
+    duration: "9D8N",
     group: "Group Tour",
-    link: "/indian-tours/leh-to-turtuk-tour",
+    link: "/indian-tours/spiti-winter-tour-package",
   },
   {
-    title: "Ladakh Bike Expedition",
-    dates: ["May 20", "June 05", "July 15"],
-    prices: ["Starting ₹22,990*", "₹19,990*"],
-    image: "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    duration: "5D4N",
+    title: "Spiti Valley with Chandra Taal",
+    dates: ["March 29", "April 02", "April 15"],
+    prices: ["Starting ₹20,990*", "₹16,000*"],
+    image: "/img/chandrataal.png",
+    duration: "7D6N",
     group: "Group Tour",
-    link: "/indian-tours/ladakh-bike-trip",
+    link: "/indian-tours/spiti-chandratal-tour-package",
   },
-
+  {
+    title: "Spiti Valley Bike Tour Package",
+    dates: ["March 27", "April 05", "April 14"],
+    prices: ["Starting ₹32,990*", "₹29,990*"],
+    image: "/img/bike.jpg",
+    duration: "5D6N",
+    group: "Group Adventure",
+    link: "/indian-tours/spiti-bike-tour-package",
+  },
+  {
+    title: "Spiti Valley Full Circuit Tour",
+    dates: ["Jan 18", "Feb 08", "Feb 15"],
+    prices: ["Starting ₹30,990*", "₹21,999*"],
+    image: "/img/spiti3.jpg",
+    duration: "9D8N",
+    group: "Group Tour",
+    link: "/indian-tours/spitifullcircuit-tour-package",
+  },
+  {
+    title: "Spiti Valley – Cold Desert Adventure",
+    dates: ["Feb 01", "Feb 15", "Mar 01"],
+    prices: ["Starting ₹32,990*", "Price On Request*"],
+    image: "https://images.unsplash.com/photo-1651955670895-9aa2e9243b66?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    duration: "9D8N",
+    group: "Group Adventure",
+    link: "/indian-tours/spiti-winter-tour-package",
+  },
+    {
+    title: "Spiti Valley Himalayan Odyssey",
+    dates: ["Feb 01", "Feb 15", "Mar 01"],
+    prices: ["Starting ₹32,990*", "Price On Request*"],
+    image: "https://wallpaperaccess.com/full/7928594.jpg",
+    duration: "8D7N",
+    group: "Group Adventure",
+    link: "/indian-tours/spiti-tour-package",
+  },
 ];
 
-const LadakhTour = () => {
+const SpitiValleyTour = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [contentHeight, setContentHeight] = useState(0);
   const contentRef = useRef(null);
@@ -46,7 +81,7 @@ const LadakhTour = () => {
     date: null,
     travellers: '',
     email: '',
-    package: 'Ladakh Tour',
+    package: 'Spiti Valley Tour',
   });
 
   const handleOpenModal = (tour) => {
@@ -79,20 +114,20 @@ const LadakhTour = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Modal Form Submitted:', { ...formData, tour: selectedTour?.title });
-    alert('Thank you! We will contact you soon.');
+    alert('Thank you! We will contact you shortly for your Spiti adventure.');
     handleCloseModal();
   };
 
   const handleHeroFormSubmit = (e) => {
     e.preventDefault();
     console.log('Hero Form Submitted:', formData);
-    alert('Thank you! Your inquiry has been sent.');
+    alert('Thank you! Your inquiry has been sent successfully.');
     setFormData((prev) => ({
       ...prev,
       name: '',
       phone: '',
       email: '',
-      package: 'Ladakh Tour',
+      package: 'Spiti Valley Tour',
     }));
   };
 
@@ -103,7 +138,7 @@ const LadakhTour = () => {
   }, [isOpen]);
 
   const stats = [
-    { img: '/img/instagram.png', text: 'Community of<br/> 400k+ On Instagram' },
+    { img: '/img/smile.png', text: '400k+<br/>Happy Customers' },
     { img: '/img/star.png', text: '4.8<br/>Ratings' },
     { img: '/img/travel.png', text: '400+<br/>Itineraries' },
     { img: '/img/wallet.png', text: 'Book Now &<br/>Pay Later' },
@@ -114,12 +149,12 @@ const LadakhTour = () => {
       {/* Hero Section */}
       <div
         className="relative w-full h-screen bg-cover bg-center flex justify-center lg:justify-end items-center px-4 sm:px-6 lg:px-8"
-        style={{ backgroundImage: "url('/img/ladakh.jpg')" }}
+        style={{ backgroundImage: "url('/img/spiti2.jpg')" }}
       >
         <h2
           className="absolute top-1/2 left-1/2 lg:left-auto lg:right-[60%] transform -translate-x-1/2 lg:translate-x-1/2 -translate-y-1/2 text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center lg:text-left z-10 font-serif"
         >
-          Ladakh Tour
+          Spiti Valley Tour
         </h2>
 
         <motion.form
@@ -167,9 +202,10 @@ const LadakhTour = () => {
             required
             className="w-full p-3 mb-4 border rounded focus:ring-[#00453A] focus:border-[#00453A]"
           >
-            <option value="Ladakh Tour">Ladakh Tour</option>
-            <option value="Kerala Tour">Kerala Tour</option>
-            <option value="Sikkim">Sikkim</option>
+            <option value="Spiti Valley Tour">Spiti Valley – Cold Desert Adventure</option>
+            <option value="Ladakh Tour">Ladakh</option>
+            <option value="Himachal Tour">Himachal Pradesh</option>
+            <option value="Sikkim Tour">Sikkim</option>
           </select>
 
           <label className="block text-left text-gray-700 text-sm mb-2">Email</label>
@@ -202,7 +238,7 @@ const LadakhTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Explore the Land of High Passes – Ladakh Tour Packages by Paradise Bliss Tours Pvt. Ltd.
+          Explore the Untouched Beauty of Spiti Valley with Paradise Bliss Tours Pvt. Ltd.
         </motion.h2>
         <motion.p
           className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
@@ -210,19 +246,20 @@ const LadakhTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Explore the journey of Ladakh, where you will feel Adventure in every turn. Here, you will experience scenic snowcapped peaks, crystal clear lakes, wonderful landscapes, and ancient monasteries that will make your journey full of thrills. At Paradise Bliss Tours, we ensure that you will receive a handpicked Ladakh Package that combines adventure and spirituality. 
-Whether you are planning a family trip or the Leh-Ladakh Bike trip, we have all the customized packages for every traveler. 
+          Welcome to Spiti Valley – The land that lies between India and Tibet. Here you can feel that every mountain is telling you a story of adventure, Peace, and faith. Spiti is bounded by the Rocky Mountains, ancient monasteries, and the pristine sky. Spiti is one of the breathtaking destinations that offers the raw beauty of nature and a Soulful experience. 
+In Paradise Bliss Tours, we organize personalized packages for you, which include the Comfort and the Thrill. From the Crazy drive through the high-altitude hills to the cozy stays at the Himalayan villages. Our goal is to make your trip seamless and unforgettable.
 
         </motion.p>
-
                 <motion.p
           className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-         Ladakh is situated at an Altitude of 1,000 ft. It is a fascinating union territory that offers a perfect blend of adventure and peace. Here you can experience the snowcapped peaks and the calm lakes like Pangong Tso, which offer a mesmerizing view. A bike trip to Leh is a lifetime experience that provides a blend of thrill and adventure. And here, you can visit the ancient monasteries that will give a spiritual and cultural vibe.
+          Popularly known as the Middle Land, Spiti Valley is located in the Lahaul and Spiti district of Himachal Pradesh. It is one of the most delightful high-altitude cold deserts in the Himalayas. Surrounded by the snow-covered peaks and monasteries, and scenic villages. It is a perfect destination that offers a perfect blend of adventure, spirituality, and peace. Its raw beauty, crystal clear rivers, and the starlit nights make it the ideal destination for the Nature lover.
+
         </motion.p>
+
 
         <div
           ref={contentRef}
@@ -233,42 +270,40 @@ Whether you are planning a family trip or the Leh-Ladakh Bike trip, we have all 
         >
           <div className="py-6 space-y-8 text-gray-600">
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">A Paradise for Adventure and Peace Seekers</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">The Land Between Heaven and Earth</h3>
               <p className="leading-relaxed">
-                Ladakh isn’t just about breathtaking views—it’s about feeling alive in the purest sense. From motorbike rides on the world’s highest motorable roads to trekking through scenic valleys, every moment in Ladakh is filled with excitement and wonder.
+                Spiti means “The Middle Land” — between India and Tibet. With barren landscapes, ancient monasteries, and snow-capped peaks, it offers a surreal escape from the ordinary.
               </p>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Top places to visit in Ladakh</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Must-Visit Places in Spiti</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li><strong>Leh:</strong> Leh is the cultural and spiritual Capital of Ladakh. Here you can experience the breathtaking landscape views and the spiritual monasteries. It is the perfect blend of old traditions and the modern Adventure. If you are an Adventure lover, then you can go on a bike trip, rafting, and trekking. And if you are a Spiritual Seeker, then you can go to Thiksey and Hemis monasteries. </li>
-                <li><strong>Pangong Lake:</strong> This is a scenic natural wonder of Ladakh. This lake has crystal clear water that changes its color throughout the day, from Azure blue, emerald green, and turquoise. This lake stretches 134 km and also extends to Tibet. It is surrounded by the barren mountains and open blue sky. </li>
-                <li><strong>Nubra Valley:</strong> This place is a panoramic blend of white desert and dunes, lush green valleys, and glacier rivers. You can go for a camel safari on the back of a double-humped Bactrian camel. And the Diskit monastery, with a 106 ft Maitrey Budha statue, is a famous part of it that gives a bird’s eye view of the valley and a Spiritual calm.</li>
-                <li><strong>Magnetic Hill:</strong> It is a fascinating phenomenon of Ladakh; this place gives the optical illusion that the vehicles are moving up hills on their own. It is located 3 km from Leh on the Leh-Kargil highway. It is surrounded by the magnificent mountains and the blue sky. This is a great place for photography. </li>
-                <li><strong>Tuktuk:</strong> This is India’s last village in the north, perched at the Indo-Pak border. This place is truly magical, which takes you to a different world. You can experience the Bali tradition and cuisine. It offers the picture-perfect stone house, apricot orchards, wooden bridge, and warm hospitality.</li>
+                <li><strong>Kaza</strong>: The Heart of Spiti Valley, it is the most famous town in the Spiti Valley. It is the perfect hub that gives you the complete vibes of their local culture. It offers vibrant markets, cozy cafes, fascinating mountains, and warm-hearted people. It also provides the base to reach the nearby places like Hikkim, Key monastery, and Langza. </li>
+                <li><strong>Langza</strong>: Renowned as the Fossil Village, it is the most picture-perfect place of the Spiti. It is situated at 14,500 ft, and is famous for its ancient marine fossils that tell the story about that time when the land was immersed under the Tethys sea. This place is surrounded by lush greenery in summer and covered with snow in the winter, and it is also a great place for Stargazing.</li>
+                <li><strong>Key Monastery</strong>: This is the largest and most famous Monastery of the Spiti Valley, situated on the hilltop of the Spiti River. This monastery is a thousand years old and was built as a fortress. Monks live here a disciplined and calm life, giving the visitor a chance to experience their peaceful life. From the top, it gives a stunning view, especially at sunset and sunrise. </li>
+                <li><strong>Chicham Bridge</strong>: The highest bridge of Asia, which stands at a height of 14,569 ft., joining the Chicham and the Kibber village. This bridge offers a stunning view of the rugged valley, which makes it the favorite spot for travelers and photographers. It is the most glorious landmark of the Spiti Valley.</li>
+                <li><strong>Komic</strong>: It holds the title of World’s highest village with a connected motorable road, situated at an altitude of about 15,000 ft. The Komic monastery is known as the heart of this village, and is believed to be 500 years old. The monks practice deep meditations in a silent and charming environment.  </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Culture and People of Ladakh</h3>
-              <p className="leading-relaxed">
-                The people of Ladakh, with their warm smiles and rich traditions, add soul to this cold desert. Deeply rooted in Buddhist culture, the region celebrates vibrant festivals like Hemis Festival and Losar.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Ladakhi Cuisine</h3>
-              <p className="leading-relaxed">
-                Savor Thukpa, Momos, Skyu, and Butter Tea — hearty meals perfect for high-altitude living.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit Ladakh</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li><strong>May–Sep:</strong> This time has the pleasant weather, roads are open, and the vibrant territory. Best for the road trips, sightseeing, and thrilling adventure activities in Leh, Nubra Valley, Pangong Lake, and Turtuk.</li>
-                <li><strong>Oct–April:</strong>During winter, Ladakh turns into the Snow heaven. This time is perfect for the Chadar trek. </li>
-                <li><strong>Note :</strong>During winter, Ladakh turns into the Snow heaven. This time is perfect for the Chadar trek. </li>
+                <li><strong>May–Sep</strong>:  This time is good for sightseeing and the road trip, as all the roads remain open.</li>
+                <li><strong>oct-feb</strong>: During this time, the whole Spiti becomes a snow desert, and it also becomes a paradise for snow lovers. </li>
+                <li><strong>Note </strong>Avoid travel in the monsoon due to the high risk of landslides. </li>
               </ul>
             </div>
-               <div>
+             <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in Spiti </h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>1.	Visit the ancient monasteries like Key, Komic, Tabo, and Dhankar.</li>
+                <li>2.	Send a postcard from the world’s highest post office at Hikkim.</li>
+                <li>3.	Experience the best Stargazing with a clear sky in Langza and Komic.</li>
+                <li>4.	Explore the ancient marine fossils at Langza. </li>
+                <li>5.	Visit Asia’s highest bridge, Chicham Bridge. </li>
+              </ul>
+            </div>
+           <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Kerala Trip?</h3>
               <ul className="list-disc list-inside space-y-2">
                 <li>We have a tailored itinerary for all traveler as per their need and preferences.</li>
@@ -277,7 +312,7 @@ Whether you are planning a family trip or the Leh-Ladakh Bike trip, we have all 
                 <li>Enjoy local sightseeing for whatever package you choose.</li>
                 <li>We provide you 24*7 customer support.</li>
               </ul>
-            </div>
+            </div>  
           </div>
         </div>
 
@@ -319,7 +354,7 @@ Whether you are planning a family trip or the Leh-Ladakh Bike trip, we have all 
           style={{ color: 'var(--color-dark)', fontFamily: 'salazur' }}
           className="text-4xl sm:text-5xl md:text-7xl font-bold py-6 text-center"
         >
-          Ladakh Tour Packages
+          Spiti Valley Tour Packages
         </h1>
       </div>
 
@@ -347,7 +382,6 @@ Whether you are planning a family trip or the Leh-Ladakh Bike trip, we have all 
                     whileHover={{ scale: 1.05, boxShadow: '0 15px 30px rgba(0,0,0,0.2)' }}
                     className="h-full flex flex-col"
                   >
-                    {/* Clickable Area */}
                     <Link href={tour.link} className="flex-1 flex flex-col">
                       <Image
                         src={tour.image}
@@ -376,7 +410,6 @@ Whether you are planning a family trip or the Leh-Ladakh Bike trip, we have all 
                       </div>
                     </Link>
 
-                    {/* Request Callback Button */}
                     <div className="px-6 pb-6">
                       <motion.button
                         onClick={(e) => {
@@ -510,4 +543,4 @@ Whether you are planning a family trip or the Leh-Ladakh Bike trip, we have all 
   );
 };
 
-export default LadakhTour;
+export default SpitiValleyTour;

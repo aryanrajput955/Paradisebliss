@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,44 +15,17 @@ import Link from 'next/link';
 
 const tours = [
   {
-    title: "McLeodganj–Triund Trek",
-    dates: ["Dates on Request"],
-    prices: ["₹8,999*", "₹7,499*"],
-    image: "/img/himachal.jpg",
-    duration: "2N3D",
+    title: "Spain Backpacking – La Tomatina Special",
+    dates: ["Aug 25", "Aug 26", "Aug 27"],
+    prices: ["Starting ₹1,49,999*", "₹1,29,999*"],
+    image: "/optimised/euro1.jpg",
+    duration: "9D/8N",
     group: "Group Tour",
-    link: "/indian-tours/mcleodganj-triund-trek",
-  },
-    {
-    title: "Manali–Kasol–Sissu Tour",
-    dates: ["Dates on Request"],
-    prices: ["₹8,999*", "₹7,499*"],
-    image: "https://images.unsplash.com/photo-1675515642414-d99b23e2d95f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    duration: "3N4D",
-    group: "Group Tour",
-    link: "/indian-tours/manali-kasol-sissu-tour",
-  },
-  {
-    title: "Sangla Holi Festival Tour",
-    dates: ["Dates on Request"],
-    prices: ["₹12,999*", "₹10,999*"],
-    image: "https://images.unsplash.com/photo-1617184003170-1f266c325ff3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    duration: "9N10D",
-    group: "Group Tour",
-    link: "/indian-tours/sangla-holi-tour",
-  },
-  {
-    title: "Kasol–Tosh Trek",
-    dates: ["Dates on Request"],  
-    prices: ["₹15,999*", "₹13,499*"],
-    image: "https://images.unsplash.com/photo-1573465679176-c3a87941baa2?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    duration: "2N3D",
-    group: "Group Tour",
-    link: "/indian-tours/kasol-tosh-trek",
+    link: "/trip-packages/europe-packages",
   },
 ];
 
-const HimachalTour = () => {
+const EuropeTour = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [contentHeight, setContentHeight] = useState(0);
   const contentRef = useRef(null);
@@ -63,7 +37,7 @@ const HimachalTour = () => {
     date: null,
     travellers: '',
     email: '',
-    package: 'Himachal Pradesh Tour',
+    package: 'Europe Tour',
   });
 
   const handleOpenModal = (tour) => {
@@ -74,7 +48,7 @@ const HimachalTour = () => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedTour(null);
-    setFormData({ name: '', phone: '', date: null, travellers: '', email: '', package: 'Himachal Pradesh Tour' });
+    setFormData({ name: '', phone: '', date: null, travellers: '', email: '', package: 'Europe Tour' });
   };
 
   const handleInputChange = (e) => {
@@ -95,10 +69,10 @@ const HimachalTour = () => {
   const handleHeroFormSubmit = (e) => {
     e.preventDefault();
     console.log('Hero form submitted:', formData);
-    setFormData({ name: '', phone: '', date: null, travellers: '', email: '', package: 'Himachal Pradesh Tour' });
+    setFormData({ name: '', phone: '', date: null, travellers: '', email: '', package: 'Europe Tour' });
   };
 
-  useEffect (() => {
+  useEffect(() => {
     if (contentRef.current) {
       setContentHeight(isOpen ? contentRef.current.scrollHeight : 0);
     }
@@ -116,12 +90,12 @@ const HimachalTour = () => {
       {/* Hero Section */}
       <div
         className="relative w-full h-screen bg-cover bg-center flex justify-center lg:justify-end items-center px-4 sm:px-6 lg:px-8"
-        style={{ backgroundImage: "url('/img/himachal.jpg')" }}
+        style={{ backgroundImage: "url('/optimised/spain.webp')" }}
       >
         <h2
-          className="absolute top-1/2 left-1/2 lg:left-auto lg:right-[60%] transform -translate-x-1/2 lg:translate-x-1/2 -translate-y-1/2 text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center lg:text-left z-10 font-serif"
+          className="absolute top-1/2 left-1/2 lg:left-auto lg:right-[60%] transform -translate-x-1/2 lg:translate-x-1/2 -translate-y-1/2 text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center lg:text-left z-10 font-serif drop-shadow-lg"
         >
-          Himachal Pradesh Tour
+          Europe Tour
         </h2>
         <motion.form
           id="travel"
@@ -178,9 +152,9 @@ const HimachalTour = () => {
             className="w-full p-2 mb-4 border rounded text-sm sm:text-base focus:ring-[#00453A] focus:border-[#00453A]"
             aria-label="Tour package selection"
           >
-            <option value="Himachal Pradesh Tour">Himachal Pradesh Tour</option>
-            <option value="Ladakh">Ladakh</option>
-            <option value="Sikkim">Sikkim</option>
+            <option value="Europe Tour">Europe Tour</option>
+            <option value="La Tomatina Special">La Tomatina Special</option>
+            <option value="Multi-Country Europe">Multi-Country Europe</option>
           </select>
           <label htmlFor="email" className="block mb-2 text-left text-gray-700 text-sm sm:text-base">
             Email
@@ -215,7 +189,7 @@ const HimachalTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Explore the Beauty of Himachal Pradesh with Paradise Bliss Tours Pvt Ltd.
+          Discover Europe with Paradise Bliss Tours
         </motion.h2>
         <motion.p
           className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
@@ -223,19 +197,10 @@ const HimachalTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-         Explore Himachal Pradesh – A complete paradise for nature lovers and adventure seekers. This place offers the snow-covered peaks, valleys filled with the fragrance of Pine trees, ancient monasteries, and orchards of Apples. 
-At Paradise Bliss Tours, we organized a package that is the perfect blend of comfort, scenic beauty, and thrill. Whether you want a romantic gateway at Manali, a soothing holiday at Dharamshala, or a Thrilling Experience at Shimla and Spiti. we make sure that your trip will be memorable as never before. 
-
+          Europe is a tapestry of varied histories, cuisines, architecture and adventures. From the sunlit coasts of the Mediterranean to the snow-capped Alps — it’s a continent that invites exploration. With Paradise Bliss Tours, our Europe packages deliver iconic highlights and hidden gems in one seamless experience.
         </motion.p>
-                <motion.p
-          className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-         Himachal Pradesh is a Dream destination for many travelers who are seeking Natural, untouched beauty and adventure. This state gives the perfect blend of spirituality, peace, and thrill. The most visited places are: Shimla, Manali, Spiti Valley, Dharmshala, and Dalhousie. Here, you can see the colonial charms, snow paradise, spiritual aura, and inner peace. Every place in Himachal has its own beauty that tells an amazing story.
 
-        </motion.p>
+        {/* Expandable Content */}
         <div
           ref={contentRef}
           className={`text-left w-full max-w-5xl overflow-hidden transition-all duration-700 ease-in-out transform ${
@@ -247,47 +212,47 @@ At Paradise Bliss Tours, we organized a package that is the perfect blend of com
           }}
         >
           <div className="py-6 space-y-8">
+
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">A Journey Through Nature’s Wonderland</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">About Europe:</h3>
               <p className="text-gray-600 leading-relaxed">
-                Every corner of Himachal offers a new experience. Imagine waking up to the sound of chirping birds, walking through pine-scented trails, and watching the sun set behind snow-laden mountains — that’s everyday magic in Himachal. The state is dotted with charming hill stations like Shimla, Manali, Dharamshala, Dalhousie, and Kasol, each with its unique charm and stories to tell.
-                From the colonial elegance of Shimla to the scenic beauty of Kullu-Manali, every destination promises breathtaking views and unforgettable memories. The Spiti Valley, known for its rugged terrain and ancient monasteries, offers a raw, untouched beauty that feels like another world.
+                Europe is known as the “Continent of Culture & Romance”. It is famous for its Architectural beauty, fairy-tale landscapes, artistic excellence, and marvelous cities. From Switzerland’s snowy mountains to the picture-perfect alley of Paris, Rome’s echoing historic past, the floral wonders of Amsterdam, and the colorful nightlife of Barcelona, Europe is astonishing, waiting to be explored. It is one of the most diverse, attractive, and enriching destinations on earth.
               </p>
             </div>
+
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Must-Visit Destinations</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Shimla</strong>: This is one of the popular hill station in India, which is famous for its Colonial-era Architecture, endless mountain Horizon, and the highly acclaimed Mall Road. It is a perfect mix of adventure and peace, and it’s an all-time favorite destination for honeymooners and families as well. </li>
-                <li><strong>Manali</strong>:A paradise for Adventure and Romance, nestled in the Kullu Valley. Snowcapped mountains, river-facing cafes, cozy resorts, and apple orchards make it an admirable hill station of India. Explore the natural beauty and thrill in Solang Valley, Rohtang Pass, and old Manali.</li>
-                <li><strong>Dharamshala & McLeodganj</strong>: This is situated opposite the Dhuladhar Range. Dharamshala is a perfect blend of natural charm and the Tibetan culture. This is the Home of the Dalai Lama, known for its monasteries, picturesque charm, and Calm aura. Visit McLeod Ganj to chill at the hillside cafes, stroll through the pine forests, and enjoy the natural charm.</li>
-                <li><strong>Dalhousie & Khajjiar</strong>:An enchanting hill station with the Vintage Charm. This is known as the Mini Switzerland of India. With whispering pine valleys, a Vintage Victorian structure, and the snow-covered pir pinjal range, it is a perfect destination for friends and family. Explore Khajjiur, Panchpula, and St. John’s Church. </li>
-                <li><strong>Spiti Valley</strong>: It is called the Middle Land, as it lies between India and Tibet. This is a high-altitude desert with untouched beauty, the Rocky Mountains, and Ancient Monasteries. Visit Asia’s highest bridge, Chicham Bridge, the key monastery, Kaza, and experience the most unique starlit night. </li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best place to visit in Europe:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-4 mt-4">
+                <li><strong>Switzerland:</strong> Switzerland is a dreamy country that looks like it comes directly out of a dream. This place offers stunning mountains, beautiful scenery, tranquil lakes, and a peaceful environment. Its main attractions are Lucerne and Zurich, offering a seamless blend of natural beauty and a modern lifestyle. Travelers can enjoy iconic experiences, such as Jungfraujoch and Mt. Titlis, as well as scenic rail adventures like the Panoramic Express.</li>
+                <li><strong>France:</strong> The timeless beauty, which is celebrated for its culture, Fashion, and Romance. This place is the perfect blend of modernity and eternal charm. Paris is often called the &quot;City of Lights&quot;, offers the grand avenues, iconic monuments, stunning cafes, and the historic museums, which are worldwide famous. The Other attractions are the Provence, Bordeaux, and Normandy.</li>
+                <li><strong>Italy:</strong> A charming country known for its past, fabulous food, and the amazing places to explore. Italy offers lovely beaches, a calm landscape, a beautiful lake, and attractive streets. It is also popular for its world-famous food like pasta, gelato, and pizza. Its main tourist attractions are Rome, Venice, and Florence. With its delicious food, natural beauty, and great places to visit, it&apos;s a perfect escape for Vacations.</li>
+                <li><strong>Netherlands:</strong> This is an elegant and calm country that is renowned for its windmills, Tulip fields, and the peaceful canals. This country is famous for its cleanliness, modern lifestyle, and warm-hearted people. In the spring season, the tulips bloom in vibrant and bright colors, which look similar to those in a storybook. Its main attractions are Amsterdam and Rotterdam, where you can explore the Stunning streets, museums, and cozy cafes.</li>
+                <li><strong>Spain:</strong> Spain is a vital destination plugged with bright beaches, a historic legacy, intense culture, and lively cities. Barcelona, Madrid, Seville, and Valencia describe the iconic attractions like the Royal Palace, Sagrada Familia, and beautiful cathedrals. This country also offers the elegant islands like Ibiza and Mallorca. Spain is renowned for its flamenco dance, football, festivals, and delicious dishes like paella and tapas.</li>
+                <li><strong>Austria:</strong> Austria offers breathtaking views of towering peaks, crystal-clear lakes, and elegant cities. Vienna, the capital city, is famous for its ancient Palaces, classical music, and royal heritage. Salzburg, the birthplace of Mozart, fascinates travelers with its extensive architecture, fortress, and scenic landscapes. The country displays an ideal combination of nature, culture, and history</li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in Himachal </h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>1.	Step into the Hill stations & colonial Charms in Shimla and Dalhousie.</li>
-                <li>2.	Experience the thrilling snow adventure in Solang Valley and Rohtang Pass.</li>
-                <li>3.	Visit Monasteries and uncover peace and the spiritual vibes in Dhramshala</li>
-                <li>4.	Explore trekking and camping in Thirthan Valley, Kheerganga, and Triund. </li>
-                <li>5.	Discover the Raw natural beauty of the Spiti Valley.</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in Europe:</h3>
+              <ul className="list-disc list-inside text-gray-600 space-y-2 mt-4">
+                <li>Explore the Iconic landmarks like the Eiffel Tower, the Colosseum, Big Ben, and Sagrada Familia.</li>
+                <li>Peaceful cruise trip in Amsterdam, and the romantic waterway ride in Venice.</li>
+                <li>Experience the Natural beauty, like snow-covered peaks, northern lights, lakes, and beaches.</li>
+                <li>Discover the historical architectures like the Vatican Museums, the Louvre Museum, the Prague Castle, and the Acropolis.</li>
+                <li>Taste the local taste of Europe, which is a paradise for food lovers.</li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Culture, Food and Festivals</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Beyond its scenic beauty, Himachal is rich in culture and traditions. The locals, with their warm hospitality and colorful attire, make you feel right at home. Festivals like Kullu Dussehra, Halda, and Losar reflect the vibrant spirit of the region. Don’t forget to try the local delicacies like Siddu, Babru, Thukpa, and Trout Fish for a true Himachali experience.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit Himachal Pradesh</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Summer (March to June)</strong>: This season has the delightful weather, clear sky, and the floral Valley, ideal for Friends and family Trip. </li>
-                <li><strong>Monsoon (July to September)</strong>: Discover Majestic snow in Shimla, Manali, and Kufri. Perfect for Honeymooners and the family trip.</li>
-                <li><strong>Winter (October to February)</strong>:Experience the lush greenery everywhere, which creates a peaceful and romantic essence. Great for nature lovers.</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best time to Visit:</h3>
+              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
+                <li><strong>Spring (March to May):</strong> This is a good time to visit Europe, as the tulips bloom and the city looks fresh. The crowd is also less compared to summer.</li>
+                <li><strong>Summer (June to August):</strong> the most popular time for tourists to visit, best for outdoor and beach activities in Spain & Greece, lakes exploration in Switzerland.</li>
+                <li><strong>Autumn (September to November):</strong> In this season, leaves turn golden and make the landscape look stunning. This is best for a budget-friendly trip.</li>
+                <li><strong>Winter (December to February):</strong> In some parts of Europe, it looks majestic in winter. Best for skiing, Northern lights, and the winter holiday.</li>
               </ul>
             </div>
+
             <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">Why choose Paradise Bliss Tours:</h3>
               <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
@@ -298,8 +263,10 @@ At Paradise Bliss Tours, we organized a package that is the perfect blend of com
                 <li>Affordable Luxury Tour packages without any hidden cost.</li>
               </ul>
             </div>
+
           </div>
         </div>
+
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
           className="mt-6 px-8 py-3 cursor-pointer bg-green-900 text-white rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out font-semibold"
@@ -341,7 +308,7 @@ At Paradise Bliss Tours, we organized a package that is the perfect blend of com
           style={{ color: 'var(--color-dark)', fontFamily: 'salazur' }}
           className="text-4xl sm:text-5xl md:text-7xl font-bold py-6 text-center"
         >
-          Himachal Tour Packages
+          Europe Tour Packages
         </h1>
       </div>
 
@@ -362,9 +329,7 @@ At Paradise Bliss Tours, we organized a package that is the perfect blend of com
               clickable: true,
               el: '.swiper-pagination-custom',
               dynamicBullets: true,
-              renderBullet: (index, className) => {
-                return `<span class="${className}"></span>`;
-              },
+              renderBullet: (index, className) => `<span class="${className}"></span>`,
             }}
             breakpoints={{
               768: { slidesPerView: 2 },
@@ -375,7 +340,6 @@ At Paradise Bliss Tours, we organized a package that is the perfect blend of com
             {tours.map((tour, index) => (
               <SwiperSlide key={index}>
                 <div className="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 h-full">
-                  {/* Motion wrapper for hover scale */}
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -386,17 +350,12 @@ At Paradise Bliss Tours, we organized a package that is the perfect blend of com
                     }}
                     className="h-full flex flex-col"
                   >
-                    {/* Clickable area: image + info */}
                     <Link href={tour.link} className="flex-1 flex flex-col cursor-pointer">
                       <Image height={224}
                         width={400}
                         src={tour.image}
                         alt={tour.title}
                         className="w-full h-56 object-cover rounded-t-xl"
-                        onError={(e) => {
-                          console.error(`Failed to load image: ${tour.image}`);
-                          e.target.src = '/img/placeholder.jpg';
-                        }}
                       />
                       <div className="p-6 flex-1 flex flex-col">
                         <h3 className="text-xl font-bold text-gray-900">{tour.title}</h3>
@@ -427,7 +386,6 @@ At Paradise Bliss Tours, we organized a package that is the perfect blend of com
                       </div>
                     </Link>
 
-                    {/* Request Callback Button - OUTSIDE the Link */}
                     <div className="px-6 pb-6">
                       <motion.button
                         onClick={(e) => {
@@ -479,7 +437,7 @@ At Paradise Bliss Tours, we organized a package that is the perfect blend of com
               className="absolute top-1 right-3 text-gray-500 hover:text-gray-700"
               aria-label="Close modal"
             >
-              ✕
+              X
             </button>
             {selectedTour && (
               <div className="mb-4">
@@ -497,9 +455,7 @@ At Paradise Bliss Tours, we organized a package that is the perfect blend of com
             <form onSubmit={handleSubmit}>
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Name
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700">Name</label>
                   <input
                     type="text"
                     name="name"
@@ -507,13 +463,10 @@ At Paradise Bliss Tours, we organized a package that is the perfect blend of com
                     onChange={handleInputChange}
                     required
                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00453A] focus:ring-[#00453A]"
-                    aria-label="Full name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Phone Number
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700">Phone Number</label>
                   <input
                     type="tel"
                     name="phone"
@@ -521,13 +474,10 @@ At Paradise Bliss Tours, we organized a package that is the perfect blend of com
                     onChange={handleInputChange}
                     required
                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00453A] focus:ring-[#00453A]"
-                    aria-label="Phone number"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Preferred Date
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700">Preferred Date</label>
                   <div className="relative">
                     <DatePicker
                       selected={formData.date}
@@ -537,15 +487,12 @@ At Paradise Bliss Tours, we organized a package that is the perfect blend of com
                       className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00453A] focus:ring-[#00453A]"
                       placeholderText="Select date"
                       required
-                      aria-label="Preferred travel date"
                     />
                     <AiOutlineCalendar className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Number of Travellers
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700">Number of Travellers</label>
                   <input
                     type="number"
                     name="travellers"
@@ -554,7 +501,6 @@ At Paradise Bliss Tours, we organized a package that is the perfect blend of com
                     min="1"
                     required
                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00453A] focus:ring-[#00453A]"
-                    aria-label="Number of travellers"
                   />
                 </div>
                 <motion.button
@@ -562,7 +508,6 @@ At Paradise Bliss Tours, we organized a package that is the perfect blend of com
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="w-full py-3 bg-[#00453A] text-white rounded-lg font-semibold transition-colors duration-300 cursor-pointer"
-                  aria-label="Submit request"
                 >
                   Submit Request
                 </motion.button>
@@ -573,35 +518,15 @@ At Paradise Bliss Tours, we organized a package that is the perfect blend of com
       )}
 
       <style jsx>{`
-        .swiper-container {
-          position: relative;
-        }
-        .swiper-pagination-custom {
-          position: relative;
-          bottom: 0;
-          padding-bottom: 10px;
-        }
-        .swiper-pagination-bullet {
-          background: rgba(255, 255, 255, 0.8);
-          width: 12px;
-          height: 12px;
-          margin: 0 8px;
-          border-radius: 50%;
-          transition: all 0.3s ease;
-        }
-        .swiper-pagination-bullet-active {
-          background: var(--color-dark);
-          width: 14px;
-          height: 14px;
-          opacity: 1;
-        }
-        .react-datepicker-wrapper {
-          width: 100%;
-        }
+        .swiper-container { position: relative; }
+        .swiper-pagination-custom { position: relative; bottom: 0; padding-bottom: 10px; }
+        .swiper-pagination-bullet { background: rgba(255, 255, 255, 0.8); width: 12px; height: 12px; margin: 0 8px; border-radius: 50%; }
+        .swiper-pagination-bullet-active { background: var(--color-dark); width: 14px; height: 14px; opacity: 1; }
+        .react-datepicker-wrapper { width: 100%; }
       `}</style>
       <WhyChooseUs />
     </>
   );
 };
 
-export default HimachalTour;
+export default EuropeTour;
