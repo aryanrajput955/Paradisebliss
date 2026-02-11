@@ -16,7 +16,8 @@ export function generateMetadata({ params }) {
     title: seo?.title || "Destinations | Paradise Bliss Tours",
     description:
       seo?.description ||
-      "Explore India’s best travel destinations with Paradise Bliss Tours.",
+      "Explore India's best travel destinations with Paradise Bliss Tours.",
+    keywords: seo?.keywords || "travel, tours, destinations, India",
     alternates: {
       canonical:
         seo?.canonical ||

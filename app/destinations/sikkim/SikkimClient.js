@@ -221,7 +221,7 @@ const SikkimTour = () => {
               </p>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">🏞️ Top Destinations Covered in Our Kerala Packages</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">🏞️ Top Destinations Covered in Our Sikkim Packages</h3>
               <ol className="list-decimal list-inside space-y-2">
                 <li><strong>Gangtok:</strong> The glamour capital of Sikkim, Gangtok combines modernism with natural beauty covered with cloudy mountains and monasteries, it boasts stunning views of the Kanchenjunga Range. Travelers can visit the attractions like Rumtek Monastery, MG Marg, and Tashi View Point. Its tranquil ambiance and vibrant markets, these are the spots to start the Sikkim journey.</li>
                 <li><strong>Tsomgo Lake:</strong> Exist at an altitude of 12,000 feet, Tsomgo Lake is one of the most attractive glacial lakes in India. This lake changes the color as per the season, creating an adorable sight. Covered with snow-capped peaks and picturesque beauty of nature and also experience yak rides. Perfect for those who love calmness and natural of beauty.</li>
@@ -231,7 +231,7 @@ const SikkimTour = () => {
               </ol>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">🌸 Best Time to Visit Kerala</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">🌸 Best Time to Visit Sikkim</h3>
               <ul className="list-disc list-inside space-y-2">
                 <li><strong>Spring Season (March to June):</strong> This season paints the valleys with colors as flowers bloom around the hills. This season temperature is comfortable for sightseeing, adventure, and nature walks.</li>
                 <li><strong>Autumn and early winter (September to December):</strong> In this season view of snow-capped peaks are crystal clear and making it ideal for picture spot and high altitude places like Nathula Pass and Tsomgo Lake.</li>
@@ -249,7 +249,7 @@ const SikkimTour = () => {
               </ul>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Kerala Trip?</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Sikkim Trip?</h3>
               <ul className="list-disc list-inside space-y-2">
                 <li>We have a tailored itinerary for all traveler as per their need and preferences.</li>
                 <li>We provide you with the best accommodation.</li>

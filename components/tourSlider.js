@@ -8,7 +8,6 @@ import { AiOutlineCalendar } from 'react-icons/ai';
 import { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import Image from 'next/image';
 import Link from 'next/link';
 
 // Sample tour data
@@ -174,7 +173,7 @@ export default function ToursSlider() {
                   }}
                   className="bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 h-full"
                 >
-                  <Image
+                  <img
                     height={400}
                     width={400}
                     src={tour.image}
@@ -257,7 +256,7 @@ export default function ToursSlider() {
             </button>
             {selectedTour && (
               <div className="mb-4">
-                <Image
+                <img
                   height={400}
                   width={400}
                   src={selectedTour.image}

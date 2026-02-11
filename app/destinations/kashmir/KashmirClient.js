@@ -17,7 +17,7 @@ const tours = [
     title: "Winter Kashmir Extravaganza",
     dates: ["Dec 22", "Dec 28"],
     prices: ["₹30,499*", "₹25,499*", ],
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Nanga_parbat%2C_Pakistan_by_gul791.jpg/500px-Nanga_parbat%2C_Pakistan_by_gul791.jpg",
+    image: "/optimised/winter_kashmir_extravegenza-transformed.jpeg",
     duration: "5N6D",
     group: "Group Trip",
     link: "/indian-tours/kashmir-winter-extravaganza/",
@@ -26,7 +26,7 @@ const tours = [
     title: "Kashmir Backpacking Odyssey",
     dates: ["Dates on Request"],
     prices: ["₹26,999*", "₹23,999*"],
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Pahalgam_Valley.jpg/500px-Pahalgam_Valley.jpg",
+    image: "/optimised/kashmir_backpacking_odassey-transformed.jpeg",
     duration: "5N6D",
     group: "Group Trip",
     link: "/indian-tours/kashmir-backpacking-odyssey",
@@ -35,7 +35,7 @@ const tours = [
     title: "Magnificent Kashmir Romantic Escape",
     dates: ["Dates on Request"],
     prices: ["Price on Request*"],
-    image: "/img/kashmir3.jpg",
+    image: "/optimised/magnificient_kashmir_romentic_escape.jpeg",
     duration: "6N7D",
     group: "Couple Tour Package",
     link: "/indian-tours/kashmir-romantic-escape",
@@ -44,7 +44,7 @@ const tours = [
     title: "Winter Kashmir Ultimate Circuit Journey",
     dates: ["Dates on Request"],
     prices: ["Price on Request"],
-    image: "/img/kashmir.jpg",
+    image: "/optimised/winter kashmie ultimate curcuit.jpeg",
     duration: "6N7D",
     group: "Customized Holidays",
     link: "/indian-tours/kashmir-winter-ultimate-circuit",
@@ -53,7 +53,7 @@ const tours = [
     title: "Kashmir Summer Long Circuit",
     dates: ["Jan 05", "Jan 12"],
     prices: ["On Request"],
-    image: "/img/kashmir3.jpg",
+    image: "/optimised/Summer_Kashmir_Long_Curcuit-transformed.jpeg",
     duration: "6N7D",
     group: "Group Adventure",
     link: "/indian-tours/kashmir-summer-long-circuit",
@@ -140,7 +140,7 @@ const KashmirTour = () => {
       {/* Hero Section */}
       <div
         className="relative w-full h-screen bg-cover bg-center flex justify-center lg:justify-end items-center px-4 sm:px-6 lg:px-8"
-        style={{ backgroundImage: "url('/img/kashmir.jpg')" }}
+        style={{ backgroundImage: "url('/optimised/winter_kashmir_extravegenza-transformed.jpeg')" }}
       >
         <h2
           className="absolute top-1/2 left-1/2 lg:left-auto lg:right-[60%] transform -translate-x-1/2 lg:translate-x-1/2 -translate-y-1/2 text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center lg:text-left z-10 font-serif"
@@ -278,34 +278,55 @@ Whether you are looking for a Family trip to Gulmarg and Pahalgam, an adventure-
         >
           <div className="py-6 space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">The Beauty That Defines Paradise</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Kashmir’s charm lies in its serene landscapes and natural splendor. The shimmering Dal Lake and Nigeen Lake in Srinagar are adorned with colorful shikaras and houseboats, offering peaceful rides amidst floating gardens and snow-capped backdrops.
-              </p>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Top Places to Visit in Kashmir</h3>
+
+              <h4 className="text-xl font-semibold text-green-800 mb-3">1. Srinagar</h4>
+              <p className="text-gray-600 mb-3">It is the heart of Kashmir, which is Famous for the Dal Lake, which gives a scenic view, and offers houseboat and shikara rides, the impressive Mughal gardens like Shalimar and Nishat. This place offers a view of the Himalayas. It is also famous for its Kashmiri Handicrafts, dry fruits, shawls, and carpets.</p>
+
+              <h4 className="text-xl font-semibold text-green-800 mb-3">2. Gulmarg</h4>
+              <p className="text-gray-600 mb-3">It is renowned as the ski capital. Its alpine meadows transform according to different seasons. In winter, it offers a premium skiing destination, and during summer, it invites visitors for trekking through the meadows with the wildflowers. And the best thing about this place is the gondola ride, which is one of the highest cable cars that lifts you to panoramic views beyond the horizon of peaks.</p>
+
+              <h4 className="text-xl font-semibold text-green-800 mb-3">3. Pahalgam</h4>
+              <p className="text-gray-600 mb-3">This is a stunning hill station, which is located about 100 km above Srinagar. This place is popularly known as the “Land of the Shepherd”. It gives a scenic view of lush meadows and snowcapped peaks. Major places to visit here are: Betaab valley, Aru valley, Chandanwari (starting point of the Amarnath Yatra), and Mamleshwar Temple.</p>
+
+              <h4 className="text-xl font-semibold text-green-800 mb-3">4. Sonmarg</h4>
+              <p className="text-gray-600 mb-3">This place is known for its Raw beauty. It gives a view of golden meadows. It is a famous hill station in Kashmir located 80 km away from Srinagar. Sonmarg is covered with high snow-covered mountains the alpine forests, and beautiful meadows. The top attractions of this place are the Thajiwas glaciers, Baltal valley, Kargil war memorial, and Zoji La Pass.</p>
             </div>
+
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Must-Visit Destinations in Kashmir</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><strong>Srinagar:</strong> It is the heart of Kashmir, which is Famous for the Dal Lake, which gives a scenic view, and offers houseboat and shikara rides, the impressive Mughal gardens like Shalimar and Nishat. This place offers a view of the Himalayas. It is also famous for its Kashmiri Handicrafts, dry fruits, shawls, and carpets.</li>
-                <li><strong>Gulmarg:</strong> It is renowned as the ski capital. Its alpine meadows transform according to different seasons. In winter, it offers a premium skiing destination, and during summer, it invites visitors for trekking through the meadows with the wildflowers. And the best thing about this place is the gondola ride, which is one of the highest cable cars that lifts you to panoramic views beyond the horizon of peaks. </li>
-                <li><strong>Pahalgam:</strong> This is a stunning hill station, which is located about 100 km above Srinagar. This place is popularly known as the “Land of the Shepherd”. It gives a scenic view of lush meadows and snowcapped peaks. Major places to visit here are: Betaab valley, Aru valley, Chandanwari (starting point of the Amarnath Yatra), and Mamleshwar Temple. </li>
-                <li><strong>Sonamarg:</strong> This place is known for its Raw beauty. It gives a view of golden meadows. It is a famous hill station in Kashmir located 80 km away from Srinagar. Sonmarg is covered with high snow-covered mountains the alpine forests, and beautiful meadows. The top attractions of this place are the Thajiwas glaciers, Baltal valley, Kargil war memorial, and Zoji La Pass.</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit</h3>
+              <ul className="list-disc list-inside text-gray-600 space-y-4">
+                <li>
+                  <strong>Summer (March to August):</strong> This is the best time to visit for the pleasant weather and the perfect temperature for sightseeing, trekking, boating, and enjoying the natural flora. <br/><em>Note: It is the peak tourist season, so pre-booking of accommodation is highly recommended.</em>
+                </li>
+                <li>
+                  <strong>Winter (December-February):</strong> A magical snow-covered landscape and the perfect Bollywood view can be seen in this season. This season is great for skiing and snow sports. <br/><em>Note: temperature can drop by the freezing point. So keep the heavy woolen clothes with you.</em>
+                </li>
+                <li>
+                  <strong>Monsoon (July-September):</strong> This season brings the greenery around the valley. It is the least crowded and peaceful time of the year, but rain can be intermittent for the visitors. This time is less considered for traveling as there are high chances for landslides. <br/><em>Note: Keep rain protectors with you. If you find that the weather is not favorable, then avoid outdoor activities.</em>
+                </li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Adventure & Culture</h3>
-              <p className="text-gray-600 leading-relaxed">
-                From trekking and skiing to experiencing Kashmiri Wazwan cuisine, Pashmina shopping, and warm Kahwa hospitality — Kashmir offers a complete sensory journey.
-              </p>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to Do in Kashmir</h3>
+              <ul className="list-disc list-inside text-gray-600 space-y-2">
+                <li>Shikara ride on Dal Lake, and stay in a boathouse.</li>
+                <li>Skiing and the Gondola ride in Gulmarg.</li>
+                <li>Explore the Mughal Gardens- Shalimar, Nishat, and Chasme Sahi.</li>
+                <li>Trekking in Betaab valley, Aru Valley near pahalgam.</li>
+                <li>Camping or trekking near the Thajiwas Glacier.</li>
+              </ul>
             </div>
-             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why choose Paradise Bliss Tours:</h3>
-              <ul className="list-decimal list-inside text-gray-600 space-y-2 mt-4">
-                <li>Experienced in Global and Personalized travel plans.</li>
-                <li>Tailored itinerary for all traveler as per their need and preferences.</li>
-                <li>Complete Tour services – Hotels, Visa, Flights, and sightseeing.</li>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why Choose Paradise Bliss Tours</h3>
+              <ul className="list-disc list-inside text-gray-600 space-y-2">
+                <li>We have a tailored itinerary for all traveler as per their need and preferences.</li>
+                <li>We provide you with the best accommodation.</li>
+                <li>Private Cab and local Assistance, Enjoy Hassle-free transfer with professional drivers.</li>
+                <li>Enjoy local sightseeing for whatever package you choose.</li>
                 <li>We provide you 24*7 customer support.</li>
-                <li>Affordable Luxury Tour packages without any hidden cost.</li>
               </ul>
             </div>
           </div>

@@ -19,7 +19,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const destinations = [
-      'Uttrakhand',
+      'Uttarakhand ',
       'Kerala',
       'Chardham',
       'Kashmir',

@@ -30,7 +30,12 @@ export default function VideoSlider() {
       if (ref && i !== index) ref.pause();
     });
     if (videoRefs.current[index]) {
-      videoRefs.current[index].play();
+      const playPromise = videoRefs.current[index].play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Autoplay was prevented, ignore
+        });
+      }
     }
   };
 

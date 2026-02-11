@@ -17,7 +17,7 @@ const tours = [
     title: "Georgia Mountains & Wine Tour",
     dates: ["Mar 15", "Apr 01", "May 10"],
     prices: ["Starting ₹51,999*", "₹49,999*"],
-    image: "/optimised/georgia1.jpg",
+    image: "/optimised/Georgia_Tour.jpeg",
     duration: "7D/6N",
     group: "Group Tour",
     link: "/trip-packages/georgia-packages",
@@ -79,7 +79,7 @@ const GeorgiaTour = () => {
   }, [isOpen]);
 
   const stats = [
-    { img: '/img/instagram.png', text: 'Community of<br/> 400k+ On Instagram' },
+    { img: '/img/smile.png', text: '40k+<br/>Happy Customers' },
     { img: '/img/star.png', text: '4.8<br/>Ratings' },
     { img: '/img/travel.png', text: '400+<br/>Itineraries' },
     { img: '/img/wallet.png', text: 'Book Now &<br/>Pay Later' },

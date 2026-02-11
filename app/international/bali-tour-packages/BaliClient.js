@@ -189,7 +189,7 @@ const BaliTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Paradise Bliss Bali Backpacking Tour – 7 Days of Adventure, Culture & Serenity
+          Discover the Magical Island of Bali with Paradise Bliss Tours Pvt. Ltd.
         </motion.h2>
         <motion.p
           className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
@@ -197,7 +197,7 @@ const BaliTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          From the bustling streets of Kuta to the serene landscapes of Ubud, this itinerary offers a perfect blend of adventure, culture, and relaxation. Embark on a journey of a lifetime with Paradise Bliss Tours.
+          Welcome to Bali, the Island of God. Bali is more than just a single island; it is formed from three different islands – Nusa Penida, Nusa Lembongan, and Nusa Ceningan. You can experience the most amazing islands here with lots of temples. Bali is the perfect blend of Charm and Devotion. Paradise Bliss Tours will provide you with a customized package that will make your trip so smooth and memorable. Whether you want to vibe on beaches, want some peaceful time in the hills, or rice fields, or want to explore the best sunset on Mount Batur. We have all the plans that will make your journey as you wish.
         </motion.p>
         <div
           ref={contentRef}
@@ -211,50 +211,72 @@ const BaliTour = () => {
         >
           <div className="py-6 space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">🗓️ Day-by-Day Itinerary</h3>
-              <ul className="list-none text-gray-600 space-y-4">
-                <li><strong>Day 1: Arrival in Bali – Welcome to Kuta</strong><br/>Land in Bali, meet your coordinator, transfer to Kuta hotel. Relax at Kuta Beach or explore markets.</li>
-                <li><strong>Day 2: Adventure & Culture</strong><br/>Water sports at Benoa Beach (Jet Ski, Banana Boat, Parasailing). Visit Uluwatu Temple & Kecak Fire Dance at sunset.</li>
-                <li><strong>Day 3: Nusa Penida Exploration</strong><br/>Full-day tour: Keling King Beach, Angel’s Billabong, Broken Beach. Includes local lunch.</li>
-                <li><strong>Day 4: Tanah Lot & Finns Beach Club</strong><br/>Morning at iconic Tanah Lot Temple. Afternoon relaxation at Finns Beach Club.</li>
-                <li><strong>Day 5: Kintamani Adventure</strong><br/>Scenic drive to Kintamani. Visit Coffee Plantation, Tegalalang Rice Terrace, Tegenungan Waterfall, Bali Swing.</li>
-                <li><strong>Day 6: ATV Ride & Waterfall</strong><br/>ATV ride through rice fields & jungle. Visit Kanto Lampo Waterfall for a dip.</li>
-                <li><strong>Day 7: Departure</strong><br/>Check-out after breakfast. Transfer to Ngurah Rai Airport.</li>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">About Bali</h3>
+              <p className="text-gray-600 leading-relaxed">Bali is a predominantly Hindu-majority area in Indonesia, creating a spiritual vibe. It has a special day called Nyapi, when the whole island goes silent; it’s a different kind of celebration that these people do. The most expensive coffee in the world - Kopi Luwak, was generated here with some special techniques. Bali has a Famous culture and warm hospitality that is admired worldwide.</p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Places to Visit in Bali</h3>
+
+              <h4 className="text-xl font-semibold text-green-800 mb-3">1. Ubud</h4>
+              <p className="text-gray-600 mb-3">It is a beautiful place that has many famous places to visit, some of which are:</p>
+              <ul className="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                <li><strong>Tegalalang Rice Terraces:</strong> It’s a UNESCO World Heritage site, which truly shows the relationship between the Bali people and nature. You can walk through the rice terrace and can feel the calm and nature's beauty.</li>
+                <li><strong>Ubud Monkey Forest:</strong> The home of thousands of Monkeys that live freely around there. There are so many ancient temples that will tell you about the tradition and their culture.</li>
+                <li><strong>Puram Taman Kemuda Saraswati:</strong> In the Center of Ubud, you can explore the stunning temple that is dedicated to the Goddess Saraswati. At a short distance, there is another temple named Tirta Empul Temple, which is famous for its Holy water, which people have used for the purification of their souls for thousands of years.</li>
+                <li><strong>Handara Gate:</strong> A famous Balinese-style gate, which is the entrance of a Golf course. It’s a picturesque spot, where you can snap photos that capture Bali’s Nature and Culture in one frame.</li>
+              </ul>
+
+              <h4 className="text-xl font-semibold text-green-800 mb-3">2. East Bali</h4>
+              <p className="text-gray-600 mb-3">It's an adventure-filled place that will make your journey full of thrill and joy. Some of the most famous places to visit are:</p>
+              <ul className="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                <li><strong>Mount Batur:</strong> It’s a Famous spot for hikers who want to experience the Breathtaking views. Once you reach the top, you can experience the panoramic view of the sunset and the sunrise as well.</li>
+                <li><strong>Tirtha Ganga:</strong> It is situated in East Bali. As the name represents the Holy water of the Ganges. It is the Royal Palace that was built in 1948. It has a stunning pool and the natural springs over it. Nearby, you can explore another temple, which is Taman Soekasada Ujung. It was built in 1909 by the king of Karangasem. It is the perfect mix of Bali and the European flair that shows the real art of the Balinese architecture and the modernism of the kings.</li>
+                <li><strong>Pura Gunung Cemeng:</strong> This temple is situated outside the countryside and is surrounded by lush greenery and scenic views.</li>
+                <li><strong>Sidemen Valley:</strong> This Valley is untouched by the busy tourists. Smooth, traditional Villagers who live their lives at a slower Pace. You can walk through the rice terrace and explore the Bali tradition and experience the true spirit of Bali.</li>
+                <li><strong>Besakih Temple:</strong> The most important temple of Hindus in the Island. It's an interesting place to learn about the Balinese culture and tradition, which is all about Hinduism. Some of the structures of the temple are about 2000 years old. In 1963, a volcano erupted, and the temple wasn’t badly damaged, which makes this temple more sacred for the Bali people.</li>
+                <li><strong>Padang Bai:</strong> This charming coastal village has beautiful beaches and amazing diving spots. It’s a fair port for other islands. The beaches here have crystal clear water with colorful fish. This is the perfect place for water activities.</li>
+              </ul>
+
+              <h4 className="text-xl font-semibold text-green-800 mb-3">3. Southern Bali and Nusa Islands</h4>
+              <p className="text-gray-600 mb-3">Here you can explore the most iconic parks and the temple of Bali, some of which are:</p>
+              <ul className="list-disc list-inside text-gray-600 space-y-2 mb-4">
+                <li><strong>Garuda Wisnu Kencana (GWK) Cultural Park:</strong> It is a giant theme park based on the Hindu gods. The main attraction of this park is the massive statue of Lord Vishnu seated on Garuda, one of the tallest statues in the world. And the park itself is so huge, which tells a tradition about the Balinese people.</li>
+                <li><strong>Uluwatu Temple:</strong> This is a very beautiful temple in Bali that overlooks the waves of the Indian Ocean. It is one of the most important temples of Bali. It looks amazing at sunset, when the sun paints the entire sky. Here, a special folk dance takes place in the evening by a group of men while telling the story of Ramayan.</li>
+                <li><strong>Tanah Lot Temple:</strong> It is famous for its sunset view and is the most picturesque spot on the island. This temple is surrounded by the ocean's heavy waves, which make it difficult to reach the temple. You can only visit there if the waves are low.</li>
+                <li><strong>Nusa Penida:</strong> You can explore the picture-perfect beaches here. This is a heaven for Nature enthusiasts and adventure lovers. Some of the most popular beaches are: Angle’s Billabong and Atuh Beach.</li>
+                <li><strong>Nusa Lembongan:</strong> This place is perfect for underwater activities. This is an important location where the agriculture of seaweeds takes place. Devil’ Tear is a must-visit place on this island.</li>
+                <li><strong>Nusa Ceningan:</strong> This is the smallest of the three Nusa Islands. It is famous for the water sports and the tranquility. The most famous places are: Blue Lagoon and Secret Beach.</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">✅ Package Inclusions</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Best Time to Visit</h3>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>6 nights in 3-star hotels with daily breakfast</li>
-                <li>1 Indonesian lunch on Nusa Penida</li>
-                <li>Airport transfers, ferry to Nusa Penida, intercity private transfers</li>
-                <li>All activities: Water sports, Uluwatu Temple + Kecak Dance, Nusa Penida tour, Tanah Lot, Finns Beach Club, Kintamani tour, Bali Swing, ATV ride, Kanto Lampo Waterfall</li>
-                <li>24/7 on-call travel assistance</li>
+                <li><strong>Dry season (April-October):</strong> This is the Popular Tourist time, ideal for sightseeing and outdoor activities. As this season has clear skies and pleasant weather.</li>
+                <li><strong>Wet season (November-March):</strong> This time is perfect to explore the lush greenery of the tropical regions, and the crowd is also smaller.</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">❌ Exclusions</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to Do in Bali</h3>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>International flights from India</li>
-                <li>Meals unless specified</li>
-                <li>Personal expenses, travel insurance, tips</li>
+                <li>Explore the charming beaches in Bali.</li>
+                <li>Visit the sacred temples of Bali- Tanah Lot, Uluwatu, and Besakih.</li>
+                <li>Experience the thrilling Water Activities in the Nusa Islands.</li>
+                <li>Explore Bali’s culture in Ubud.</li>
+                <li>Watch the incredible sunset in Tanah Lot and Uluwatu.</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Departure Cities</h3>
-              <p className="text-gray-600">Flights available from <strong>Delhi, Mumbai, Bengaluru, Kolkata</strong></p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why Choose This Tour?</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Why Choose Paradise Bliss Tours</h3>
               <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li>Perfect mix of adventure, culture, and relaxation</li>
-                <li>Small group experience with expert local guidance</li>
-                <li>Hassle-free planning with 24/7 support</li>
-                <li>Limited-time offer: <strong>₹49,999 only!</strong></li>
+                <li>Experienced in Global and Personalised travel plans.</li>
+                <li>Tailored itinerary for all traveler as per their need and preferences.</li>
+                <li>Complete Tour services – Hotels, Visa, Flights, and sightseeing.</li>
+                <li>We provide you 24*7 customer support.</li>
+                <li>Affordable Luxury Tour packages without any hidden cost.</li>
               </ul>
             </div>
           </div>

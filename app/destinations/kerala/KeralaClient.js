@@ -14,15 +14,6 @@ import Link from 'next/link';
 
 const tours = [
   {
-    title: "Kerala Backpacking Escape",
-    dates: ["Dates on Request"],
-    prices: [""," Price on Request"],
-    image: "/img/kerla.jpg",
-    duration: "6N7D",
-    group: "Group Tour",
-    link: "/indian-tours/kerala-backpacking-escape",
-  },
-  {
     title: "Kerala Backpacking Tour",
     dates: ["Dates on Request"],
     prices: [""," Price on Request"],
@@ -49,7 +40,15 @@ const tours = [
     group: "Honeymoon Package",
     link: "/indian-tours/kerala-romantic-honeymoon-gateway",
   },
-   
+  {
+    title: "Kerala Backpacking Escape",
+    dates: ["Dates on Request"],
+    prices: [""," Price on Request"],
+    image: "/img/kerla.jpg",
+    duration: "6N7D",
+    group: "Group Tour",
+    link: "/indian-tours/kerala-backpacking-escape",
+  },
 ];
 
 const KeralaTour = () => {
@@ -220,7 +219,7 @@ const KeralaTour = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-         🌄 Explore Heaven on Earth—Kerala Tour Packages by Paradise Bliss Tours Pvt. Ltd.
+          🌄 Explore Heaven on Earth—Kerala Tour Packages by Paradise Bliss Tours Pvt. Ltd.
         </motion.h2>
         <motion.p
           className="font-sans text-lg text-gray-700 mb-6 w-full max-w-5xl leading-relaxed"
@@ -229,8 +228,7 @@ const KeralaTour = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           We define the beauty of Kerala—the land of peaceful backwaters, cloud-covered highlands, sandy coastline, and energetic traditions. At Paradise Bliss Tours Pvt. Ltd., we are offering you strategic tour packages that combine relaxation, nature, and culture—we secure your review and charm as “God’s Own Country” itself.
-Whether you dream of a romantic houseboat stay in Alleppey, a family trip in the midst of Munnar’s tea gardens, or a refreshing coastal getaway in Kovalam, our organized tour packages cater to every traveler and offer support, smoothness, and cherished memories. 
-
+          Whether you dream of a romantic houseboat stay in Alleppey, a family trip in the midst of Munnar’s tea gardens, or a refreshing coastal getaway in Kovalam, our organized tour packages cater to every traveler and offer support, smoothness, and cherished memories. 
         </motion.p>
 
         <div
@@ -246,16 +244,6 @@ Whether you dream of a romantic houseboat stay in Alleppey, a family trip in the
               <p className="leading-relaxed">
                 Kerala’s charm lies in its breathtaking natural beauty. The calm backwaters of Alleppey and Kumarakom are like a dreamscape where you can drift through palm-fringed canals on a traditional houseboat. The gentle ripples of water, lush green paddy fields, and rustic village life create an experience that soothes the soul.
               </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">Things to do in kerala </h3>
-                <ul className="list-disc list-inside space-y-2">
-                <li>•	Relax on Beaches: Find the stunning sunset on the beach and swim in Kovalam or Varkala.</li>
-                <li>•	Backwaters and Cruise: Enjoy traditional houseboat rides and village life in Alleppey and Kumarakom.</li>
-                <li>•	Wildlife and Nature: During the safari you can go birdwatching at Kumarakom Bird in Periyar Wild Sanctuary.</li>
-                <li>•	Experience Ayurveda and Wellness: Experience the best yoga retreats, Ayurvedic massages, and herbal therapies.</li>
-                <li>•	Hill Stations: Explore sightseeing and enjoy trekking, tea gardens, waterfalls, and cool weather in Munnar and Wayanad.</li>
-              </ul>
             </div>
             <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">Culture, Festivals, and Traditions</h3>
@@ -277,18 +265,28 @@ Whether you dream of a romantic houseboat stay in Alleppey, a family trip in the
                 <li><strong>Summer (Mar–May):</strong>Ideal for inspecting hill stations like Munnar and Wayanad, presenting a refreshing retreat to enjoy cool and pleasant weather. Kerala’s weather during the summer season is peaceful and relaxing in hill stations, where you can enjoy greenery, tea gardens, and nature walks.</li>
               </ul>
             </div>
-              <div>
-                <h3 className="text-2xl font-semibold text-green-900 mb-4">Top Destinations Covered in Our Kerala Packages </h3>
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">🌸 Things to do in Kerala</h3>
               <ul className="list-disc list-inside space-y-2">
-                <li>1.	Munnar: This hill station is famous for its rolling tea plantations, misty valleys, and scenic falls. Beyond its beauty, Munnar also has a great variety of flora and fauna. In Eravikulam National Park, you can also discover the Nilgiri Tahr, which is an endangered flower, and the special Nilakurinji flower, which blooms once every twelve years.</li>
-                <li>2.	Alleppey (Alappuzha): The Venice of the East—eminent views for its tranquil backwaters, traditional houseboats, and lush paddy fields. This beautiful town defines an unforgettable experience; peaceful canals weave through villages, coconut groves, and vital landscapes.</li>
-                <li>3.	Thekkady: The land of Wilderness—home to Periyar Wildlife Sanctuary, spice plantations, and bamboo rafting adventures. It is also popular for its fragrant spice plantations, defining a savory experience of Kerala’s spice culture. Activities like bamboo rafting on the peaceful Periyar Lake deliver memorable memories of the region'sscenic beauty.</li>
-                <li>4.	Kovalam: The Oceanic Elegance—it is famous for the semilunar-shaped beaches, Ayurvedic retreats, and wonderful sunsets over the Arabian Sea. Travelers can revitalize with traditional Ayurvedic therapies, visitors also enjoy water sports, or they simply relax under waving palms as the sun paints the skyline in shades of orange and gold.</li>
-                <li>5.	Kumarakom: A calm paradise land—perfect for lake cruises and authentic Kerala village experiences. It is a heaven for birdwatchers, as countless colorful birds can be seen at Kumarakom Bird Sanctuary.</li>
-                <li>6.	Wayanad: Nature’s retreat—it is a charming eminence district filled with cascading waterfalls, caves, wildlife refuges, and lush green forests. It is also home to a rich wildlife sanctuary, as many birds and animals live together in their natural surroundings.</li>
+                <li>Relax on Beaches: Find the stunning sunset on the beach and swim in Kovalam or Varkala.</li>
+                <li>Backwaters and Cruise: Enjoy traditional houseboat rides and village life in Alleppey and Kumarakom.</li>
+                <li>Wildlife and Nature: During the safari you can go birdwatching at Kumarakom Bird in Periyar Wild Sanctuary.</li>
+                <li>Experience Ayurveda and Wellness: Experience the best yoga retreats, Ayurvedic massages, and herbal therapies.</li>
+                <li>Hill Stations: Explore sightseeing and enjoy trekking, tea gardens, waterfalls, and cool weather in Munnar and Wayanad.</li>
               </ul>
             </div>
-             <div>
+            <div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">Top Destinations Covered in Our Kerala Packages </h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>Munnar: This hill station is famous for its rolling tea plantations, misty valleys, and scenic falls. Beyond its beauty, Munnar also has a great variety of flora and fauna. In Eravikulam National Park, you can also discover the Nilgiri Tahr, which is an endangered flower, and the special Nilakurinji flower, which blooms once every twelve years.</li>
+                <li>Alleppey (Alappuzha): The Venice of the East—eminent views for its tranquil backwaters, traditional houseboats, and lush paddy fields. This beautiful town defines an unforgettable experience; peaceful canals weave through villages, coconut groves, and vital landscapes.</li>
+                <li>Thekkady: The land of Wilderness—home to Periyar Wildlife Sanctuary, spice plantations, and bamboo rafting adventures. It is also popular for its fragrant spice plantations, defining a savory experience of Kerala’s spice culture. Activities like bamboo rafting on the peaceful Periyar Lake deliver memorable memories of the region'sscenic beauty.</li>
+                <li>Kovalam: The Oceanic Elegance—it is famous for the semilunar-shaped beaches, Ayurvedic retreats, and wonderful sunsets over the Arabian Sea. Travelers can revitalize with traditional Ayurvedic therapies, visitors also enjoy water sports, or they simply relax under waving palms as the sun paints the skyline in shades of orange and gold.</li>
+                <li>Kumarakom: A calm paradise land—perfect for lake cruises and authentic Kerala village experiences. It is a heaven for birdwatchers, as countless colorful birds can be seen at Kumarakom Bird Sanctuary.</li>
+                <li>Wayanad: Nature’s retreat—it is a charming eminence district filled with cascading waterfalls, caves, wildlife refuges, and lush green forests. It is also home to a rich wildlife sanctuary, as many birds and animals live together in their natural surroundings.</li>
+              </ul>
+            </div>
+            <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Kerala Trip?</h3>
               <ul className="list-disc list-inside space-y-2">
                 <li>We have a tailored itinerary for all traveler as per their need and preferences.</li>

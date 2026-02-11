@@ -1,19 +1,21 @@
-import Image from 'next/image';
-import AdventureTours from "@/components/adventure";
-import Banner1 from "@/components/banner1";
-
-import HolidaySaleBanner from "@/components/christmas";
-import DVDiaries from "@/components/customer-gallery";
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
 import HeroSection from "@/components/herosection";
 import ImageGallery from "@/components/imageGalley";
-import DomesticGetaways from "@/components/international-packages";
-import InternationalSlider from "@/components/internationalbanner";
-import Quote from "@/components/quote";
-import TestimonialSlider from "@/components/testimonials";
-import ToursSlider from "@/components/tourSlider";
-import VideoSlider from "@/components/videos";
-// import WhatsAppButton from "@/components/WhatsAppButton";
-import WhyChooseUs from "@/components/whychooseus";
+import ImageGalleryMobile from '@/components/imagegallerymobile';
+
+// Defer below-the-fold components with dynamic imports
+const Banner1 = dynamic(() => import("@/components/banner1"), { ssr: true });
+const VideoSlider = dynamic(() => import("@/components/videos"), { ssr: true });
+const HolidaySaleBanner = dynamic(() => import("@/components/christmas"), { ssr: true });
+const AdventureTours = dynamic(() => import("@/components/adventure"), { ssr: true });
+const DomesticGetaways = dynamic(() => import("@/components/international-packages"), { ssr: true });
+const InternationalSlider = dynamic(() => import("@/components/internationalbanner"), { ssr: true });
+const ToursSlider = dynamic(() => import("@/components/tourSlider"), { ssr: true });
+const WhyChooseUs = dynamic(() => import("@/components/whychooseus"), { ssr: true });
+const DVDiaries = dynamic(() => import("@/components/customer-gallery"), { ssr: true });
+const TestimonialSlider = dynamic(() => import("@/components/testimonials"), { ssr: true });
+const Quote = dynamic(() => import("@/components/quote"), { ssr: true });
 
 export const metadata = {
   title: "Paradise Bliss Tours - Explore India & International Trips",
@@ -31,20 +33,34 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
+      <div className="hidden md:block">
       <ImageGallery />
-      <Banner1 />
-      <VideoSlider />
+      </div>
+      <div className="md:hidden">
+        <ImageGalleryMobile />
+      </div>
+      
+      <Suspense fallback={null}>
+        <Banner1 />
+      </Suspense>
+      
+      <Suspense fallback={null}>
+        <div className="hidden md:block">
+          <VideoSlider />
+        </div>
+      </Suspense>
 
-      <HolidaySaleBanner />
-      <AdventureTours/>
-      <DomesticGetaways />
-      <InternationalSlider />
-    <ToursSlider />
-    <WhyChooseUs />
-    <DVDiaries />
-    <TestimonialSlider />
-    <Quote />
-    {/* <WhatsAppButton /> */}
+      <Suspense fallback={null}>
+        <HolidaySaleBanner />
+        <AdventureTours />
+        <DomesticGetaways />
+        <InternationalSlider />
+        <ToursSlider />
+        <WhyChooseUs />
+        <DVDiaries />
+        <TestimonialSlider />
+        <Quote />
+      </Suspense>
     </div>
   );
 }

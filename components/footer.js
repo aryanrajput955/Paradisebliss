@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -9,19 +8,19 @@ const Footer = () => {
         {/* Logo Section */}
         <div className="flex flex-col items-center mb-8">
           {/* Logo */}
-          <Image
-            src="https://raw.githubusercontent.com/aryanrajput955/icons_paradise/refs/heads/main/logo.png" // Replace with your logo path
+          <img
+            src="https://raw.githubusercontent.com/aryanrajput955/icons_paradise/refs/heads/main/logo.png"
             alt="Paradise Bliss"
-            width={200} // Adjust width as needed
-            height={50} // Adjust height as needed
+            width={200}
+            height={50}
             className="object-contain mt-10 mb-6"
           />
 
           {/* Social Media Icons */}
           <div className="flex space-x-6 mb-10">
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="https://raw.githubusercontent.com/aryanrajput955/icons_paradise/refs/heads/main/twitter.png" // Replace with X (Twitter) icon path
+              <img
+                src="https://raw.githubusercontent.com/aryanrajput955/icons_paradise/refs/heads/main/twitter.png"
                 alt="X (Twitter)"
                 width={30}
                 height={30}
@@ -29,8 +28,8 @@ const Footer = () => {
               />
             </a>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="https://raw.githubusercontent.com/aryanrajput955/icons_paradise/refs/heads/main/fb.png" // Replace with Facebook icon path
+              <img
+                src="https://raw.githubusercontent.com/aryanrajput955/icons_paradise/refs/heads/main/fb.png"
                 alt="Facebook"
                 width={30}
                 height={30}
@@ -38,8 +37,8 @@ const Footer = () => {
               />
             </a>
             <a href="https://www.instagram.com/paradiseblisstours?igsh=YXZpaHE3ZHBxZ3gy" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="https://raw.githubusercontent.com/aryanrajput955/icons_paradise/refs/heads/main/instagram2.png" // Replace with Instagram icon path
+              <img
+                src="https://raw.githubusercontent.com/aryanrajput955/icons_paradise/refs/heads/main/instagram2.png"
                 alt="Instagram"
                 width={30}
                 height={30}
@@ -47,8 +46,8 @@ const Footer = () => {
               />
             </a>
             <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="https://raw.githubusercontent.com/aryanrajput955/icons_paradise/refs/heads/main/whatsapp1.png" // Replace with WhatsApp icon path
+              <img
+                src="https://raw.githubusercontent.com/aryanrajput955/icons_paradise/refs/heads/main/whatsapp1.png"
                 alt="WhatsApp"
                 width={30}
                 height={30}
@@ -56,8 +55,8 @@ const Footer = () => {
               />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <Image
-                src="https://raw.githubusercontent.com/aryanrajput955/icons_paradise/refs/heads/main/linkedin.png" // Replace with LinkedIn icon path
+              <img
+                src="https://raw.githubusercontent.com/aryanrajput955/icons_paradise/refs/heads/main/linkedin.png"
                 alt="LinkedIn"
                 width={30}
                 height={30}

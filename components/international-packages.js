@@ -20,7 +20,7 @@ const destinations = [
 	{
 		title: 'Georgia',
 		startingPrice: '₹49,999',
-		image: '/img/GI.jpg',
+		image: '/optimised/Georgia_Tour.jpeg',
 		link: '/international/georgia-tour-packages',
 	},
 	{

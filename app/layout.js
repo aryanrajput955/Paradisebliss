@@ -1,6 +1,6 @@
 // app/layout.js
 import "./globals.css";
-import Image from 'next/image';
+import { Suspense } from "react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -39,8 +39,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body>
-        <Loader />
+        <Suspense fallback={null}>
+          <Loader />
+        </Suspense>
         <Navbar />
         {children}
         <Footer />

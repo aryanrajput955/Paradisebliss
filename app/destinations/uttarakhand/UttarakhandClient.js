@@ -17,7 +17,7 @@ const tours = [
     title: "Uttarakhand Tour Package",
     dates: ["Dates on Request"],
     prices: ["₹12,999*", "₹9,999*"],
-    image: "/img/uttarakhand2.jpg",
+    image: "/img/uttarakhand2.jpeg",
     duration: "5N6D",
     group: "Group Departure",
     link: "/indian-tours/uttarakhand-tour-package",
@@ -246,7 +246,7 @@ Whether you want to seek blessings from the Chardham yatra, or want the thrill o
               </ul>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Kerala Trip?</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Uttarakhand Trip?</h3>
               <ul className="list-disc list-inside space-y-2">
                 <li>We have a tailored itinerary for all traveler as per their need and preferences.</li>
                 <li>We provide you with the best accommodation.</li>

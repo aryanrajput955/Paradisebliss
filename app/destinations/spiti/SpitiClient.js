@@ -17,7 +17,7 @@ const tours = [
     title: "Winter Spiti Valley Tour",
     dates: ["March 28", "April 01", "April 15"],
     prices: ["Starting ₹20,990*", "₹17,990*"],
-    image: "/img/spiti.jpg",
+    image: "/optimised/Winter_spiti-transformed.jpeg",
     duration: "9D8N",
     group: "Group Tour",
     link: "/indian-tours/spiti-winter-tour-package",
@@ -26,7 +26,7 @@ const tours = [
     title: "Spiti Valley with Chandra Taal",
     dates: ["March 29", "April 02", "April 15"],
     prices: ["Starting ₹20,990*", "₹16,000*"],
-    image: "/img/chandrataal.png",
+    image: "/optimised/Chandratal-Lake-Spiti.jpeg",
     duration: "7D6N",
     group: "Group Tour",
     link: "/indian-tours/spiti-chandratal-tour-package",
@@ -35,7 +35,7 @@ const tours = [
     title: "Spiti Valley Bike Tour Package",
     dates: ["March 27", "April 05", "April 14"],
     prices: ["Starting ₹32,990*", "₹29,990*"],
-    image: "/img/bike.jpg",
+    image: "/optimised/Spiti-Valley-Bike-Trip.jpeg",
     duration: "5D6N",
     group: "Group Adventure",
     link: "/indian-tours/spiti-bike-tour-package",
@@ -44,7 +44,7 @@ const tours = [
     title: "Spiti Valley Full Circuit Tour",
     dates: ["Jan 18", "Feb 08", "Feb 15"],
     prices: ["Starting ₹30,990*", "₹21,999*"],
-    image: "/img/spiti3.jpg",
+    image: "/optimised/Spiti-valey-full-curcuit.jpeg",
     duration: "9D8N",
     group: "Group Tour",
     link: "/indian-tours/spitifullcircuit-tour-package",
@@ -304,7 +304,7 @@ In Paradise Bliss Tours, we organize personalized packages for you, which includ
               </ul>
             </div>
            <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Kerala Trip?</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Spiti Trip?</h3>
               <ul className="list-disc list-inside space-y-2">
                 <li>We have a tailored itinerary for all traveler as per their need and preferences.</li>
                 <li>We provide you with the best accommodation.</li>

@@ -133,7 +133,7 @@ const RajasthanTour = () => {
       {/* Hero Section */}
       <div
         className="relative w-full h-screen bg-cover bg-center flex justify-center lg:justify-end items-center px-4 sm:px-6 lg:px-8"
-        style={{ backgroundImage: "url('/img/rajasthan.jpg')" }}
+        style={{ backgroundImage: "url('/img/rajasthan.jpeg')" }}
       >
         <h2
           className="absolute top-1/2 left-1/2 lg:left-auto lg:right-[60%] transform -translate-x-1/2 lg:translate-x-1/2 -translate-y-1/2 text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center lg:text-left z-10 font-serif"
@@ -293,7 +293,7 @@ At Paradise Bliss Tours, we provide you with a premium Rajasthan Heritage Packag
             <div>
               <h3 className="text-2xl font-semibold text-green-900 mb-4">A Culinary Royal Treat</h3>
               <p className="leading-relaxed">
-                Savor Dal Baati Churma, Laal Maas, Gatte ki Sabzi, Ker Sangri, and sweets like Ghewar & Malpua — pure royal indulgence.
+                Savour Dal Baati Churma, Laal Maas, Gatte ki Sabzi, Ker Sangri, and sweets like Ghewar & Malpua — pure royal indulgence.
               </p>
             </div>
             <div>
@@ -305,7 +305,7 @@ At Paradise Bliss Tours, we provide you with a premium Rajasthan Heritage Packag
               </ul>
             </div>
             <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Kerala Trip?</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Rajasthan Trip?</h3>
               <ul className="list-disc list-inside space-y-2">
                 <li>We have a tailored itinerary for all traveler as per their need and preferences.</li>
                 <li>We provide you with the best accommodation.</li>

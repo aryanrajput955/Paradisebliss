@@ -17,7 +17,7 @@ const tours = [
     title: "Thailand Full Moon Party Tour",
     dates: ["Nov 15", "Dec 01", "Jan 10"],
     prices: ["Starting ₹59,999*", "₹59,999*"],
-    image: "/optimised/the-full-moon-party.avif",
+    image: "/optimised/Thailand_tour.jpeg",
     duration: "8D/7N",
     group: "Group Tour",
     link: "/trip-packages/thailand-packages",
@@ -79,7 +79,7 @@ const ThailandTour = () => {
   }, [isOpen]);
 
   const stats = [
-    { img: '/img/instagram.png', text: 'Community of<br/> 400k+ On Instagram' },
+    { img: '/img/smile.png', text: '40k+<br/>Happy Customers' },
     { img: '/img/star.png', text: '4.8<br/>Ratings' },
     { img: '/img/travel.png', text: '400+<br/>Itineraries' },
     { img: '/img/wallet.png', text: 'Book Now &<br/>Pay Later' },
@@ -90,7 +90,7 @@ const ThailandTour = () => {
       {/* Hero Section */}
       <div
         className="relative w-full h-screen bg-cover bg-center flex justify-center lg:justify-end items-center px-4 sm:px-6 lg:px-8"
-        style={{ backgroundImage: "url('/optimised/the-full-moon-party.avif')" }}
+        style={{ backgroundImage: "url('/optimised/Thailand-tour.avif')" }}
       >
         <h2
           className="absolute top-1/2 left-1/2 lg:left-auto lg:right-[60%] transform -translate-x-1/2 lg:translate-x-1/2 -translate-y-1/2 text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center lg:text-left z-10 font-serif"

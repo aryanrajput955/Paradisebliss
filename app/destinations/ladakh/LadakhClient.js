@@ -17,7 +17,7 @@ const tours = [
     title: "Leh to Turtuk Tour",
     dates: ["May 15", "June 01", "July 10"],
     prices: ["Starting ₹25,990*", "₹22,990*"],
-    image: "/img/ladakh.jpg",
+    image: "/optimised/LAdakh_tour-transformed.jpeg",
     duration: "7D6N",
     group: "Group Tour",
     link: "/indian-tours/leh-to-turtuk-tour",
@@ -26,7 +26,7 @@ const tours = [
     title: "Ladakh Bike Expedition",
     dates: ["May 20", "June 05", "July 15"],
     prices: ["Starting ₹22,990*", "₹19,990*"],
-    image: "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/optimised/Ladakh-Tour-2.jpg",
     duration: "5D4N",
     group: "Group Tour",
     link: "/indian-tours/ladakh-bike-trip",
@@ -269,7 +269,7 @@ Whether you are planning a family trip or the Leh-Ladakh Bike trip, we have all 
               </ul>
             </div>
                <div>
-              <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Kerala Trip?</h3>
+              <h3 className="text-2xl font-semibold text-green-900 mb-4">✨ Why Choose Paradise Bliss Tours for Your Ladakh Trip?</h3>
               <ul className="list-disc list-inside space-y-2">
                 <li>We have a tailored itinerary for all traveler as per their need and preferences.</li>
                 <li>We provide you with the best accommodation.</li>
