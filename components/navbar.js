@@ -88,7 +88,7 @@ export default function Navbar() {
   return (
     <>
       {/* Banner */}
-      <div style={{backgroundColor:"var(--color-dark)"}} className="fixed top-0 left-0 w-screen text-white text-center py-1.5 sm:py-2 z-50">
+      <div style={{ backgroundColor: "var(--color-dark)" }} className="fixed top-0 left-0 w-screen text-white text-center py-1.5 sm:py-2 z-50">
         <button className="text-xs sm:text-sm md:text-base mb-0 hover:scale-105 ease-in-out transition-all">
           Uttarakhand & Char Dham Early Offer!
         </button>
@@ -96,13 +96,12 @@ export default function Navbar() {
 
       {/* Navbar */}
       <header
-        className={`fixed top-6 sm:top-8 left-0 w-screen flex items-center justify-between p-2 sm:p-3 md:p-4 z-40 transition-all duration-300 ${
-          isScrolled ? 'bg-[#E4DECF] shadow-lg' : 'bg-[#E4DECF]'
-        }`}
+        className={`fixed top-6 sm:top-8 left-0 w-screen flex items-center justify-between p-2 sm:p-3 md:p-4 z-40 transition-all duration-300 ${isScrolled ? 'bg-[#E4DECF] shadow-lg' : 'bg-[#E4DECF]'
+          }`}
       >
         <div className="container mx-auto flex items-center justify-between px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-16">
           {/* Desktop Layout */}
-          <div style={{color:'var(--color-dark)'}} className="hidden lg:flex items-center w-full">
+          <div style={{ color: 'var(--color-dark)' }} className="hidden lg:flex items-center w-full">
             <div className="flex items-center gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
               <div className="logo">
                 <Link href="/">
@@ -204,7 +203,7 @@ export default function Navbar() {
                   </a>
                 </li>
                 <li>
-                  <Link legacyBehavior href="/blogs.html">
+                  <Link legacyBehavior href="/blogs">
                     <a
                       className="relative hover:text-green-600 text-xs lg:text-sm xl:text-base 2xl:text-lg transition-colors duration-300 group whitespace-nowrap"
                     >
@@ -280,11 +279,11 @@ export default function Navbar() {
           {isMobileMenuOpen && (
             <>
               {/* Backdrop */}
-              <div 
+              <div
                 className="fixed inset-0 bg-black/50 z-40 lg:hidden"
                 onClick={() => setIsMobileMenuOpen(false)}
               ></div>
-              
+
               {/* Slide-in Menu */}
               <div className="fixed top-0 mt-6 left-0 h-screen w-[85%] sm:w-4/5 md:w-3/5 bg-[#E4DECF] shadow-2xl transform transition-transform duration-300 ease-in-out z-50 lg:hidden overflow-y-auto">
                 {/* Menu Header */}
@@ -447,7 +446,7 @@ export default function Navbar() {
                         </a>
                       </li>
                       <li>
-                        <Link legacyBehavior href="/blogs.html">
+                        <Link legacyBehavior href="/blogs">
                           <a
                             className="relative text-black hover:text-green-600 text-base sm:text-lg font-medium transition-all duration-300 group py-3 px-4 block rounded-lg hover:bg-white/50"
                             onClick={() => setIsMobileMenuOpen(false)}

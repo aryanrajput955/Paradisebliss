@@ -1,9 +1,7 @@
 // app/layout.js
 import "./globals.css";
 import { Suspense } from "react";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import ConditionalLayout from "@/components/ConditionalLayout";
 import Loader from "@/components/Loader";
 
 export const metadata = {
@@ -14,7 +12,7 @@ export const metadata = {
   keywords:
     "Paradise Bliss Tours, travel company India, holiday packages, international tours, domestic tours, customized tours, honeymoon packages, travel agency India",
   icons: {
-    icon: "/img/logo2.jpg", 
+    icon: "/img/logo2.jpg",
   },
   openGraph: {
     title:
@@ -47,10 +45,9 @@ export default function RootLayout({ children }) {
         <Suspense fallback={null}>
           <Loader />
         </Suspense>
-        <Navbar />
-        {children}
-        <Footer />
-        <WhatsAppButton />
+        <ConditionalLayout>
+          {children}
+        </ConditionalLayout>
       </body>
     </html>
   );
