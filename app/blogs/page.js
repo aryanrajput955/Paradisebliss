@@ -5,14 +5,12 @@ import Link from 'next/link'
 
 const BlogsPage = () => {
     const [blogs, setBlogs] = useState([])
-    const [categories, setCategories] = useState([])
     const [isLoading, setIsLoading] = useState(true)
-    const [selectedCategory, setSelectedCategory] = useState('')
+
     const [searchTerm, setSearchTerm] = useState('')
 
     useEffect(() => {
         fetchBlogs()
-        fetchCategories()
     }, [])
 
     const fetchBlogs = async () => {
@@ -25,9 +23,7 @@ const BlogsPage = () => {
                 params.push(`search=${encodeURIComponent(searchTerm.trim())}`)
             }
 
-            if (selectedCategory) {
-                params.push(`category=${selectedCategory}`)
-            }
+
 
             if (params.length > 0) {
                 url += params.join('&')
@@ -44,28 +40,14 @@ const BlogsPage = () => {
         }
     }
 
-    const fetchCategories = async () => {
-        try {
-            const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/categories`)
-            if (response.data.success) {
-                setCategories(response.data.data)
-            }
-        } catch (error) {
-            console.error('Error fetching categories:', error)
-        }
-    }
+
 
     const handleSearch = (e) => {
         e.preventDefault()
         fetchBlogs()
     }
 
-    const handleCategoryFilter = (categoryId) => {
-        setSelectedCategory(categoryId)
-        setTimeout(() => {
-            fetchBlogs()
-        }, 100)
-    }
+
 
     const formatDate = (date) => {
         return new Date(date).toLocaleDateString('en-US', {
@@ -137,7 +119,6 @@ const BlogsPage = () => {
                                 type='button'
                                 onClick={() => {
                                     setSearchTerm('')
-                                    setSelectedCategory('')
                                     setTimeout(fetchBlogs, 100)
                                 }}
                                 className='px-6 py-3 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transition-all'>
@@ -146,28 +127,7 @@ const BlogsPage = () => {
                         </div>
                     </form>
 
-                    {/* Category Filter Pills */}
-                    <div className='mt-6 flex flex-wrap gap-3'>
-                        <button
-                            onClick={() => handleCategoryFilter('')}
-                            className={`px-5 py-2 rounded-full font-medium transition-all ${selectedCategory === ''
-                                ? 'bg-[#00453a] text-white shadow-lg'
-                                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                                }`}>
-                            All Categories
-                        </button>
-                        {categories.map((category) => (
-                            <button
-                                key={category._id}
-                                onClick={() => handleCategoryFilter(category._id)}
-                                className={`px-5 py-2 rounded-full font-medium transition-all ${selectedCategory === category._id
-                                    ? 'bg-[#00453a] text-white shadow-lg'
-                                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                                    }`}>
-                                {category.name}
-                            </button>
-                        ))}
-                    </div>
+
                 </div>
             </div>
 
@@ -195,8 +155,8 @@ const BlogsPage = () => {
                         </div>
                         <h3 className='text-2xl font-bold text-gray-800 mb-2'>No blogs found</h3>
                         <p className='text-gray-600'>
-                            {searchTerm || selectedCategory
-                                ? 'Try adjusting your search or filters'
+                            {searchTerm
+                                ? 'Try adjusting your search'
                                 : 'Check back soon for new content'}
                         </p>
                     </div>
@@ -213,13 +173,7 @@ const BlogsPage = () => {
                                         alt={blog.metaTitle}
                                         className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
                                     />
-                                    {blog.category && (
-                                        <div className='absolute top-4 left-4'>
-                                            <span className='inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold bg-[#00453a] text-white shadow-lg'>
-                                                {blog.category.name}
-                                            </span>
-                                        </div>
-                                    )}
+
                                 </div>
 
                                 {/* Blog Content */}

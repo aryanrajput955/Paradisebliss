@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aws-sdk": "^2.1693.0",
     "axios": "^1.13.5",
+    "bcryptjs": "^3.0.3",
     "framer-motion": "^12.4.7",
+    "jsonwebtoken": "^9.0.3",
     "lucide-react": "^0.477.0",
+    "mongoose": "^9.2.1",
     "next": "15.2.0",
     "react": "^19.0.0",
     "react-datepicker": "^8.2.0",
@@ -21,8 +25,10 @@
     "react-quill-new": "^3.8.3",
     "react-slick": "^0.30.3",
     "react-toastify": "^11.0.5",
+    "sharp": "^0.34.5",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.2.4"
+    "swiper": "^11.2.4",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

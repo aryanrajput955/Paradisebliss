@@ -4,10 +4,10 @@ import Link from 'next/link'
 import axios from 'axios'
 
 const AdminHome = () => {
-    const [latestProducts, setLatestProducts] = useState([])
+
     const [latestBlogs, setLatestBlogs] = useState([])
     const [latestUsers, setLatestUsers] = useState([])
-    const [categories, setCategories] = useState([])
+
 
     useEffect(() => {
         fetchLatestData()
@@ -15,17 +15,9 @@ const AdminHome = () => {
 
     const fetchLatestData = async () => {
         try {
-            // Fetch categories first
-            const categoriesRes = await axios.get(
-                `${process.env.NEXT_PUBLIC_API_URL}/api/categories`
-            )
-            setCategories(categoriesRes.data.data)
 
-            // Fetch latest products
-            const productsRes = await axios.get(
-                `${process.env.NEXT_PUBLIC_API_URL}/api/products?limit=5`
-            )
-            setLatestProducts(productsRes.data.data)
+
+
 
             // Fetch latest blogs
             const blogsRes = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs`)
@@ -49,15 +41,9 @@ const AdminHome = () => {
         }
     }
 
-    const getCategoryColor = (categoryId) => {
-        const category = categories.find((cat) => cat._id === categoryId)
-        return category?.color || '#64748B'
-    }
 
-    const getCategoryName = (categoryId) => {
-        const category = categories.find((cat) => cat._id === categoryId)
-        return category?.name || 'Unknown'
-    }
+
+
 
     return (
         <div className='max-w-6xl mx-auto p-6'>
@@ -70,7 +56,7 @@ const AdminHome = () => {
                 </div>
                 <p className='text-slate-600 text-lg leading-relaxed'>
                     Select a menu item from the sidebar to get started with managing your
-                    products, categories, blogs, and users.
+                    categories, blogs, and users.
                 </p>
 
                 <div className='grid grid-cols-2 gap-4 mt-8'>
@@ -161,11 +147,7 @@ const AdminHome = () => {
                                     </div>
                                 )}
                                 {/* Category Badge */}
-                                <div className='absolute top-3 left-3'>
-                                    <span className='inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-white/90 backdrop-blur-sm text-slate-700 border border-slate-200'>
-                                        {blog.category?.name || 'Uncategorized'}
-                                    </span>
-                                </div>
+
                             </div>
 
                             {/* Content */}

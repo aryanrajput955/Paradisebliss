@@ -8,7 +8,7 @@ import 'react-quill-new/dist/quill.snow.css'
 
 const ManageBlogs = () => {
     const [blogs, setBlogs] = useState([])
-    const [categories, setCategories] = useState([])
+
     const [isLoading, setIsLoading] = useState(true)
     const [editModal, setEditModal] = useState({ isOpen: false, blog: null })
     const [editForm, setEditForm] = useState({
@@ -16,7 +16,6 @@ const ManageBlogs = () => {
         metaDescription: '',
         title: '',
         content: '',
-        category: '',
         author: '',
         date: '',
     })
@@ -26,8 +25,6 @@ const ManageBlogs = () => {
 
     // Search state
     const [searchText, setSearchText] = useState('')
-    const [selectedCategory, setSelectedCategory] = useState('')
-    const [showCategoryDropdown, setShowCategoryDropdown] = useState(false)
 
     // Rich text editor modules configuration
     const quillModules = {
@@ -56,7 +53,6 @@ const ManageBlogs = () => {
 
     useEffect(() => {
         fetchBlogs()
-        fetchCategories()
         // eslint-disable-next-line
     }, [])
 
@@ -70,9 +66,7 @@ const ManageBlogs = () => {
                 params.push(`search=${encodeURIComponent(searchText.trim())}`)
             }
 
-            if (selectedCategory) {
-                params.push(`category=${selectedCategory}`)
-            }
+
 
             if (params.length > 0) {
                 url += params.join('&')
@@ -90,17 +84,7 @@ const ManageBlogs = () => {
         }
     }
 
-    const fetchCategories = async () => {
-        try {
-            const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/categories`)
-            if (response.data.success) {
-                setCategories(response.data.data)
-            }
-        } catch (error) {
-            console.error('Error fetching categories:', error)
-            toast.error('Failed to load categories')
-        }
-    }
+
 
     const handleEdit = (blog) => {
         setEditForm({
@@ -108,7 +92,7 @@ const ManageBlogs = () => {
             metaDescription: blog.metaDescription,
             title: blog.title,
             content: blog.content,
-            category: blog.category?._id || blog.category,
+
             author: blog.author,
             date: new Date(blog.date).toISOString().split('T')[0],
         })
@@ -124,7 +108,6 @@ const ManageBlogs = () => {
             metaDescription: '',
             title: '',
             content: '',
-            category: '',
             author: '',
             date: '',
         })
@@ -160,7 +143,7 @@ const ManageBlogs = () => {
                 image: editImage,
                 title: editForm.title.trim(),
                 content: editForm.content.trim(),
-                category: editForm.category,
+
                 author: editForm.author.trim(),
                 date: editForm.date,
             }
@@ -231,11 +214,9 @@ const ManageBlogs = () => {
 
     // Handle reset/clear search
     const handleResetSearch = () => {
-        const isAlreadyCleared = searchText === '' && selectedCategory === ''
+        const isAlreadyCleared = searchText === ''
 
         setSearchText('')
-        setSelectedCategory('')
-        setShowCategoryDropdown(false)
 
         if (isAlreadyCleared) {
             setIsLoading(true)
@@ -248,22 +229,13 @@ const ManageBlogs = () => {
 
     // Re-fetch blogs when search criteria changes
     useEffect(() => {
-        if (searchText === '' && selectedCategory === '') {
+        if (searchText === '') {
             fetchBlogs()
         }
         // eslint-disable-next-line
-    }, [searchText, selectedCategory])
+    }, [searchText])
 
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (!event.target.closest('.category-dropdown-container')) {
-                setShowCategoryDropdown(false)
-            }
-        }
 
-        document.addEventListener('mousedown', handleClickOutside)
-        return () => document.removeEventListener('mousedown', handleClickOutside)
-    }, [])
 
     return (
         <div className='max-w-6xl'>
@@ -309,75 +281,7 @@ const ManageBlogs = () => {
                             </div>
                         </div>
 
-                        {/* Category Dropdown */}
-                        <div className='relative group category-dropdown-container'>
-                            <label className='block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1 ml-1'>
-                                Category
-                            </label>
-                            <div className='relative'>
-                                <button
-                                    type='button'
-                                    onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}
-                                    className='w-full pl-3 pr-8 py-2 bg-slate-50 border border-slate-200 rounded-xl text-left text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 focus:bg-white transition-all duration-200 text-sm'>
-                                    <span
-                                        className={`block truncate ${!selectedCategory ? 'text-slate-400' : ''
-                                            }`}>
-                                        {selectedCategory
-                                            ? categories.find((c) => c._id === selectedCategory)?.name
-                                            : 'All Categories'}
-                                    </span>
-                                    <span className='absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none'>
-                                        <svg
-                                            className={`w-5 h-5 text-slate-400 transition-transform duration-200 ${showCategoryDropdown ? 'rotate-180' : ''
-                                                }`}
-                                            fill='none'
-                                            stroke='currentColor'
-                                            viewBox='0 0 24 24'>
-                                            <path
-                                                strokeLinecap='round'
-                                                strokeLinejoin='round'
-                                                strokeWidth='2'
-                                                d='M19 9l-7 7-7-7'
-                                            />
-                                        </svg>
-                                    </span>
-                                </button>
 
-                                {showCategoryDropdown && (
-                                    <div className='absolute z-10 mt-2 w-full bg-white rounded-xl shadow-xl border border-slate-100 animate-in fade-in zoom-in-95 duration-100 overflow-hidden'>
-                                        <div className='max-h-60 overflow-auto p-1'>
-                                            <button
-                                                type='button'
-                                                className={`w-full text-left px-4 py-2.5 rounded-lg text-sm transition-colors ${!selectedCategory
-                                                    ? 'bg-blue-50 text-blue-700 font-medium'
-                                                    : 'text-slate-700 hover:bg-slate-50'
-                                                    }`}
-                                                onClick={() => {
-                                                    setSelectedCategory('')
-                                                    setShowCategoryDropdown(false)
-                                                }}>
-                                                All Categories
-                                            </button>
-                                            {categories.map((cat) => (
-                                                <button
-                                                    key={cat._id}
-                                                    type='button'
-                                                    className={`w-full text-left px-4 py-2.5 rounded-lg text-sm transition-colors ${selectedCategory === cat._id
-                                                        ? 'bg-blue-50 text-blue-700 font-medium'
-                                                        : 'text-slate-700 hover:bg-slate-50'
-                                                        }`}
-                                                    onClick={() => {
-                                                        setSelectedCategory(cat._id)
-                                                        setShowCategoryDropdown(false)
-                                                    }}>
-                                                    {cat.name}
-                                                </button>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
                     </div>
 
                     {/* Action Buttons */}
@@ -443,9 +347,7 @@ const ManageBlogs = () => {
                                 <th className='px-4 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider max-w-48'>
                                     Meta Title
                                 </th>
-                                <th className='px-4 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider w-24'>
-                                    Category
-                                </th>
+
 
                                 <th className='px-4 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider max-w-64'>
                                     Meta Desc
@@ -485,11 +387,7 @@ const ManageBlogs = () => {
                                                 {blog.metaTitle}
                                             </div>
                                         </td>
-                                        <td className='px-4 py-4 whitespace-nowrap text-sm text-slate-700'>
-                                            <span className='inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800'>
-                                                {blog.category?.name || 'Uncategorized'}
-                                            </span>
-                                        </td>
+
 
                                         <td className='px-4 py-4 text-sm text-slate-600'>
                                             <div
@@ -600,28 +498,8 @@ const ManageBlogs = () => {
                                     </div>
 
                                     {/* Category, Author, Date Row */}
-                                    <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-                                        <div>
-                                            <label className='block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wider'>
-                                                Category
-                                            </label>
-                                            <select
-                                                value={editForm.category}
-                                                onChange={(e) =>
-                                                    setEditForm({ ...editForm, category: e.target.value })
-                                                }
-                                                className='w-full px-3 py-2.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all bg-slate-50 hover:bg-white'
-                                                required>
-                                                <option value=''>Select Category</option>
-                                                {categories.map((category) => (
-                                                    <option
-                                                        key={category._id}
-                                                        value={category._id}>
-                                                        {category.name}
-                                                    </option>
-                                                ))}
-                                            </select>
-                                        </div>
+                                    <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+
                                         <div>
                                             <label className='block text-xs font-semibold text-slate-600 mb-1.5 uppercase tracking-wider'>
                                                 Author

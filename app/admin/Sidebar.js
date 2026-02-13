@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const Sidebar = () => {
-    const [openMenu, setOpenMenu] = useState('products')
+    const [openMenu, setOpenMenu] = useState('dashboard')
     const pathname = usePathname()
 
     const toggleMenu = (menuName) => {

@@ -12,31 +12,14 @@ const AddBlog = () => {
         metaDescription: '',
         title: '',
         content: '',
-        category: '',
+
         author: '',
         date: new Date().toISOString().split('T')[0],
     })
 
-    const [categories, setCategories] = useState([])
     const [image, setImage] = useState(null)
     const [imagePreview, setImagePreview] = useState('')
     const [isSubmitting, setIsSubmitting] = useState(false)
-
-    useEffect(() => {
-        fetchCategories()
-    }, [])
-
-    const fetchCategories = async () => {
-        try {
-            const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/categories`)
-            if (response.data.success) {
-                setCategories(response.data.data)
-            }
-        } catch (error) {
-            console.error('Error fetching categories:', error)
-            toast.error('Failed to load categories')
-        }
-    }
 
     // Rich text editor modules configuration
     const quillModules = {
@@ -112,10 +95,7 @@ const AddBlog = () => {
             toast.error('Please upload image')
             return
         }
-        if (!formData.category) {
-            toast.error('Please select a category')
-            return
-        }
+
         if (!formData.author.trim()) {
             toast.error('Please enter author name')
             return
@@ -142,7 +122,7 @@ const AddBlog = () => {
                 image: image,
                 title: formData.title.trim(),
                 content: formData.content.trim(),
-                category: formData.category,
+
                 author: formData.author.trim(),
                 date: formData.date,
             }
@@ -163,7 +143,7 @@ const AddBlog = () => {
                     metaDescription: '',
                     title: '',
                     content: '',
-                    category: '',
+
                     author: '',
                     date: new Date().toISOString().split('T')[0],
                 })
@@ -228,28 +208,8 @@ const AddBlog = () => {
                         />
                     </div>
 
-                    <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-                        {/* Category */}
-                        <div>
-                            <label className='block text-xs font-semibold text-slate-600 mb-1 uppercase tracking-wider'>
-                                Category <span className='text-red-500'>*</span>
-                            </label>
-                            <select
-                                name='category'
-                                value={formData.category}
-                                onChange={handleInputChange}
-                                className='w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm'
-                                required>
-                                <option value=''>Select a category</option>
-                                {categories.map((category) => (
-                                    <option
-                                        key={category._id}
-                                        value={category._id}>
-                                        {category.name}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+
 
                         {/* Author */}
                         <div>
